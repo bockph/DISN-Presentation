@@ -18,8 +18,8 @@ explain state of the art
 
 ### What the author thinks
 
-### What
+### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mzk3Mzc1OTcsMjMzMTkyOTddfQ==
+eyJoaXN0b3J5IjpbLTY2OTU0NDg1NiwyMzMxOTI5N119
 -->
