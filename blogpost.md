@@ -6,8 +6,20 @@ explain state of the art
 
 ## What prerequisites do we need to understand the paper
 
-##
+## A two step approach
+
+### Estimating the camera pose
+
+### Prediction the Signed Distance Function
+
+## Evaluating the Approach
+
+## Some Discussion about this paper
+
+### What the author thinks
+
+### What
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjY1MjUxMTgsMjMzMTkyOTddfQ==
+eyJoaXN0b3J5IjpbLTE3Mzk3Mzc1OTcsMjMzMTkyOTddfQ==
 -->
