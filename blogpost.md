@@ -7,7 +7,7 @@ Using 2D images for a 3D shape reconstruction is a trending topic in the Researc
 In general, 3D representations can be divided into:
 
  - **explizit methods ---**
- - **implicit methods ---** define a isocontour
+ - **implicit methods ---** define a surface by the equation
 
 explizit or implizit.
 ## Knowledge needed for the paper
@@ -26,7 +26,7 @@ explizit or implizit.
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MDMxNDIyMCwxMzM2NzYxMTE2LC0xMD
-czNTc3NDUyLDIwMDAyODA4MDEsLTY2OTU0NDg1NiwyMzMxOTI5
-N119
+eyJoaXN0b3J5IjpbLTY2NTAxNTE2LC04NjAzMTQyMjAsMTMzNj
+c2MTExNiwtMTA3MzU3NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4
+NTYsMjMzMTkyOTddfQ==
 -->
