@@ -1,4 +1,5 @@
-![3D shape reconstruction with fine grained details from a 2D image using DISN](tmp)
+
+![3D shape reconstruction with fine grained details from a 2D image using DISN]([https://raw.githubusercontent.com/bockph/DISN-Presentation/master/title_1.png?token=AEVFODFDIUR7FDCWZH7LZZC6C5MWO](https://raw.githubusercontent.com/bockph/DISN-Presentation/master/title_1.png?token=AEVFODFDIUR7FDCWZH7LZZC6C5MWO))
 # A paper review on how to recover high quality and detail-rich 3D shapes from 2D images
 While humans are quite good in recognizing objects and deriving their properties using intuition, for machines this is a rather complex but -- as a core technology for a variety of fields such as virtual reality or medical imaging -- needed task to recover a 3D shape from a single view. Therefore, it has been an ongoing research field, which experienced in the last few years quite some progress particulary driven by deep learning. However, while most contemporary work already delivers quite decent results on recovering the overall shape, recovering also fine graind details such as small holes was not a major focus in this field of research. Until 2019 when Wang et Al. published "DISN: Deep Implicit Surface Network for High-quality Single-view 3D Reconstruction" a paper presenting a Neural Network capable of doing both. 
 
@@ -37,9 +38,9 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMjg1NTU0MiwyMTIzMjExNjk4LC0zND
-k4OTEyODUsLTE0NTM5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0
-NywtMjU1MDY5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMT
-A3MzU3NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTky
-OTddfQ==
+eyJoaXN0b3J5IjpbLTE1NDI0NzU3MjQsLTQyMjg1NTU0MiwyMT
+IzMjExNjk4LC0zNDk4OTEyODUsLTE0NTM5NzcwNTksMjc2NzI3
+NTUsMTUyODcxMjM0NywtMjU1MDY5NjcwLC04NjAzMTQyMjAsMT
+MzNjc2MTExNiwtMTA3MzU3NzQ1MiwyMDAwMjgwODAxLC02Njk1
+NDQ4NTYsMjMzMTkyOTddfQ==
 -->
