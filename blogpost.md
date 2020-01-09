@@ -7,6 +7,7 @@ Using 2D images for a 3D shape reconstruction is a trending topic in the Researc
 In general, 3D representations can be divided into:
 
  - **explizit methods ---**
+ - **impli
 
 explizit or implizit.
 ## Knowledge needed for the paper
@@ -25,6 +26,7 @@ explizit or implizit.
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNjc2MTExNiwtMTA3MzU3NzQ1MiwyMD
-AwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTkyOTddfQ==
+eyJoaXN0b3J5IjpbMTM5MjI1OTQ3NiwxMzM2NzYxMTE2LC0xMD
+czNTc3NDUyLDIwMDAyODA4MDEsLTY2OTU0NDg1NiwyMzMxOTI5
+N119
 -->
