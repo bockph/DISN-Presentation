@@ -3,9 +3,9 @@
 
 
   <p style ="font-style:normal;display:inherit;text-align:center;font-size:90%">
-  <img  src="http://sparkandshine.net/wordpress/wp-content/uploads/2016/02/dominating_sets_example2.png"  alt="dominating_sets_example2"/>
+  <img  style ="font-style:normal;display:inherit;text-align:center;font-size:90%" src="http://sparkandshine.net/wordpress/wp-content/uploads/2016/02/dominating_sets_example2.png"  alt="dominating_sets_example2"/>
  <br>
- <em>Fig. 2: The minimum dominating set of a graph</em>
+ <em style ="font-style:normal;display:inherit;text-align:center;font-size:90%" >Fig. 2: The minimum dominating set of a graph</em>
  </p>
 
 <figure>
@@ -51,7 +51,7 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY4NTE4MzY0LC05ODMwNzM5OTQsLTE1ND
+eyJoaXN0b3J5IjpbMTQyMTIyOTAyLC05ODMwNzM5OTQsLTE1ND
 I0NzU3MjQsLTQyMjg1NTU0MiwyMTIzMjExNjk4LC0zNDk4OTEy
 ODUsLTE0NTM5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0NywtMj
 U1MDY5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMTA3MzU3
