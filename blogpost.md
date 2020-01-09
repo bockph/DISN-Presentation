@@ -4,7 +4,7 @@
 ## Introduction
 some apetizing here
 
-## What is 3D shape reconstruction about
+## How can a 3D shape be represented and what other approaches exist so far.
 Using 2D images for a 3D shape reconstruction is a trending topic in the Research of the last  years. However, while there are already several promising approaches out there, scientists where not able to decide on a gold standard concerning the representation of the 3D shape yet.
 
 In general, 3D representations can be divided into:
@@ -21,7 +21,7 @@ As explicit representations are often quite intuitiv in their usage and therefor
 
 
 
-## Knowledge needed for the paper
+
 ## A two step approach
 
 ### Estimating the camera pose
@@ -37,8 +37,8 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkzMTM2MTA2LC0zNDk4OTEyODUsLTE0NT
-M5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0NywtMjU1MDY5Njcw
-LC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMTA3MzU3NzQ1MiwyMD
-AwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTkyOTddfQ==
+eyJoaXN0b3J5IjpbMjEyMzIxMTY5OCwtMzQ5ODkxMjg1LC0xND
+UzOTc3MDU5LDI3NjcyNzU1LDE1Mjg3MTIzNDcsLTI1NTA2OTY3
+MCwtODYwMzE0MjIwLDEzMzY3NjExMTYsLTEwNzM1Nzc0NTIsMj
+AwMDI4MDgwMSwtNjY5NTQ0ODU2LDIzMzE5Mjk3XX0=
 -->
