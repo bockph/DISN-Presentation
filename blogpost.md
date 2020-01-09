@@ -6,7 +6,7 @@ Using 2D images for a 3D shape reconstruction is a trending topic in the Researc
 
 In general, 3D representations can be divided into:
 
- - **explicit methods ---** describe a 3D model using e.g. pointclouds, voxels or meshes. Such methods are not only easy to encode but ver
+ - **explicit methods ---** describe a 3D model using e.g. pointclouds, voxels or meshes. As these methods are intuitiv in their usage they are very easy to encode but also very intuitiv in its usage. However, they
  - **implicit representations ---** define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds then a point $P(X,Y,Z)$ is said to be on the surface. The advantage of such an representations is that a volumetric model which is continous itself is also described by a continous function. This lead to more A very common version of such an implicit function $F$ is the **Signed-Distance-Function (SDF)** which is also used by the here presented approach. A SDF maps the point $P$ to a real value $s  \in \mathbb{R}$ where the sign of $s$ tells wether $P$ is insider or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface.
 
 explizit or implizit.
@@ -26,7 +26,7 @@ explizit or implizit.
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDE0NTI2ODEsLTE0NTM5NzcwNTksMj
+eyJoaXN0b3J5IjpbLTE2MDMyOTgxMjQsLTE0NTM5NzcwNTksMj
 c2NzI3NTUsMTUyODcxMjM0NywtMjU1MDY5NjcwLC04NjAzMTQy
 MjAsMTMzNjc2MTExNiwtMTA3MzU3NzQ1MiwyMDAwMjgwODAxLC
 02Njk1NDQ4NTYsMjMzMTkyOTddfQ==
