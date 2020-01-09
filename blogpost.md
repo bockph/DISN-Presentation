@@ -1,14 +1,8 @@
 
 ![3D shape reconstruction with fine grained details from a 2D image using DISN[1]](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 
-1.  /* for image caption */
-2.  img + br + em {
-3.  font-style: normal;
-4.  display: inherit;
-5.  text-align: center;
-6.  font-size:  90%;
-7.  }
-  <p>
+
+  <p style ="font-style:normal;display:inherit;text-align:center;font-size:90%">
   <img  src="http://sparkandshine.net/wordpress/wp-content/uploads/2016/02/dominating_sets_example2.png"  alt="dominating_sets_example2"/>
  <br>
  <em>Fig. 2: The minimum dominating set of a graph</em>
@@ -57,10 +51,10 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDI2MDU2MTYsLTk4MzA3Mzk5NCwtMT
-U0MjQ3NTcyNCwtNDIyODU1NTQyLDIxMjMyMTE2OTgsLTM0OTg5
-MTI4NSwtMTQ1Mzk3NzA1OSwyNzY3Mjc1NSwxNTI4NzEyMzQ3LC
-0yNTUwNjk2NzAsLTg2MDMxNDIyMCwxMzM2NzYxMTE2LC0xMDcz
-NTc3NDUyLDIwMDAyODA4MDEsLTY2OTU0NDg1NiwyMzMxOTI5N1
-19
+eyJoaXN0b3J5IjpbNDY4NTE4MzY0LC05ODMwNzM5OTQsLTE1ND
+I0NzU3MjQsLTQyMjg1NTU0MiwyMTIzMjExNjk4LC0zNDk4OTEy
+ODUsLTE0NTM5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0NywtMj
+U1MDY5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMTA3MzU3
+NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTkyOTddfQ
+==
 -->
