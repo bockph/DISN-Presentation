@@ -9,7 +9,7 @@ In general, 3D representations can be divided into:
  - **explicit methods ---** describe a 3D model solidly using e.g. pointclouds, voxels or meshes. 
  - **implicit methods---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface.  A very common version of such an implicit function $F$ is the **Signed-Distance-Function (SDF)** which is also used by the here presented approach. A SDF maps the point $P$ to a real value $s  \in \mathbb{R}$ where the sign of $s$ tells wether $P$ is insider or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface.
 
-As explicit representations are often quite intuitiv in their usage and therefore easy to encode. But, if such a representation is choosen a limited resolution and fixed mesh topology has to be assumed -- limiting the flexibility of an approach. These drawbacks, however, can be overcome by using an implicit function which are neither limited in resolution, because of their continuity,  nor suffer from fixed topology. Nonetheless, an implicit function has to be rendered on some point
+As explicit representations are often quite intuitiv in their usage and therefore easy to encode. But, if such a representation is choosen a limited resolution and fixed mesh topology has to be assumed -- limiting the flexibility of an approach. These drawbacks, however, can be overcome by using an implicit function which are neither limited in resolution, because of their continuity,  nor suffer from fixed topology. Nonetheless, an implicit function has to be rendered on some point which in consequence leads to a fixed resolution
 
 
 
@@ -30,8 +30,8 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTg1Mzc0MzIsLTE0NTM5NzcwNTksMj
-c2NzI3NTUsMTUyODcxMjM0NywtMjU1MDY5NjcwLC04NjAzMTQy
-MjAsMTMzNjc2MTExNiwtMTA3MzU3NzQ1MiwyMDAwMjgwODAxLC
-02Njk1NDQ4NTYsMjMzMTkyOTddfQ==
+eyJoaXN0b3J5IjpbLTIyNDgyNzk5MiwtMTQ1Mzk3NzA1OSwyNz
+Y3Mjc1NSwxNTI4NzEyMzQ3LC0yNTUwNjk2NzAsLTg2MDMxNDIy
+MCwxMzM2NzYxMTE2LC0xMDczNTc3NDUyLDIwMDAyODA4MDEsLT
+Y2OTU0NDg1NiwyMzMxOTI5N119
 -->
