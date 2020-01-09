@@ -3,8 +3,8 @@
 
 
 <figure>
-  <img src="{{https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true}}/assets/image.jpg" alt="3D shape reconstruction with fine grained details from a 2D image using DISN[1]"/>
-  <figcaption>This is my caption text.</figcaption>
+  <img src="https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true" alt="3D shape reconstruction with fine grained details from a 2D image using DISN[1]"/>
+  <figcaption>3D shape reconstruction with fine grained details from a 2D image using DISN[1]</figcaption>
 </figure>
 
 # A paper review on how to recover high quality and detail-rich 3D shapes from 2D images
@@ -45,10 +45,9 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NjE0NDYxNiwtOTgzMDczOTk0LC0xNT
-QyNDc1NzI0LC00MjI4NTU1NDIsMjEyMzIxMTY5OCwtMzQ5ODkx
-Mjg1LC0xNDUzOTc3MDU5LDI3NjcyNzU1LDE1Mjg3MTIzNDcsLT
-I1NTA2OTY3MCwtODYwMzE0MjIwLDEzMzY3NjExMTYsLTEwNzM1
-Nzc0NTIsMjAwMDI4MDgwMSwtNjY5NTQ0ODU2LDIzMzE5Mjk3XX
-0=
+eyJoaXN0b3J5IjpbNTI4NjUzOTcsLTk4MzA3Mzk5NCwtMTU0Mj
+Q3NTcyNCwtNDIyODU1NTQyLDIxMjMyMTE2OTgsLTM0OTg5MTI4
+NSwtMTQ1Mzk3NzA1OSwyNzY3Mjc1NSwxNTI4NzEyMzQ3LC0yNT
+UwNjk2NzAsLTg2MDMxNDIyMCwxMzM2NzYxMTE2LC0xMDczNTc3
+NDUyLDIwMDAyODA4MDEsLTY2OTU0NDg1NiwyMzMxOTI5N119
 -->
