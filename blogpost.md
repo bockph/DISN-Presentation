@@ -6,7 +6,7 @@ Using 2D images for a 3D shape reconstruction is a trending topic in the Researc
 
 In general, 3D representations can be divided into:
 
- - **explicit methods ---** describe a 3D model solidly using e.g. pointclouds, voxels or meshes. The main advantage of such method is its intuitivity 
+ - **explicit methods ---** describe a 3D model solidly using e.g. pointclouds, voxels or meshes. The main advantage of such method is its intuitivity which also makes them easy to encode e.g. in a Neural Network. But they suffer from limited resolution and fixed mesh topologies.
  - **implicit methods---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface.  
 
 
@@ -33,7 +33,7 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MDk5NzcyOCwtMTQ1Mzk3NzA1OSwyNz
+eyJoaXN0b3J5IjpbMTkzMzM0Nzk0NiwtMTQ1Mzk3NzA1OSwyNz
 Y3Mjc1NSwxNTI4NzEyMzQ3LC0yNTUwNjk2NzAsLTg2MDMxNDIy
 MCwxMzM2NzYxMTE2LC0xMDczNTc3NDUyLDIwMDAyODA4MDEsLT
 Y2OTU0NDg1NiwyMzMxOTI5N119
