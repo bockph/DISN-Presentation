@@ -7,7 +7,7 @@ Using 2D images for a 3D shape reconstruction is a trending topic in the Researc
 In general, 3D representations can be divided into:
 
  - **explizit methods ---**
- - **implicit methods ---** define a surface by the equation
+ - **implicit methods ---** define a surface by the equation 
 
 explizit or implizit.
 ## Knowledge needed for the paper
@@ -26,7 +26,7 @@ explizit or implizit.
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTAxNTE2LC04NjAzMTQyMjAsMTMzNj
-c2MTExNiwtMTA3MzU3NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4
-NTYsMjMzMTkyOTddfQ==
+eyJoaXN0b3J5IjpbLTI1NTA2OTY3MCwtODYwMzE0MjIwLDEzMz
+Y3NjExMTYsLTEwNzM1Nzc0NTIsMjAwMDI4MDgwMSwtNjY5NTQ0
+ODU2LDIzMzE5Mjk3XX0=
 -->
