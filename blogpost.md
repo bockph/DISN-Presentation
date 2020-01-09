@@ -1,11 +1,9 @@
-
+![3D shape reconstruction from a 2D image using DISN](tmp)
 # A paper review on how to recover high quality and detail-rich 3D shapes from 2D images
 some apetizing here
 ## What is 3D shape reconstruction about
-explain state of the art
-
-## What prerequisites do we need to understand the paper
-
+Using 2D images for a 3D shape reconstruction is a trending topic in the Research of the last  years. However, while there are already several promising approaches out there, scientists where not able to decide on a gold standard concerning the representation of the 3D shape yet. In general, representation
+## Knowledge needed for the paper
 ## A two step approach
 
 ### Estimating the camera pose
@@ -21,5 +19,6 @@ explain state of the art
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2OTU0NDg1NiwyMzMxOTI5N119
+eyJoaXN0b3J5IjpbMjAwMDI4MDgwMSwtNjY5NTQ0ODU2LDIzMz
+E5Mjk3XX0=
 -->
