@@ -1,5 +1,7 @@
 ![3D shape reconstruction from a 2D image using DISN](tmp)
 # A paper review on how to recover high quality and detail-rich 3D shapes from 2D images
+
+## Introduction
 some apetizing here
 
 ## What is 3D shape reconstruction about
@@ -35,7 +37,7 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMxNDkzNjIwLC0zNDk4OTEyODUsLTE0NT
+eyJoaXN0b3J5IjpbMjkzMTM2MTA2LC0zNDk4OTEyODUsLTE0NT
 M5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0NywtMjU1MDY5Njcw
 LC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMTA3MzU3NzQ1MiwyMD
 AwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTkyOTddfQ==
