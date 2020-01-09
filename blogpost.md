@@ -1,6 +1,6 @@
 ![3D shape reconstruction from a 2D image using DISN](tmp)
 # A paper review on how to recover high quality and detail-rich 3D shapes from 2D images
-While humans are quite good in recognizing objects and deriving their properties using intuition, for machines it is a rather complex, but as a core technology for a variety of fields, needed task to recover a 3D shape from a single view. Therefore, it has been an ongoing research field, which experienced in the last few years quite some progress particulary driven by deep learning. However, while most contemporary work already delivers quite decent results on recovering the overall shape, until recent recovering also fine graind details such as small holes 
+While humans are quite good in recognizing objects and deriving their properties using intuition, for machines it is a rather complex, but as a core technology for a variety of fields, needed task to recover a 3D shape from a single view. Therefore, it has been an ongoing research field, which experienced in the last few years quite some progress particulary driven by deep learning. However, while most contemporary work already delivers quite decent results on recovering the overall shape, until recent recovering also fine graind details such as small holes was not a major focus of research. However, 
 
 ## How can a 3D shape be represented and what other approaches exist so far.
 Using 2D images for a 3D shape reconstruction is a trending topic in the Research of the last years. However, while there are already several promising approaches out there, scientists where not able to decide on a gold standard concerning the representation of the 3D shape yet. TODO insert Neural Networks as recent main approach
@@ -37,9 +37,9 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzI1MDQ1OTksMjEyMzIxMTY5OCwtMz
-Q5ODkxMjg1LC0xNDUzOTc3MDU5LDI3NjcyNzU1LDE1Mjg3MTIz
-NDcsLTI1NTA2OTY3MCwtODYwMzE0MjIwLDEzMzY3NjExMTYsLT
-EwNzM1Nzc0NTIsMjAwMDI4MDgwMSwtNjY5NTQ0ODU2LDIzMzE5
-Mjk3XX0=
+eyJoaXN0b3J5IjpbLTU5MDMwMTMzNywyMTIzMjExNjk4LC0zND
+k4OTEyODUsLTE0NTM5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0
+NywtMjU1MDY5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMT
+A3MzU3NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTky
+OTddfQ==
 -->
