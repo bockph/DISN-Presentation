@@ -2,7 +2,7 @@
 # A paper review on how to recover high quality and detail-rich 3D shapes from 2D images
 some apetizing here
 ## What is 3D shape reconstruction about
-Using 2D images for a 3D shape reconstruction is a trending topic in the Research of the last  years. However, while there are already several promising approaches out there, scientists where not able to decide on a gold standard concerning the representation of the 3D shape yet. In general, 3D representation can be explizit or implizit
+Using 2D images for a 3D shape reconstruction is a trending topic in the Research of the last  years. However, while there are already several promising approaches out there, scientists where not able to decide on a gold standard concerning the representation of the 3D shape yet. In general, 3D representations can be explizit or implizit.
 ## Knowledge needed for the paper
 ## A two step approach
 
@@ -19,6 +19,6 @@ Using 2D images for a 3D shape reconstruction is a trending topic in the Researc
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NjMyMzgzNSwyMDAwMjgwODAxLC02Nj
-k1NDQ4NTYsMjMzMTkyOTddfQ==
+eyJoaXN0b3J5IjpbLTEwNzM1Nzc0NTIsMjAwMDI4MDgwMSwtNj
+Y5NTQ0ODU2LDIzMzE5Mjk3XX0=
 -->
