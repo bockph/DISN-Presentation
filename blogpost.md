@@ -1,8 +1,6 @@
 ![3D shape reconstruction from a 2D image using DISN](tmp)
 # A paper review on how to recover high quality and detail-rich 3D shapes from 2D images
 
-## Introduction
-some apetizing here
 
 ## How can a 3D shape be represented and what other approaches exist so far.
 Using 2D images for a 3D shape reconstruction is a trending topic in the Research of the last years. However, while there are already several promising approaches out there, scientists where not able to decide on a gold standard concerning the representation of the 3D shape yet. TODO insert Neural Networks as recent main approach
@@ -11,6 +9,7 @@ In general, 3D representations can be divided into:
 
  - **explicit methods ---** describe a 3D model solidly using e.g. pointclouds, voxels or meshes. The main advantage of such method is its intuitivity which also makes them easy to encode e.g. in a Neural Network. But they suffer from limited resolution and fixed mesh topologies.
  - **implicit methods---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface.  Because of its continuity the aformentioned drawbacks of explicit representations do not have to be considered here. Nonetheless, an implicit function probably has to be rendered on some point e.g. using the marching cubes algorithm adding additional calculation effort to an application.
+
 
 Recent work that uses  an explicit representation is e.g. AtlasNet, Pixel2Mesh
 ### What 
@@ -38,9 +37,9 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNjc0MjE5NywyMTIzMjExNjk4LC0zND
-k4OTEyODUsLTE0NTM5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0
-NywtMjU1MDY5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMT
-A3MzU3NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTky
-OTddfQ==
+eyJoaXN0b3J5IjpbLTE4MjAxMTczMjQsMjEyMzIxMTY5OCwtMz
+Q5ODkxMjg1LC0xNDUzOTc3MDU5LDI3NjcyNzU1LDE1Mjg3MTIz
+NDcsLTI1NTA2OTY3MCwtODYwMzE0MjIwLDEzMzY3NjExMTYsLT
+EwNzM1Nzc0NTIsMjAwMDI4MDgwMSwtNjY5NTQ0ODU2LDIzMzE5
+Mjk3XX0=
 -->
