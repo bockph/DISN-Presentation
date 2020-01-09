@@ -2,12 +2,6 @@
 ![3D shape reconstruction with fine grained details from a 2D image using DISN[1]](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 
 
-  <p style ="font-style:normal;display:inherit;text-align:center;font-size:90%">
-  <img  style ="font-style:normal;display:inherit;text-align:center;font-size:90%" src="http://sparkandshine.net/wordpress/wp-content/uploads/2016/02/dominating_sets_example2.png"  alt="dominating_sets_example2"/>
- <br>
- <em style ="font-style:normal;display:inherit;text-align:center;font-size:90%" >Fig. 2: The minimum dominating set of a graph</em>
- </p>
-
 <figure>
   <img src="https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true" alt="3D shape reconstruction with fine grained details from a 2D image using DISN[1]"/>
   <figcaption>3D shape reconstruction with fine grained details from a 2D image using DISN[1]</figcaption>
@@ -51,10 +45,9 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyMTIyOTAyLC05ODMwNzM5OTQsLTE1ND
-I0NzU3MjQsLTQyMjg1NTU0MiwyMTIzMjExNjk4LC0zNDk4OTEy
-ODUsLTE0NTM5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0NywtMj
-U1MDY5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMTA3MzU3
-NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTkyOTddfQ
-==
+eyJoaXN0b3J5IjpbNTI4NjUzOTcsLTk4MzA3Mzk5NCwtMTU0Mj
+Q3NTcyNCwtNDIyODU1NTQyLDIxMjMyMTE2OTgsLTM0OTg5MTI4
+NSwtMTQ1Mzk3NzA1OSwyNzY3Mjc1NSwxNTI4NzEyMzQ3LC0yNT
+UwNjk2NzAsLTg2MDMxNDIyMCwxMzM2NzYxMTE2LC0xMDczNTc3
+NDUyLDIwMDAyODA4MDEsLTY2OTU0NDg1NiwyMzMxOTI5N119
 -->
