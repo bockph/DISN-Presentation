@@ -3,7 +3,7 @@
 # A paper review on how to recover high quality and detail-rich 3D shapes from 2D images
 <figure>
   <img src="https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true" alt="3D shape reconstruction with fine grained details from a 2D image using DISN[1]"/>
-  <figcaption ><center>3D shape reconstruction with fine grained details from a 2D image using DISN[1]</center></figcaption>
+  <center><figcaption >3D shape reconstruction with fine grained details from a 2D image using DISN[1]</figcaption></center>
 </figure>
 
 While humans are quite good in recognizing objects and deriving their properties using intuition, for machines this is a rather complex but -- as a core technology for a variety of fields such as virtual reality or medical imaging -- needed task to recover a 3D shape from a single view. Therefore, it has been an ongoing research field, which experienced in the last few years quite some progress particulary driven by deep learning. However, while most contemporary work already delivers quite decent results on recovering the overall shape, recovering also fine graind details such as small holes was not a major focus in this field of research. Until 2019 when Wang et Al. published "DISN: Deep Implicit Surface Network for High-quality Single-view 3D Reconstruction" a paper presenting a Neural Network capable of doing both. 
@@ -43,10 +43,10 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIzNzE3ODMzLC05ODMwNzM5OTQsLTE1ND
-I0NzU3MjQsLTQyMjg1NTU0MiwyMTIzMjExNjk4LC0zNDk4OTEy
-ODUsLTE0NTM5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0NywtMj
-U1MDY5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMTA3MzU3
-NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTkyOTddfQ
-==
+eyJoaXN0b3J5IjpbLTMxODkxNSw1MjM3MTc4MzMsLTk4MzA3Mz
+k5NCwtMTU0MjQ3NTcyNCwtNDIyODU1NTQyLDIxMjMyMTE2OTgs
+LTM0OTg5MTI4NSwtMTQ1Mzk3NzA1OSwyNzY3Mjc1NSwxNTI4Nz
+EyMzQ3LC0yNTUwNjk2NzAsLTg2MDMxNDIyMCwxMzM2NzYxMTE2
+LC0xMDczNTc3NDUyLDIwMDAyODA4MDEsLTY2OTU0NDg1NiwyMz
+MxOTI5N119
 -->
