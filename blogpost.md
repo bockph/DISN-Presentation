@@ -1,6 +1,6 @@
 ![3D shape reconstruction from a 2D image using DISN](tmp)
 # A paper review on how to recover high quality and detail-rich 3D shapes from 2D images
-Recovering a 3D shape from a single view is an ongoing research field which experienced quite some progress in the last few years driven by DeepLearning approaches. Until Single-view 3D reconstruction has been a
+Recovering a 3D shape from a single view is an ongoing research field which experienced quite some progress in the last few years driven by DeepLearning approaches. While for humans this is an easy and intuitive task, for machines this is rather complex but necessary. E.g. a robo Until Single-view 3D reconstruction has been a
 
 ## How can a 3D shape be represented and what other approaches exist so far.
 Using 2D images for a 3D shape reconstruction is a trending topic in the Research of the last years. However, while there are already several promising approaches out there, scientists where not able to decide on a gold standard concerning the representation of the 3D shape yet. TODO insert Neural Networks as recent main approach
@@ -37,7 +37,7 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1OTE5NjA5MywyMTIzMjExNjk4LC0zND
+eyJoaXN0b3J5IjpbLTIyNTMwODU5MywyMTIzMjExNjk4LC0zND
 k4OTEyODUsLTE0NTM5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0
 NywtMjU1MDY5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMT
 A3MzU3NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTky
