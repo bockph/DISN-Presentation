@@ -6,8 +6,8 @@ Using 2D images for a 3D shape reconstruction is a trending topic in the Researc
 
 In general, 3D representations can be divided into:
 
- - **explicit representations---**
- - **implicit representations---** define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds then a point $P(X,Y,Z)$ is said to be on the surface. A very common version of such an implicit function $F$ is the **Signed-Distance-Function (SDF)** which is also used by the here presented approach. A SDF maps the point $P$ to a real value $s  \in \mathbb{R}$ where the sign of $s$ tells wether $P$ is insider or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface.
+ - **explicit representations ---** are
+ - **implicit representations ---** define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds then a point $P(X,Y,Z)$ is said to be on the surface. A very common version of such an implicit function $F$ is the **Signed-Distance-Function (SDF)** which is also used by the here presented approach. A SDF maps the point $P$ to a real value $s  \in \mathbb{R}$ where the sign of $s$ tells wether $P$ is insider or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface.
 
 explizit or implizit.
 ## Knowledge needed for the paper
@@ -26,7 +26,8 @@ explizit or implizit.
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc2NzI3NTUsMTUyODcxMjM0NywtMjU1MD
-Y5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMTA3MzU3NzQ1
-MiwyMDAwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTkyOTddfQ==
+eyJoaXN0b3J5IjpbLTE0NTM5NzcwNTksMjc2NzI3NTUsMTUyOD
+cxMjM0NywtMjU1MDY5NjcwLC04NjAzMTQyMjAsMTMzNjc2MTEx
+NiwtMTA3MzU3NzQ1MiwyMDAwMjgwODAxLC02Njk1NDQ4NTYsMj
+MzMTkyOTddfQ==
 -->
