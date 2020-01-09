@@ -8,7 +8,7 @@
 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 
-While humans are quite good in recognizing objects and deriving their properties using intuition, for machines this is a rather complex but -- as a core technology for a variety of fields such as virtual reality or medical imaging -- needed task to recover a 3D shape from a single view. Therefore, it has been an ongoing research field, which experienced in the last few years quite some progress particulary driven by deep learning. However, while most contemporary work already delivers quite decent results on recovering the overall shape, recovering also fine graind details such as small holes was not a major focus in this field of research. Until 2019 when Wang et Al. published "DISN: Deep Implicit Surface Network for High-quality Single-view 3D Reconstruction" a paper presenting a Neural Network capable of doing both. 
+While humans are quite good in recognizing objects and deriving their properties , for machines this is a rather complex but -- as a core technology for a variety of fields -- needed task to recover a 3D shape from a single view. Therefore, it has been an ongoing research field, which experienced in the last few years quite some progress -- particulary driven by deep learning. However, while most contemporary work already delivers quite decent results on recovering the overall shape, recovering also fine graind details such as small holes was not a major focus in this field of research. Until 2019 when Wang et Al. published "DISN: Deep Implicit Surface Network for High-quality Single-view 3D Reconstruction" a paper presenting a Neural Network capable of doing both. 
 
 ## How can a 3D shape be represented and what other approaches exist so far.
 Using 2D images for a 3D shape reconstruction is a trending topic in the Research of the last years. However, while there are already several promising approaches out there, scientists where not able to decide on a gold standard concerning the representation of the 3D shape yet. TODO insert Neural Networks as recent main approach
@@ -45,7 +45,7 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNDgyNzQ4MCwtMjE0NjI5MzYyNCwxNT
+eyJoaXN0b3J5IjpbLTEzOTkzNDg0NywtMjE0NjI5MzYyNCwxNT
 I2MTI3NDg2LDUyMzcxNzgzMywtOTgzMDczOTk0LC0xNTQyNDc1
 NzI0LC00MjI4NTU1NDIsMjEyMzIxMTY5OCwtMzQ5ODkxMjg1LC
 0xNDUzOTc3MDU5LDI3NjcyNzU1LDE1Mjg3MTIzNDcsLTI1NTA2
