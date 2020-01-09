@@ -9,6 +9,7 @@ In general, 3D representations can be divided into:
  - **explicit methods ---** describe a 3D model solidly using e.g. pointclouds, voxels or meshes. The main advantage of such method is its intuitivity which also makes them easy to encode e.g. in a Neural Network. But they suffer from limited resolution and fixed mesh topologies.
  - **implicit methods---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface.  Because of its continuity the aformentioned drawbacks of explicit representations do not have to be considered here. Nonetheless, an implicit function probably has to be rendered on some point e.g. using the marching cubes algorithm adding additional calculation effort to an application.
 
+Famous work
 A very common version of such an implicit function $F$ is the **Signed-Distance-Function (SDF)** which is also used by the here presented approach. A SDF maps the point $P$ to a real value $s  \in \mathbb{R}$ where the sign of $s$ tells wether $P$ is insider or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface.
 
 As explicit representations are often quite intuitiv in their usage and therefore easy to encode. But, if such a representation is choosen a limited resolution and fixed mesh topology has to be assumed -- limiting the flexibility of an approach. These drawbacks, however, can be overcome by using an implicit function which are neither limited in resolution, because of their continuity,  nor suffer from fixed topology. 
@@ -32,8 +33,8 @@ As explicit representations are often quite intuitiv in their usage and therefor
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0OTg5MTI4NSwtMTQ1Mzk3NzA1OSwyNz
-Y3Mjc1NSwxNTI4NzEyMzQ3LC0yNTUwNjk2NzAsLTg2MDMxNDIy
-MCwxMzM2NzYxMTE2LC0xMDczNTc3NDUyLDIwMDAyODA4MDEsLT
-Y2OTU0NDg1NiwyMzMxOTI5N119
+eyJoaXN0b3J5IjpbLTY4NTc0NjY1LC0zNDk4OTEyODUsLTE0NT
+M5NzcwNTksMjc2NzI3NTUsMTUyODcxMjM0NywtMjU1MDY5Njcw
+LC04NjAzMTQyMjAsMTMzNjc2MTExNiwtMTA3MzU3NzQ1MiwyMD
+AwMjgwODAxLC02Njk1NDQ4NTYsMjMzMTkyOTddfQ==
 -->
