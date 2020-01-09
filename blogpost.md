@@ -7,7 +7,7 @@ Using 2D images for a 3D shape reconstruction is a trending topic in the Researc
 In general, 3D representations can be divided into:
 
  - **explizit methods ---**
- - **implicit methods ---** define a surface with a volumetric function, where the equation $F(X,Y,Z)$
+ - **implicit methods ---** define a surface with a volumetric function. If the equation $F(X,Y,Z) = 0$ holds then a point at the position X, 
 
 explizit or implizit.
 ## Knowledge needed for the paper
@@ -26,7 +26,7 @@ explizit or implizit.
 ### What I think
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDAyMzI4NTksLTI1NTA2OTY3MCwtOD
+eyJoaXN0b3J5IjpbLTE3MDU3MTk3MDMsLTI1NTA2OTY3MCwtOD
 YwMzE0MjIwLDEzMzY3NjExMTYsLTEwNzM1Nzc0NTIsMjAwMDI4
 MDgwMSwtNjY5NTQ0ODU2LDIzMzE5Mjk3XX0=
 -->
