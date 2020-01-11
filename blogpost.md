@@ -26,18 +26,18 @@ For camera pose estimation they use the general approach proposed by Insafutdino
 To reduce those disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$  is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, one can then obtain the rotation matrix $R= (R_x, R_y, R_z)^T\in \mathbb{R}^{(3\times3)}$ with the following formulas:
 $R_x = N(b_x), \space R_z = N(R_x \times b_y) ,\space R_y = R_z \times R_x$
 
-with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
-Translation $t \in \matbb{R}^3$ is predicted directly.
+with $N(\cdot)$ being the normalization function and '$\times$' the cross product.**[?Zhou et al. ]**
+Translation $t \in \mathbb{R}^3$ is predicted directly.
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMD
-c1MTA1MTI2LC03NzU3NTYxOTQsMzYxOTQ3MzAwLC0xMTI4NjE0
-NzI3LDkwMjY0MTc5NSwtMzIwMTU2MiwtMjEyMTY5MzYwMiw1NT
-QwNjc4MDksLTIxNDYyOTM2MjQsMTUyNjEyNzQ4Niw1MjM3MTc4
-MzMsLTk4MzA3Mzk5NCwtMTU0MjQ3NTcyNCwtNDIyODU1NTQyLD
-IxMjMyMTE2OTgsLTM0OTg5MTI4NSwtMTQ1Mzk3NzA1OSwyNzY3
-Mjc1NV19
+eyJoaXN0b3J5IjpbNTkzOTIwOTM2LDE5ODY5MDgzMDYsLTEzMj
+IzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0LDM2MTk0NzMw
+MCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLTMyMDE1NjIsLTIxMj
+E2OTM2MDIsNTU0MDY3ODA5LC0yMTQ2MjkzNjI0LDE1MjYxMjc0
+ODYsNTIzNzE3ODMzLC05ODMwNzM5OTQsLTE1NDI0NzU3MjQsLT
+QyMjg1NTU0MiwyMTIzMjExNjk4LC0zNDk4OTEyODUsLTE0NTM5
+NzcwNTldfQ==
 -->
