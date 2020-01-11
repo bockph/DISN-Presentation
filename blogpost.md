@@ -29,14 +29,14 @@ $$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space  and\space R_y = R_z \times
 
 with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
 Translation $t \in \mathbb{R}^3$ is predicted directly.
-
+##### sdfsdf
 When training this module they use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space. This model space is then set as the world space where all camera parameters are with respect to. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. The authors have not been precise here, however, probably they transformed the aligned world space objects of ShapeNet Core with different extrinsics to create their ground truth data. As a regression loss they use the Mean-squared-error (MSE) resulting in :
 $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
 ### How is the Signed Distance Function predicted
 The SDF prediction network consists of three different parts. The first is a simple VGG-16 Encoder that extracts global features from the 2D image. 
 The second is the local feature extraction module. It uses the estimated camera pose to project the point $P \in \mathbb{R}^3$ onto a 2D location $q \in \mathbb{R}^2$ on the image plane. Having $q$ in each feature map the corresponding part is extracted and concatenated. As not all feature maps equal the size of the input image, bilinear interpolation is used to resize the feature maps and extract the values.
-The third part is a multilayer perceptron which maps the given point to a higher dimensional feature space. This is then concatenated to both the global and local features. Decoding those results in an SDF value for the overall shape for the former, and a residual SDF for the later. Combining them trough simple addition results in an SDF that also recovers previously missing details of an object -- as . The following figure illustrates the concrete structure of the network.
+The third part is a multilayer perceptron which maps the given point to a higher dimensional feature space. This is then concatenated to both the global and local features. Decoding those results in an SDF value for the overall shape for the former, and a residual SDF for the later. Combining them trough simple addition results in an SDF that also recovers previously missing details of an object . The following figure illustrates the concrete structure of the network.
 
 \image
 
@@ -58,11 +58,11 @@ $$ L_{SDF} =\sum_p  m | f(I,p) - SDF^I(p)|
 
 ### What I think
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NjkwNTE4MiwtMTkyMzI2MDQ3MiwxND
-cyMzU3NTQsOTU1NTQyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkz
-NiwxOTg2OTA4MzA2LC0xMzIyMzA4ODczLDIwNzUxMDUxMjYsLT
-c3NTc1NjE5NCwzNjE5NDczMDAsLTExMjg2MTQ3MjcsOTAyNjQx
-Nzk1LC0zMjAxNTYyLC0yMTIxNjkzNjAyLDU1NDA2NzgwOSwtMj
-E0NjI5MzYyNCwxNTI2MTI3NDg2LDUyMzcxNzgzMywtOTgzMDcz
-OTk0XX0=
+eyJoaXN0b3J5IjpbLTEzOTEyNDY5NjcsLTE5MjMyNjA0NzIsMT
+Q3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5
+MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC
+03NzU3NTYxOTQsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0
+MTc5NSwtMzIwMTU2MiwtMjEyMTY5MzYwMiw1NTQwNjc4MDksLT
+IxNDYyOTM2MjQsMTUyNjEyNzQ4Niw1MjM3MTc4MzMsLTk4MzA3
+Mzk5NF19
 -->
