@@ -18,26 +18,40 @@ Examples that were compared to DISN are *AtlasNet*, *Pixel2Mesh*, and *3DN*.  Wh
 Recent works like  *IMNet* or *OccNet*  predict such functions and have shown to be capable of avoiding the aforementioned drawbacks of explicit methods. Nonetheless, none of those works has been capable of reconstructing fine-grained details.
 
 ## A two-step approach
-To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. represent a 3D object implicitly using a Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface.  As this function is continuous, DISN provides arbitrary resolution and therefore, avoids the drawback of the other explicit methods.
-To predict this SDF they developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: one for camera pose estimation and the other for concrete SDF prediction.
+To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. represent a 3D object implicitly using a Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface.  As this function is continuous, DISN reconstructs objects with arbitrary resolution.
+To predict this SDF they developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network additionally to the global feature encoder.
 
 ### How is the camera pose estimated 
-For camera pose estimation they use the general approach proposed by Insafutdinov and Dosovitskiy **[???]** . By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
-To reduce those disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$  is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, one can then obtain the rotation matrix $R= (R_x, R_y, R_z)^T\in \mathbb{R}^{(3\times3)}$ with the following formulas:
-$R_x = N(b_x), \space R_z = N(R_x \times b_y) ,\space R_y = R_z \times R_x$
+For camera pose estimation they use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
+To reduce those disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$  is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, one can then obtain the rotation matrix R =(R_x, R_y, R_z)^T \in \matbb{R}^(3x3) with the following formula:
+$R_x = N(b_x), R_z = N(R_x \times b_y) and R_y = R_z \times R_x$
 
-with $N(\cdot)$ being the normalization function and '$\times$' the cross product.**[?Zhou et al. ]**
-Translation $t \in \mathbb{R}^3$ is predicted directly.
+with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
+Translation $t \in \matbb{R}^3$ is predicted directly.
+
+When training this module they use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space. This model space is then set as the world space where all camera parameters are with respect to. To calculate the Loss for regression, instead of comparing ground truth (GT) camera parameters to predicted ones they transform a given world space point cloud ($PC_w$)  to camera space using the predicted parameters and then compare it to the GT point cloud $PC_{G}$. The authors have not been precise here, however, probably they transformed the aligned world space objects of ShapeNet Core with different extrinsics to create their ground truth data.
 
 
 
 
+
+
+
+### Prediction the Signed Distance Function
+
+## Evaluating the Approach
+
+## Some Discussion about this paper
+
+### What the author thinks
+
+### What I think
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkzOTIwOTM2LDE5ODY5MDgzMDYsLTEzMj
-IzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0LDM2MTk0NzMw
-MCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLTMyMDE1NjIsLTIxMj
-E2OTM2MDIsNTU0MDY3ODA5LC0yMTQ2MjkzNjI0LDE1MjYxMjc0
-ODYsNTIzNzE3ODMzLC05ODMwNzM5OTQsLTE1NDI0NzU3MjQsLT
-QyMjg1NTU0MiwyMTIzMjExNjk4LC0zNDk4OTEyODUsLTE0NTM5
-NzcwNTldfQ==
+eyJoaXN0b3J5IjpbLTE4Nzk5NDg5MzgsNTkzOTIwOTM2LDE5OD
+Y5MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2
+MTk0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLT
+MyMDE1NjIsLTIxMjE2OTM2MDIsNTU0MDY3ODA5LC0yMTQ2Mjkz
+NjI0LDE1MjYxMjc0ODYsNTIzNzE3ODMzLC05ODMwNzM5OTQsLT
+E1NDI0NzU3MjQsLTQyMjg1NTU0MiwyMTIzMjExNjk4LC0zNDk4
+OTEyODVdfQ==
 -->
