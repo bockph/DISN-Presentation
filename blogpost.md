@@ -29,7 +29,7 @@ $$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space  and\space R_y = R_z \times
 
 with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
 Translation $t \in \mathbb{R}^3$ is predicted directly.
-##### sdfsdf
+
 When training this module they use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space. This model space is then set as the world space where all camera parameters are with respect to. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. The authors have not been precise here, however, probably they transformed the aligned world space objects of ShapeNet Core with different extrinsics to create their ground truth data. As a regression loss they use the Mean-squared-error (MSE) resulting in :
 $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
@@ -47,10 +47,9 @@ $$ L_{SDF} =\sum_p  m | f(I,p) - SDF^I(p)|
     m_2, &              \text{otherwise}
 \end{cases}$$
 
+## Evaluation of DISN
 
 
-
-## Evaluating the Approach
 
 ## Some Discussion about this paper
 
@@ -58,7 +57,7 @@ $$ L_{SDF} =\sum_p  m | f(I,p) - SDF^I(p)|
 
 ### What I think
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTEyNDY5NjcsLTE5MjMyNjA0NzIsMT
+eyJoaXN0b3J5IjpbLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMT
 Q3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5
 MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC
 03NzU3NTYxOTQsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0
