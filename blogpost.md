@@ -1,6 +1,7 @@
 
 
 
+
 # A paper review on how to reconstruct high quality and detail-rich 3D shapes from 2D images
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 <center><i>3D shape reconstruction from a 2D image using DISN [1]</i></center> 
@@ -29,11 +30,25 @@ $$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space  and\space R_y = R_z \times
 with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
 Translation $t \in \mathbb{R}^3$ is predicted directly.
 
-When training this module they use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space. This model space is then set as the world space where all camera parameters are with respect to. For regression a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. The authors have not been precise here, however, probably they transformed the aligned world space objects of ShapeNet Core with different extrinsics to create their ground truth data. As a regression loss they use the Mean-squared-error (MSE) resulting in :
+When training this module they use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space. This model space is then set as the world space where all camera parameters are with respect to. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. The authors have not been precise here, however, probably they transformed the aligned world space objects of ShapeNet Core with different extrinsics to create their ground truth data. As a regression loss they use the Mean-squared-error (MSE) resulting in :
 $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
+### How is the Signed Distance Function predicted
+The SDF prediction network consists of three different parts. The first is a simple VGG-16 Encoder that extracts global features from the 2D image. 
+The second is the local feature extraction module. It uses the estimated camera pose to project the point $P \in \matbb{R}^3$ onto a 2D location $q \in \matbb{R}^2 on the image plane. Having $q$ the corresponding part in each feature map is extracted and concatenated. As not all feature maps equal the size of the input image, bilinear interpolation is used to resize the feature maps and extract the values.
+The third part is a multilayer perceptron which maps the given point to a higher dimensional feature space. This is then concatenated to both the global and local features. Decoding those results in an SDF value for the overall shape for the former, and a residual SDF for the later. Combining them trough simple addition results in an SDF that also recovers previously missing details of an object. The following figure illustrates the concrete structure of the network.
 
-### Prediction the Signed Distance Function
+\image
+
+For the loss calculation of the network, two things have to be taken into consideration. First, in contrast to e.g. IMNet one wants to recover different iso-levels and second, the network should concentrate on details near and inside the iso-surface. This in consequence leads to a weighted lossfunction of SDF values being defined as:
+$$ L_{SDF} =\sum_p  m | f(I,p) - SDF^I(p)| 
+\\m =\begin{cases}
+    m_1, &SDF^I(p) >\delta \\
+    m_2, &              \text{otherwise}
+\end{cases}$$
+
+
+
 
 ## Evaluating the Approach
 
@@ -42,22 +57,12 @@ $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 ### What the author thinks
 
 ### What I think
-
-$\left| \begin{array}{ccc}
-\lambda - a & -b & -c \\
--d & \lambda - e & -f \\
--g & -h & \lambda - i \end{array} \right$
-
-$$m =\begin{cases}
-    m_1 &SDF^I(p) >\delta  x\geq 1\\
-    0,              & \text{otherwise}
-\end{cases}$$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMDQ3NjgzNSwxNDcyMzU3NTQsOTU1NT
-QyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwxOTg2OTA4MzA2
-LC0xMzIyMzA4ODczLDIwNzUxMDUxMjYsLTc3NTc1NjE5NCwzNj
-E5NDczMDAsLTExMjg2MTQ3MjcsOTAyNjQxNzk1LC0zMjAxNTYy
-LC0yMTIxNjkzNjAyLDU1NDA2NzgwOSwtMjE0NjI5MzYyNCwxNT
-I2MTI3NDg2LDUyMzcxNzgzMywtOTgzMDczOTk0LC0xNTQyNDc1
-NzI0XX0=
+eyJoaXN0b3J5IjpbLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NT
+U0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMw
+NiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQsMz
+YxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMzIwMTU2
+MiwtMjEyMTY5MzYwMiw1NTQwNjc4MDksLTIxNDYyOTM2MjQsMT
+UyNjEyNzQ4Niw1MjM3MTc4MzMsLTk4MzA3Mzk5NCwtMTU0MjQ3
+NTcyNF19
 -->
