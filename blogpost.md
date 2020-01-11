@@ -43,16 +43,21 @@ $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
 ### What I think
 
-$\left{ \begin{array}{ccc}
+$\left| \begin{array}{ccc}
 \lambda - a & -b & -c \\
 -d & \lambda - e & -f \\
--g & -h & \lambda - i \end{array} \right}$
+-g & -h & \lambda - i \end{array} \right$
+
+$\begin{cases}
+    \text{if } x\geq 1\\
+    0,              & \text{otherwise}
+\end{cases}$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2ODE4MDM3MCwxNDcyMzU3NTQsOTU1NT
-QyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwxOTg2OTA4MzA2
-LC0xMzIyMzA4ODczLDIwNzUxMDUxMjYsLTc3NTc1NjE5NCwzNj
-E5NDczMDAsLTExMjg2MTQ3MjcsOTAyNjQxNzk1LC0zMjAxNTYy
-LC0yMTIxNjkzNjAyLDU1NDA2NzgwOSwtMjE0NjI5MzYyNCwxNT
-I2MTI3NDg2LDUyMzcxNzgzMywtOTgzMDczOTk0LC0xNTQyNDc1
-NzI0XX0=
+eyJoaXN0b3J5IjpbLTEzNjYzOTgxNjEsMTQ3MjM1NzU0LDk1NT
+U0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMw
+NiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQsMz
+YxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMzIwMTU2
+MiwtMjEyMTY5MzYwMiw1NTQwNjc4MDksLTIxNDYyOTM2MjQsMT
+UyNjEyNzQ4Niw1MjM3MTc4MzMsLTk4MzA3Mzk5NCwtMTU0MjQ3
+NTcyNF19
 -->
