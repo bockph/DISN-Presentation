@@ -43,13 +43,16 @@ $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
 ### What I think
 
-$A=\{ \matrix{$
+$\left{ \begin{array}{ccc}
+\lambda - a & -b & -c \\
+-d & \lambda - e & -f \\
+-g & -h & \lambda - i \end{array} \right}$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mz
-k3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3
-MywyMDc1MTA1MTI2LC03NzU3NTYxOTQsMzYxOTQ3MzAwLC0xMT
-I4NjE0NzI3LDkwMjY0MTc5NSwtMzIwMTU2MiwtMjEyMTY5MzYw
-Miw1NTQwNjc4MDksLTIxNDYyOTM2MjQsMTUyNjEyNzQ4Niw1Mj
-M3MTc4MzMsLTk4MzA3Mzk5NCwtMTU0MjQ3NTcyNCwtNDIyODU1
-NTQyXX0=
+eyJoaXN0b3J5IjpbLTU2ODE4MDM3MCwxNDcyMzU3NTQsOTU1NT
+QyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwxOTg2OTA4MzA2
+LC0xMzIyMzA4ODczLDIwNzUxMDUxMjYsLTc3NTc1NjE5NCwzNj
+E5NDczMDAsLTExMjg2MTQ3MjcsOTAyNjQxNzk1LC0zMjAxNTYy
+LC0yMTIxNjkzNjAyLDU1NDA2NzgwOSwtMjE0NjI5MzYyNCwxNT
+I2MTI3NDg2LDUyMzcxNzgzMywtOTgzMDczOTk0LC0xNTQyNDc1
+NzI0XX0=
 -->
