@@ -23,7 +23,7 @@ To predict this SDF they developed a feed-forward neural network that takes a si
 
 ### How is the camera pose estimated 
 For camera pose estimation they use the general approach proposed by Insafutdinov and Dosovitskiy **[???]** . By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
-To reduce those disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$  is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, one can then obtain the rotation matrix $R= (R_x, R_y, R_z)^T$ \in \matbb{R}^3$ with the following formulas:
+To reduce those disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$  is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, one can then obtain the rotation matrix $R= (R_x, R_y, R_z)^T\in \mathbb{R}^{(3\times3)}$ with the following formulas:
 $R_x = N(b_x), R_z = N(R_x \times b_y) , R_y = R_z \times R_x$
 
 with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
@@ -33,7 +33,7 @@ Translation $t \in \matbb{R}^3$ is predicted directly.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjMyMDcxMCwtMTMyMjMwODg3MywyMD
+eyJoaXN0b3J5IjpbMTA2MzA3OTY0MiwtMTMyMjMwODg3MywyMD
 c1MTA1MTI2LC03NzU3NTYxOTQsMzYxOTQ3MzAwLC0xMTI4NjE0
 NzI3LDkwMjY0MTc5NSwtMzIwMTU2MiwtMjEyMTY5MzYwMiw1NT
 QwNjc4MDksLTIxNDYyOTM2MjQsMTUyNjEyNzQ4Niw1MjM3MTc4
