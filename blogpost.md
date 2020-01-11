@@ -24,13 +24,14 @@ To predict this SDF they developed a feed-forward neural network that takes a si
 ### How is the camera pose estimated 
 For camera pose estimation they use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
 To reduce those disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$  is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, one can then obtain the rotation matrix $R =(R_x, R_y, R_z)^T \in \mathbb{R}^{(3x3)}$ with the following formulas:
-$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space  and\space R_y = R_z \times R_x$
+$$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space  and\space R_y = R_z \times R_x$$
 
 with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
 Translation $t \in \mathbb{R}^3$ is predicted directly.
 
 When training this module they use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space. This model space is then set as the world space where all camera parameters are with respect to. For regression a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. The authors have not been precise here, however, probably they transformed the aligned world space objects of ShapeNet Core with different extrinsics to create their ground truth data. As a regression loss they use the Mean-squared-error (MSE) resulting in :
-$L_{cam} = (\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2)/(\sum_{p \in PC_w} 1)$
+$$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
+
 
 
 
@@ -48,7 +49,7 @@ $L_{cam} = (\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2)/(\sum_{p \in PC_w} 1)$
 
 ### What I think
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODE4NjQ1Niw1OTM5MjA5MzYsMTk4Nj
+eyJoaXN0b3J5IjpbMTg1MjgzMTM3OSw1OTM5MjA5MzYsMTk4Nj
 kwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYx
 OTQsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMz
 IwMTU2MiwtMjEyMTY5MzYwMiw1NTQwNjc4MDksLTIxNDYyOTM2
