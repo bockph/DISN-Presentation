@@ -33,12 +33,6 @@ When training this module they use the ShapeNet Core dataset **[25]** , where al
 $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
 
-
-
-
-
-
-
 ### Prediction the Signed Distance Function
 
 ## Evaluating the Approach
@@ -49,11 +43,11 @@ $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
 ### What I think
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1MjgzMTM3OSw1OTM5MjA5MzYsMTk4Nj
-kwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYx
-OTQsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMz
-IwMTU2MiwtMjEyMTY5MzYwMiw1NTQwNjc4MDksLTIxNDYyOTM2
-MjQsMTUyNjEyNzQ4Niw1MjM3MTc4MzMsLTk4MzA3Mzk5NCwtMT
-U0MjQ3NTcyNCwtNDIyODU1NTQyLDIxMjMyMTE2OTgsLTM0OTg5
-MTI4NV19
+eyJoaXN0b3J5IjpbLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5OD
+Y5MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2
+MTk0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLT
+MyMDE1NjIsLTIxMjE2OTM2MDIsNTU0MDY3ODA5LC0yMTQ2Mjkz
+NjI0LDE1MjYxMjc0ODYsNTIzNzE3ODMzLC05ODMwNzM5OTQsLT
+E1NDI0NzU3MjQsLTQyMjg1NTU0MiwyMTIzMjExNjk4LC0zNDk4
+OTEyODVdfQ==
 -->
