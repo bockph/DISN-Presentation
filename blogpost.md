@@ -35,7 +35,7 @@ $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
 ### How is the Signed Distance Function predicted
 The SDF prediction network consists of three different parts. The first is a simple VGG-16 Encoder that extracts global features from the 2D image. 
-The second is the local feature extraction module. It uses the estimated camera pose to project the point $P \in \matbb{R}^3$ onto a 2D location $q \in \matbb{R}^2 on the image plane. Having $q$ the corresponding part in each feature map is extracted and concatenated. As not all feature maps equal the size of the input image, bilinear interpolation is used to resize the feature maps and extract the values.
+The second is the local feature extraction module. It uses the estimated camera pose to project the point $P \in \mathbb{R}^3$ onto a 2D location $q \in \mathbb{R}^2$ on the image plane. Having $q$ the corresponding part in each feature map is extracted and concatenated. As not all feature maps equal the size of the input image, bilinear interpolation is used to resize the feature maps and extract the values.
 The third part is a multilayer perceptron which maps the given point to a higher dimensional feature space. This is then concatenated to both the global and local features. Decoding those results in an SDF value for the overall shape for the former, and a residual SDF for the later. Combining them trough simple addition results in an SDF that also recovers previously missing details of an object. The following figure illustrates the concrete structure of the network.
 
 \image
@@ -58,11 +58,11 @@ $$ L_{SDF} =\sum_p  m | f(I,p) - SDF^I(p)|
 
 ### What I think
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NT
-U0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMw
-NiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQsMz
-YxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMzIwMTU2
-MiwtMjEyMTY5MzYwMiw1NTQwNjc4MDksLTIxNDYyOTM2MjQsMT
-UyNjEyNzQ4Niw1MjM3MTc4MzMsLTk4MzA3Mzk5NCwtMTU0MjQ3
-NTcyNF19
+eyJoaXN0b3J5IjpbMjc1NTA1NjA0LC0xOTIzMjYwNDcyLDE0Nz
+IzNTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2
+LDE5ODY5MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNz
+c1NzU2MTk0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3
+OTUsLTMyMDE1NjIsLTIxMjE2OTM2MDIsNTU0MDY3ODA5LC0yMT
+Q2MjkzNjI0LDE1MjYxMjc0ODYsNTIzNzE3ODMzLC05ODMwNzM5
+OTRdfQ==
 -->
