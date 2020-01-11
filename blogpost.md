@@ -23,11 +23,11 @@ To predict this SDF they developed a feed-forward neural network that takes a si
 
 ### How is the camera pose estimated 
 For camera pose estimation they use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
-To reduce those disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$  is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, one can then obtain the rotation matrix R =(R_x, R_y, R_z)^T \in \matbb{R}^(3x3) with the following formula:
-$R_x = N(b_x), R_z = N(R_x \times b_y) and R_y = R_z \times R_x$
+To reduce those disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$  is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, one can then obtain the rotation matrix $R =(R_x, R_y, R_z)^T \in \mathbb{R}^{(3x3)}$ with the following formulas:
+$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space  and\space R_y = R_z \times R_x$
 
 with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
-Translation $t \in \matbb{R}^3$ is predicted directly.
+Translation $t \in \mathbb{R}^3$ is predicted directly.
 
 When training this module they use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space. This model space is then set as the world space where all camera parameters are with respect to. To calculate the Loss for regression, instead of comparing ground truth (GT) camera parameters to predicted ones they transform a given world space point cloud ($PC_w$)  to camera space using the predicted parameters and then compare it to the GT point cloud $PC_{G}$. The authors have not been precise here, however, probably they transformed the aligned world space objects of ShapeNet Core with different extrinsics to create their ground truth data.
 
@@ -47,11 +47,11 @@ When training this module they use the ShapeNet Core dataset **[25]** , where al
 
 ### What I think
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzk5NDg5MzgsNTkzOTIwOTM2LDE5OD
-Y5MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2
-MTk0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLT
-MyMDE1NjIsLTIxMjE2OTM2MDIsNTU0MDY3ODA5LC0yMTQ2Mjkz
-NjI0LDE1MjYxMjc0ODYsNTIzNzE3ODMzLC05ODMwNzM5OTQsLT
-E1NDI0NzU3MjQsLTQyMjg1NTU0MiwyMTIzMjExNjk4LC0zNDk4
-OTEyODVdfQ==
+eyJoaXN0b3J5IjpbLTIwNjMzMzY2OSw1OTM5MjA5MzYsMTk4Nj
+kwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYx
+OTQsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMz
+IwMTU2MiwtMjEyMTY5MzYwMiw1NTQwNjc4MDksLTIxNDYyOTM2
+MjQsMTUyNjEyNzQ4Niw1MjM3MTc4MzMsLTk4MzA3Mzk5NCwtMT
+U0MjQ3NTcyNCwtNDIyODU1NTQyLDIxMjMyMTE2OTgsLTM0OTg5
+MTI4NV19
 -->
