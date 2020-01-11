@@ -29,7 +29,8 @@ $R_x = N(b_x),\space R_z = N(R_x \times b_y),\space  and\space R_y = R_z \times 
 with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
 Translation $t \in \mathbb{R}^3$ is predicted directly.
 
-When training this module they use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space. This model space is then set as the world space where all camera parameters are with respect to. To calculate the Loss for regression,  a given world space point cloud $PC_w$ is transformed to camera space using the predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. The authors have not been precise here, however, probably they transformed the aligned world space objects of ShapeNet Core with different extrinsics to create their ground truth data. In result the Loss is calculate
+When training this module they use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space. This model space is then set as the world space where all camera parameters are with respect to. For regression a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. The authors have not been precise here, however, probably they transformed the aligned world space objects of ShapeNet Core with different extrinsics to create their ground truth data. As a regression loss they use the Mean-squared-error (MSE) resulting in :
+$$
 
 
 
@@ -47,7 +48,7 @@ When training this module they use the ShapeNet Core dataset **[25]** , where al
 
 ### What I think
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1ODU0NjUyNiw1OTM5MjA5MzYsMTk4Nj
+eyJoaXN0b3J5IjpbMTkwNDY2NzUxMyw1OTM5MjA5MzYsMTk4Nj
 kwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYx
 OTQsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMz
 IwMTU2MiwtMjEyMTY5MzYwMiw1NTQwNjc4MDksLTIxNDYyOTM2
