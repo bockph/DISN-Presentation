@@ -139,19 +139,18 @@ Afterward -- for testing -- the estimated camera parameters are used. However, a
 
 ### Quantitative Evaluation
 
-The improvements of using not only an implicit method but also a local feature extraction module (which other similar approaches did not have yet) are measured by four commonly used metrics:
+The improvements of using not only an implicit method but also a local feature extraction module are measured by four commonly used metrics:
 
-1.  **Earth Mover's Distance (EMD)** is the minimum amount work that has to be done to match two distribution x and y -- in this case prediction and ground truth. Normally, x and y have to be normalized, however, as we are comparing two distributions of equal weights this is no issue. The work itself is calculated using the L2-norm resulting in:$$ EMD(PC,PC_T) = min_{\phi: PC->PC_T} \sum_{p \in PC} ||p-\phi(p)||_2$$
-EMD is better the smaller the value is.
+1.  **Earth Mover's Distance (EMD)** is the minimum amount work that has to be done to match two distribution x and y -- in this case prediction and ground truth. Normally, x and y have to be normalized, however, as we are comparing two distributions of equal weights this is no issue. The work itself is calculated using the L2-norm resulting in:$$ EMD(PC,PC_T) = min_{\phi: PC->PC_T} \sum_{p \in PC} ||p-\phi(p)||_2$$ EMD is better the smaller the value is.
 
 2.  **Chamfer Distance (CD)** calculates the matching distance to the nearest feature in both ways, from $PC to PC_T$ as well as the other way round. Here the distance is calculated as the *squared* L2-Norm leading to the following equation:
-$$ CD(PC,PC_T) = \sum_{p_1 \in PC} min_{p_2 \in PC_T} ||p_1-p_2||^2_2$$
-CD is better the smaller the value is.
+$$ CD(PC,PC_T) = \sum_{p_1 \in PC} min_{p_2 \in PC_T} ||p_1-p_2||^2_2$$CD is better the smaller the value is.
 
 3.  **Intersection over Union (IoU)** is a ratio, measuring how much overlap is present between two distributions. The general formula is given by $IoU = \frac{Intersection}{Union}$. Sadly the paper does not mention any word how they calculated Intersection and Union. Nonetheless, for evaluation, we can say the larger the value the better.
-4.  **F-score** gives a percentage of how much area was reconstructed correctly. For its calculation, we need two measures: Precision and Recall. The former describes a ratio between all predicted points with a distance to the closest ground truth point smaller than a threshold $t$ and all generated points, while the later similarly describes a ratio between all ground truth points with a distance to the closest predicted point smaller than a threshold $t$. Having precision and recall, the F-score is calculated by:
+4.  **F-score** gives a percentage of how much area was reconstructed correctly. For its calculation, we need two measures: Precision and Recall. 
+The former describes a ratio between all predicted points with a distance to the closest ground truth point smaller than a threshold $t$ and all generated points, while the later similarly describes a ratio between all ground truth points with a distance to the closest predicted point smaller than a threshold $t$. Having precision and recall, the F-score is calculated by:
 
-$$ F-score =2* \frac{Precision*Recall}{Precision+Recall}
+$$ \text{F-score} =2* \frac{Precision*Recall}{Precision+Recall}$$
 
 Here counts the higher the better, while a small threshold describes the biggest similarity.
 
@@ -187,11 +186,11 @@ Here counts the higher the better, while a small threshold describes the biggest
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzMwNDk3MjEsOTE0NjU1MTI0LC0xMT
-MwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1NDIw
-NjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MDgzMDYsLT
-EzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0LDM2MTk0
-NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLTMyMDE1NjIsLT
-IxMjE2OTM2MDIsNTU0MDY3ODA5LC0yMTQ2MjkzNjI0LDE1MjYx
-Mjc0ODZdfQ==
+eyJoaXN0b3J5IjpbMTE4MDUxMjM0Myw5MTQ2NTUxMjQsLTExMz
+A3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2
+MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMwNiwtMT
+MyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQsMzYxOTQ3
+MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMzIwMTU2MiwtMj
+EyMTY5MzYwMiw1NTQwNjc4MDksLTIxNDYyOTM2MjQsMTUyNjEy
+NzQ4Nl19
 -->
