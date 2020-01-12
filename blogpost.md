@@ -147,7 +147,8 @@ The improvements of using not only an implicit method but also a local feature e
 $$ CD(PC,PC_T) = \sum_{p_1 \in PC} min_{p_2 \in PC_T} ||p_1-p_2||^2_2$$CD is better the smaller the value is.
 
 3.  **Intersection over Union (IoU)** is a ratio, measuring how much overlap is present between two distributions. The general formula is given by $IoU = \frac{Intersection}{Union}$. Sadly the paper does not mention any word how they calculated Intersection and Union. Nonetheless, for evaluation, we can say the larger the value the better.
-4.  **F-score** gives a percentage of how much area was reconstructed correctly. For its calculation, we need two measures: Precision and Recall. 
+4.  **F-score** gives a percentage of how much area was reconstructed correctly. For its calculation, we need two measures: 
+	- $Precision = \frac{|predicted poi}{}$Precision and Recall. 
 The former describes a ratio between all predicted points with a distance to the closest ground truth point smaller than a threshold $t$ and all generated points, while the later similarly describes a ratio between all ground truth points with a distance to the closest predicted point smaller than a threshold $t$. Having precision and recall, the F-score is calculated by:
 
 $$ \text{F-score} =2* \frac{Precision*Recall}{Precision+Recall}$$
@@ -186,7 +187,7 @@ Here counts the higher the better, while a small threshold describes the biggest
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MDUxMjM0Myw5MTQ2NTUxMjQsLTExMz
+eyJoaXN0b3J5IjpbMTA4NTM1MDQxMSw5MTQ2NTUxMjQsLTExMz
 A3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2
 MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMwNiwtMT
 MyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQsMzYxOTQ3
