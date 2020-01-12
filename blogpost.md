@@ -111,9 +111,9 @@ This includes the Dataset as well as the preparation training and testing implem
 
 #### Dataset
 
-For the training of the test setup the ShapeNet Core **[...]** dataset has been used. According to the [official website](https://www.shapenet.org/) It "is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations. It covers 55 common object categories with about 51,300 unique 3D models." However, to make the evaluation comparable, the official training/test split on 13 object categories is used. Furthermore, to obtain 2D images the renderings of Choy et al **[28]** are employed. This is quite good work as most of the aforementioned other approaches (**[Atlas, Pixel,3DN, OccNet]** ) did it the same way.
+For the training of the test setup the ShapeNet Core **[...]** dataset has been used. According to the [official website](https://www.shapenet.org/) it "is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations. It covers 55 common object categories with about 51,300 unique 3D models." However, to make the evaluation comparable, the official training/test split on 13 object categories is used. Furthermore, to obtain 2D images the renderings of Choy et al **[28]** are employed. This is quite good work as most of the aforementioned other approaches (**[Atlas, Pixel,3DN, OccNet]** ) did it the same way.
 
-*As an additional contribution they rendered a [new 2D dataset](https: //github.com/Xharlie/ShapenetRender_more_variation)  that contains 5 degrees of freedom (DoF) at a Resolution of $224\times224$ -- pairing each image also "with a depth image, a normal map and an albedo image provided by blender". While this is an improvement over Choy et al. providing only 3 DoF and a resolution of $137\times137$, it is not used in the official evaluation"*
+*As an additional contribution they rendered a [new 2D dataset](https://github.com/Xharlie/ShapenetRender_more_variation)  that contains 5 degrees of freedom (DoF) at a Resolution of $224\times224$ -- pairing each image also "with a depth image, a normal map and an albedo image provided by blender". While this is an improvement over Choy et al. providing only 3 DoF and a resolution of $137\times137$, it is not used in the official evaluation"*
 
   
 
@@ -183,11 +183,11 @@ $$ \text{F-score} =2* \frac{Precision*Recall}{Precision+Recall}$$ Here counts th
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0NzEzOTczNSwtMjEyMDcyNjcyOCw5MT
-Q2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1
-NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMT
-k4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3
-NTYxOTQsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NS
-wtMzIwMTU2MiwtMjEyMTY5MzYwMiw1NTQwNjc4MDksLTIxNDYy
-OTM2MjRdfQ==
+eyJoaXN0b3J5IjpbLTE2MDY0NjYyNjcsLTIxMjA3MjY3MjgsOT
+E0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIz
+NTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LD
+E5ODY5MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1
+NzU2MTk0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3OT
+UsLTMyMDE1NjIsLTIxMjE2OTM2MDIsNTU0MDY3ODA5LC0yMTQ2
+MjkzNjI0XX0=
 -->
