@@ -148,11 +148,8 @@ $$ CD(PC,PC_T) = \sum_{p_1 \in PC} min_{p_2 \in PC_T} ||p_1-p_2||^2_2$$CD is bet
 
 3.  **Intersection over Union (IoU)** is a ratio, measuring how much overlap is present between two distributions. The general formula is given by $IoU = \frac{Intersection}{Union}$. Sadly the paper does not mention any word how they calculated Intersection and Union. Nonetheless, for evaluation, we can say the larger the value the better.
 4.  **F-score** gives a percentage of how much area was reconstructed correctly. For its calculation, we need two measures: Precision and Recall. 
-The former describes a ratio between all **predicted points** with a distance to the closest ground truth point smaller than a threshold $t$ and all generated points, while the later similarly describes a ratio between all **ground truth points** with a distance to the closest predicted point smaller than a threshold $t$ and. Having precision and recall, the F-score is calculated by:
-
-$$ \text{F-score} =2* \frac{Precision*Recall}{Precision+Recall}$$
-
-Here counts the higher the better, while a small threshold describes the biggest similarity.
+The former describes a ratio between all **predicted points** with a distance to the closest ground truth point smaller than a threshold $t$ and all generated points, while the later similarly describes a ratio between all **ground truth points** with a distance to the closest predicted point smaller than $t$ and all ground truth points. Having precision and recall, the F-score is calculated by:
+$$ \text{F-score} =2* \frac{Precision*Recall}{Precision+Recall}$$ Here counts the higher the better, while a smaller threshold describes a bigger similarity.
 
   
 
@@ -186,11 +183,11 @@ Here counts the higher the better, while a small threshold describes the biggest
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MzcxMTM2LDkxNDY1NTEyNCwtMTEzMD
-c0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQsOTU1NTQyMDYy
-LC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwxOTg2OTA4MzA2LC0xMz
-IyMzA4ODczLDIwNzUxMDUxMjYsLTc3NTc1NjE5NCwzNjE5NDcz
-MDAsLTExMjg2MTQ3MjcsOTAyNjQxNzk1LC0zMjAxNTYyLC0yMT
-IxNjkzNjAyLDU1NDA2NzgwOSwtMjE0NjI5MzYyNCwxNTI2MTI3
-NDg2XX0=
+eyJoaXN0b3J5IjpbLTIxMjA3MjY3MjgsOTE0NjU1MTI0LC0xMT
+MwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1NDIw
+NjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MDgzMDYsLT
+EzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0LDM2MTk0
+NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLTMyMDE1NjIsLT
+IxMjE2OTM2MDIsNTU0MDY3ODA5LC0yMTQ2MjkzNjI0LDE1MjYx
+Mjc0ODZdfQ==
 -->
