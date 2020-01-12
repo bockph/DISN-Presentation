@@ -103,7 +103,7 @@ m_2, & \text{otherwise}
 
 ## Evaluation of DISN
 
-In order to evaluate whether the goal of reconstructing high-quality fine-grained 3D shapes has been achieved extensive evaluation and comparison against the previously mentioned methods have been done. Herefore qualitative, as well as Quantitative evaluation on single-view 3D reconstruction, was performed. Additionally, the performance of the adapted camera pose estimation was examined against the original approach. In the last step Ablation studies have been conducted showing again qualitative as well as quantitative results.
+In order to evaluate whether the goal of reconstructing high-quality fine-grained 3D shapes has been achieved extensive evaluation and comparison against the previously mentioned methods (**[...]**) have to been done. Herefore qualitative (visual), as well as quantitative evaluation results on single-view 3D reconstruction, are provided . Additionally, the performance of the adapted camera pose estimation was examined against the original approach. In the last step Ablation studies have been conducted showing again qualitative as well as quantitative results.
 
 ### Experimental setup
 
@@ -111,13 +111,13 @@ This includes the Dataset as well as the preparation training and testing implem
 
 #### Dataset
 
-For the training of the test setup the ShapeNet Core **[...] ** dataset has been used. According to the official website (**LINK**: [https://www.shapenet.org/](https://www.shapenet.org/)) It "is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations. It covers 55 common object categories with about 51,300 unique 3D models." However, to make the evaluation comparable, the official training/test split on 13 object categories is used. Furthermore, to obtain 2D images the renderings of Choy et al **[28]** are employed. This is quite good work as most of the aforementioned other approaches (**[Atlas, Pixel,3DN, OccNet]** ) did it the same way.
+For the training of the test setup the ShapeNet Core **[...]** dataset has been used. According to the official website (**LINK**: [https://www.shapenet.org/](https://www.shapenet.org/)) It "is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations. It covers 55 common object categories with about 51,300 unique 3D models." However, to make the evaluation comparable, the official training/test split on 13 object categories is used. Furthermore, to obtain 2D images the renderings of Choy et al **[28]** are employed. This is quite good work as most of the aforementioned other approaches (**[Atlas, Pixel,3DN, OccNet]** ) did it the same way.
 
 *As an additional contribution they rendered a new 2D dataset (**LINK:**:https: //github.com/Xharlie/ShapenetRender_more_variation w) that contains 5 degrees of freedom (DoF) at a Resolution of $224\times224$ -- pairing each image also "with a depth image, a normal map and an albedo image provided by blender". While this is an improvement over Choy et al. providing only 3 DoF and a resolution of $137\times137$, it is not used in the official evaluation"*
 
   
 
-####Data Preparation
+#### Data Preparation
 
 In the data preparation step, two things have to be done: The first, ground truth data for camera pose estimation is needed. Herefore, the rendering of Choy et al. is used. The renderings provide different viewpoints of the objects in the main data set together with annotation of their transformation from world to camera space. Second, SDF ground truth data has to be generated. Following the approaches of **[29,30]** this is done by an SDF grid resolution of $256^3$. Nonetheless, as one is mostly interested in SDF values close to the iso-surface it is not necessary to train on all $256^3 = 16,777,216$ values. To reduce this number, Monte Carlo sampling under Gaussian distribution $\mathbb{N}(0,0.1) is used to choose 2048 grid points for training.
 
@@ -127,7 +127,7 @@ In the data preparation step, two things have to be done: The first, ground trut
 
 In the training procedure, the two networks (camera pose estimation and SDF prediction) are trained individually, using for the latter ground truth camera parameters. As hyperparameters using Adam optimizer the following values are chosen:
 
-$$m_1 = 4, m_2 =1, \delta = 0.001 \\ \alpha = 0.0001, batch size = 16$$
+$$m_1 = 4, \space m_2 =1, \space \delta = 0.001 \\ \alpha = 0.0001,\space \text{batch size} = 16$$
 
 Convergence takes 50 epochs.
 
@@ -137,11 +137,43 @@ Afterward -- for testing -- the estimated camera parameters are used. However, a
 
   
 
-  
+### Quantitative Evaluation
+
+The improvements of using not only an implicit method but also a local feature extraction module (which other similar approaches did not have yet) are measured by four commonly used metrics:
+
+1.  **Earth Mover's Distance (EMD)** is the minimum amount work that has to be done to match two distribution x and y -- in this case prediction and ground truth. Normally, x and y have to be normalized, however, as we are comparing two distributions of equal weights this is no issue. The work itself is calculated using the L2-norm resulting in:$$ EMD(PC,PC_T) = min_{\phi: PC->PC_T} \sum_{p \in PC} ||p-\phi(p)||_2$$
+EMD is better the smaller the value is.
+
+2.  **Chamfer Distance (CD)** calculates the matching distance to the nearest feature in both ways, from $PC to PC_T$ as well as the other way round. Here the distance is calculated as the *squared* L2-Norm leading to the following equation:
+$$ CD(PC,PC_T) = \sum_{p_1 \in PC} min_{p_2 \in PC_T} ||p_1-p_2||^2_2$$
+CD is better the smaller the value is.
+
+3.  **Intersection over Union (IoU)** is a ratio, measuring how much overlap is present between two distributions. The general formula is given by $IoU = \frac{Intersection}{Union}$. Sadly the paper does not mention any word how they calculated Intersection and Union. Nonetheless, for evaluation, we can say the larger the value the better.
+4.  **F-score** gives a percentage of how much area was reconstructed correctly. For its calculation, we need two measures: Precision and Recall. The former describes a ratio between all predicted points with a distance to the closest ground truth point smaller than a threshold $t$ and all generated points, while the later similarly describes a ratio between all ground truth points with a distance to the closest predicted point smaller than a threshold $t$. Having precision and recall, the F-score is calculated by:
+
+$$ F-score =2* \frac{Precision*Recall}{Precision+Recall}
+
+Here counts the higher the better, while a small threshold describes the biggest similarity.
 
   
 
-## Some Discussion about this paper
+####Pose Estimation results
+
+  
+
+### Qualitative Evaluation
+
+  
+
+###Ablation studies
+
+  
+
+##Additional Work
+
+  
+
+## Conclusion
 
   
 
@@ -150,12 +182,16 @@ Afterward -- for testing -- the estimated camera parameters are used. However, a
   
 
 ### What I think
+
+  
+
+##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOT
-IzMjYwNDcyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2NjM5Nzkz
-OTMsNTkzOTIwOTM2LDE5ODY5MDgzMDYsLTEzMjIzMDg4NzMsMj
-A3NTEwNTEyNiwtNzc1NzU2MTk0LDM2MTk0NzMwMCwtMTEyODYx
-NDcyNyw5MDI2NDE3OTUsLTMyMDE1NjIsLTIxMjE2OTM2MDIsNT
-U0MDY3ODA5LC0yMTQ2MjkzNjI0LDE1MjYxMjc0ODYsNTIzNzE3
-ODMzXX0=
+eyJoaXN0b3J5IjpbLTEzMzMwNDk3MjEsOTE0NjU1MTI0LC0xMT
+MwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1NDIw
+NjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MDgzMDYsLT
+EzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0LDM2MTk0
+NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLTMyMDE1NjIsLT
+IxMjE2OTM2MDIsNTU0MDY3ODA5LC0yMTQ2MjkzNjI0LDE1MjYx
+Mjc0ODZdfQ==
 -->
