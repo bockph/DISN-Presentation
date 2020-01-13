@@ -206,7 +206,7 @@ For DISN the authors wanted to find out what impact the camera pose estimation, 
 
 #### Camera Pose estimation
 
-As the local feature extraction module is directly dependant on the pose estimation, one wants to how big this influence is and whether the further improvement is crucial here. Especially, as the evaluation of the pose estimation network (Table 3) has shown that an average reprojection error of 2.95 pixels is introduced to the network. After conducting the ablation studies one can see (depicted in Table 1) that constantly better results can be achieved if true camera parameters are used. However, as already stated this might not be a crucial issue as the difference in metrics between estimated and true values is lower than the difference to most other approaches.
+As the local feature extraction module is directly dependant on the pose estimation, one wants to how big this influence is and whether the further improvement is crucial here. Especially, as the evaluation of the pose estimation network (see also table 3) has shown that an average reprojection error of 2.95 pixels is introduced to the network. After conducting the ablation studies one can see (depicted in table 1) that constantly better results can be achieved if true camera parameters are used. However, as already stated this might not be a crucial issue as the difference in metrics between estimated and true values is lower than the difference to most other approaches.
 
 When looking at figure 5 and 6 one can further, conclude that there are small differences but the overall aim is still met.
 
@@ -222,7 +222,7 @@ While quantitative results are slightly worse than the original proposed DISN th
 
 #### Removal of Local Feature Extraction Module
 
-The authors of the DISN paper presents their additional local feature extraction module as their key finding for 3D reconstruction. Therefore, to validate its effectiveness its is completely removed from the network and the results in Table 4 and figure 6 are labeled as Global. Surprisingly, while IoU is nearly equal, EMD and CD are better compared to the Binary studies -- this is unexpected as this implies a stronger impact of the classifier change than the one of adding local feature extraction. Notwithstanding, the qualitative results of the chair lose a lot of detail and seem to be more similar to IMNET or OCCNET than to DISN.
+The authors of the DISN paper presents their additional local feature extraction module as their key finding for 3D reconstruction. Therefore, to validate its effectiveness its is completely removed from the network and the results in table 4 and figure 6 are labeled as Global. Surprisingly, while IoU is nearly equal, EMD and CD are better compared to the Binary studies -- this is unexpected as this implies a stronger impact of the classifier change than the one of adding local feature extraction. Notwithstanding, the qualitative results of the chair lose a lot of detail and seem to be more similar to IMNET or OCCNET than to DISN.
 
   
 
@@ -290,11 +290,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MDk0NTkwMSw4Mjg3MTQ0MjcsNDY2MD
-I3MDMxLC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1
-NzYsLTEzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMT
-gsMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIx
-MjA3MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMj
-YwNDcyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMs
-NTkzOTIwOTM2XX0=
+eyJoaXN0b3J5IjpbNTk3ODAzNzk3LDgyODcxNDQyNyw0NjYwMj
+cwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3
+NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOC
+wyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEy
+MDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNj
+A0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1
+OTM5MjA5MzZdfQ==
 -->
