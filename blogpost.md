@@ -74,9 +74,7 @@ m_2, & \text{otherwise}
 \end{cases}$$
 ## Evaluation of DISN
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 5: Single-view 3D reconstruction results of DISN and the other presented methods. The ground truth is denoted by 'GT'. Taken from [1]*
-
-  
+*Figure 5: Single-view 3D reconstruction results of DISN and the other presented methods. The ground truth is denoted by 'GT'. Taken from [1]*  
 
 In order to evaluate whether the goal of reconstructing high-quality fine-grained 3D shapes has been achieved extensive evaluation and comparison against the previously mentioned methods (**[...]**) have to been done. To do this, qualitative (visual), as well as quantitative evaluation results on single-view 3D reconstruction, are provided. Additionally, the performance of the adapted camera pose estimation is examined against the original approach. In the last step Ablation studies have been conducted showing again qualitative as well as quantitative results.  
 
@@ -165,13 +163,7 @@ The results for EMD, CD, and IoU are presented in the following table 1. Each me
 
 Besides, a version of DISN is evaluated using the ground truth camera parameters denoted $'Ours'$ whereas the normal version using predicted camera parameters is denoted as $'Ours_cam'$.
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-
-  
-
-<center><i>Table 1: Quantitative results on ShapeNet Core for the above presented methods. Metrics are CD ($\times 0.001$), EMD ($\times 100$) and IoU(%). CD and EMD are computed on 2048 points.[1]</i></center>
-
-  
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 1: Quantitative results on ShapeNet Core for the above presented methods. Metrics are CD ($\times 0.001$), EMD ($\times 100$) and IoU(%). CD and EMD are computed on 2048 points.[1]*
 
 The quantitative results show that, on average, DISN is superior using EMD and IoU. In CD it is only beaten by 3DN. Nevertheless, as explained above this method requires further information in the form of a source mesh.
 
@@ -179,9 +171,7 @@ The quantitative results show that, on average, DISN is superior using EMD and I
 
 The F-score results are shown in Table 2. One can see that, apart from a threshold of 20%, DISN again is superior to the other methods. Something to point out here is that, especially for Low thresholds, DISN is superior to the other methods by up to 1.5% at a threshold of 0.5% and up to 3.2% at a 1% threshold. As this difference is constantly declining when the threshold reaches higher than 2%, one can see strong indications that especially fine-grained details that correlate with small distances/threshold values are improved, while the overall shape produces similar values.
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-
-<center><i>Table 2: F-score results[1]</i></center>
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 2: F-score results[1]</i></center>
 
   
 
@@ -311,11 +301,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLT
-E1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0
-NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3Mj
-U4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2
-NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MDgzMDYsLTEzMjIzMD
-g4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0LDM2MTk0NzMwMCwt
-MTEyODYxNDcyN119
+eyJoaXN0b3J5IjpbMTM5NjgyMTg0MywtMTMxNDg0ODY0OSwtMT
+QyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5
+MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMj
+QsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1
+NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwOD
+MwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQs
+MzYxOTQ3MzAwXX0=
 -->
