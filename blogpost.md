@@ -291,14 +291,21 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 ## References
 [1] 
 
+Occnet:
 Lars Mescheder, Michael Oechsle, Michael Niemeyer, Sebastian Nowozin, and Andreas Geiger. Occupancy networks: Learning 3d reconstruction in function space. In CVPR, 2019.
 
+Atlasnet
+
+pixel2mesh
+
+IMNEt
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzA3NzA0NDEsODI4NzE0NDI3LDQ2Nj
-AyNzAzMSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5
-NTc2LC0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MT
-E4LDI0MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0y
-MTIwNzI2NzI4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMz
-I2MDQ3MiwxNDcyMzU3NTQsOTU1NTQyMDYyLC0xNjYzOTc5Mzkz
-LDU5MzkyMDkzNl19
+eyJoaXN0b3J5IjpbLTg1NjEzODYxMSw4Mjg3MTQ0MjcsNDY2MD
+I3MDMxLC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1
+NzYsLTEzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMT
+gsMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIx
+MjA3MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMj
+YwNDcyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMs
+NTkzOTIwOTM2XX0=
 -->
