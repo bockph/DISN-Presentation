@@ -13,7 +13,7 @@
 
   
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Figure 1: 3D shape reconstruction from a 2D image using DISN . Taken from [1]*
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/1_title.png?raw=true)*Figure 1: 3D shape reconstruction from a 2D image using DISN . Taken from [1]*
 
 While humans are quite good at recognizing objects and deriving their properties, for machines it is a rather complex task to recover a 3D shape from a single view. Since this capability is a core technology, necessary in a variety of fields, it is an important object of research in 3D computer vision. Major progress has been achieved here, especially in the last few years through the introduction of deep learning. While most recent work already delivers quite decent results on recovering the overall shape, retrieving fine-grained details was not a major focus so far. In practice, this means small structures like holes have mostly been ignored in the reconstruction processes. To tackle this drawback Wang et al. presented "DISN: Deep Implicit Surface Network for High-quality single-view 3D Reconstruction" at the Conference on neural information processing systems (NeurIPS) 2019.
 
@@ -32,13 +32,13 @@ Recent works like *IMNet* or *OccNet* predict such functions and have shown to b
 ## A two-step approach 
 
 To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. represent a 3D object implicitly using a Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface. As this function is continuous, DISN reconstructs objects with arbitrary resolution.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Figure 2: SDF visualization blabla Taken from [1]*
+![https://github.com/bockph/DISN-Presentation/blob/master/images/3_cameraPoseNetwork.png?raw=true)*Figure 2: SDF visualization blabla Taken from [1]*
 
 To predict this SDF they developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network additionally to the global feature encoder.
 
 ### How is the camera pose estimated?
 For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/3_cameraPoseNetwork.png?raw=true)
 *Figure  3: The camera pose estimation network. Taken from [supplementary](https://xharlie.github.io/images/neurips_2019_supp.pdf) of [1]*
 
 To reduce these disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$ is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, the rotation matrix $R =(R_x, R_y, R_z)^T \in \mathbb{R}^{(3x3)}$ is obtained with the following equations:
@@ -291,11 +291,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMT
-g4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2
-MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2Nj
-I2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgs
-LTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mz
-k3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3
-MywyMDc1MTA1MTI2XX0=
+eyJoaXN0b3J5IjpbLTI5MTcxNjcwNywtMTAwOTk0NTc4OCwxMz
+gyMzM1ODY2LC0xODgxNjk5NTc2LC0xMzE0ODQ4NjQ5LC0xNDI4
+MDY1NDI2LC0xNTYzOTI2MTE4LDI0MzU5ODIxMiwyMDMzNjkwNz
+k0LC0xNjA2NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NTEyNCwt
+MTEzMDc0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQsOTU1NT
+QyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwxOTg2OTA4MzA2
+LC0xMzIyMzA4ODczXX0=
 -->
