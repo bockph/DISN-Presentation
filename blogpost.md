@@ -229,10 +229,9 @@ The authors of the DISN paper presents their additional local feature extraction
 
 #### Different Network structures
 
+
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-
-<center><i>Figure : F-score results[1]</i></center>
-
+*Figure 6: XXX  Taken from [1]*  
   
 
 As their last ablation study, the authors create a second SDF prediction network called One-stream (Figure Z). Different from the actual proposed one, only one decoder is used and both global and local features are concatenated. The only slightly inferior quantitative as well as qualitative results of one-stream vs two-stream (which is the proposed approach) show that DISN can be implemented by different network structures.
@@ -244,20 +243,14 @@ As their last ablation study, the authors create a second SDF prediction network
 To further, show the capabilities of DISN three applications are employed and briefly depicted:
 
 1.  Shape interpolation -- generates plausible shapes between two different key-objects, using interpolation. Figure **S** shows that when interpolation is applied to both global and local features, a gradual transformation is possible.
-
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-
-<center><i>Figure : Shape interpolation result[1]</i></center>
+*Figure 6: Shapeinterpolation results. Taken from [1]*  
 
 1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (Figure **kk**) do not look as nice as the ones of the official test set, they still return plausible predictions.
-
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+*Figure 6: Results on single-view 3D reconstruction with online product images. Taken from [1]*  
 
-<center><i>Figure : Shape interpolation results[1]</i></center>
-
-1.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As Figure **kkk** shows training such an extended architecture with two additional views can result in better predictions.
-
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+3.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As Figure **kkk** shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 
 <center><i>Figure : Multi-view reconstruction results. (b) shows the result from single-view input (a), while (e) is predicted using (a), (c) and (d).[1]</i></center>
 
@@ -297,11 +290,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODE2OTk1NzYsLTEzMTQ4NDg2NDksLT
-E0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2
-OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MT
-I0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5
-NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MD
-gzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0
-LDM2MTk0NzMwMF19
+eyJoaXN0b3J5IjpbLTkzMTMwMDQ0MCwtMTg4MTY5OTU3NiwtMT
+MxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1
+OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNj
+cyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIs
+MTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5Mj
+A5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2
+LC03NzU3NTYxOTRdfQ==
 -->
