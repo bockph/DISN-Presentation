@@ -289,7 +289,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
   
 
 ## References
-[1] 
+[1] Weiyue Wang, Qiangeng Xu, Duygu Ceylan, Radomir Mech, and Ulrich Neumann. DISN: Deep Implicit Surface Network for High-quality Single-view 3D Reconstruction. In NeurIPS, 2019
 
 Occnet:
 Lars Mescheder, Michael Oechsle, Michael Niemeyer, Sebastian Nowozin, and Andreas Geiger. Occupancy networks: Learning 3d reconstruction in function space. In CVPR, 2019.
@@ -321,7 +321,7 @@ Christopher B Choy, Danfei Xu, JunYoung Gwak, Kevin Chen, and Silvio Savarese. 3
 Pose estimation
 Eldar Insafutdinov and Alexey Dosovitskiy. Unsupervised learning of shape and pose with differentiable point clouds. In NeurIPS, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NzIxMDgwNiwtODU2MTM4NjExLDgyOD
+eyJoaXN0b3J5IjpbLTYxMjgxNDgzMCwtODU2MTM4NjExLDgyOD
 cxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2
 NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNi
 wtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYw
