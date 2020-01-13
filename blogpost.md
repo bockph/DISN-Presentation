@@ -13,59 +13,28 @@
 
   
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-
-  
-
-<center><i>Figure 1: 3D shape reconstruction from a 2D image using DISN . Taken from [1]</i></center>
-
-  
-
-  
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Figure 1: 3D shape reconstruction from a 2D image using DISN . Taken from [1]*
 
 While humans are quite good at recognizing objects and deriving their properties, for machines it is a rather complex task to recover a 3D shape from a single view. Since this capability is a core technology, necessary in a variety of fields, it is an important object of research in 3D computer vision. Major progress has been achieved here, especially in the last few years through the introduction of deep learning. While most recent work already delivers quite decent results on recovering the overall shape, retrieving fine-grained details was not a major focus so far. In practice, this means small structures like holes have mostly been ignored in the reconstruction processes. To tackle this drawback Wang et al. presented "DISN: Deep Implicit Surface Network for High-quality single-view 3D Reconstruction" at the Conference on neural information processing systems (NeurIPS) 2019.
 
-  
-
-In their publication, a Neural Network is presented as being capable of reconstructing both a high-quality overall shape as well as fine-grained details. While this post is about presenting their work in a more understandable manner, the original paper, as well as the official code, can be found here: https://github.com/laughtervv/DISN
-
-  
-
-  
+In their publication, a Neural Network is presented as being capable of reconstructing both a high-quality overall shape as well as fine-grained details. While this post is about presenting their work in a more understandable manner, the original paper, as well as the official code, can be found [here](https://github.com/laughtervv/DISN): 
 
 ## How does contemporary research solve the problem of single-view 3D reconstruction?
 
-  
-
-  
-
 Modern research shows that as of now deep learning is the state-of-the-art technique for single-view 3D reconstruction. However, apart from the Neural Network structures, the approaches differ in the way 3D shapes are represented in the networks. Therefore, we can cluster the related work into two distinct representation methods:
-
-  
-
-  
 
 - **explicit methods ---** describe a 3D model as a solid using e.g. point clouds, voxels or meshes. The main advantage of such a method is its intuitiveness which also makes them easy to encode e.g. in a Neural Network. However, these methods suffer from limited resolution and fixed mesh topologies. Further, traditionally applied training losses like Earth-mover Distance (EMD) or Chamfer Distance (CD) only approximate the similarity of shape and are therefore not accurate.
 Examples that were compared to DISN are *AtlasNet*, *Pixel2Mesh*, and *3DN*. While the first uses a set of parametric elements to generate 3D surfaces, the latter two reconstruct 3D shapes by deforming a given source mesh. For this, Pixel2Mesh uses a hardcoded Ellipsoid-mesh while 3DN expects the source Mesh as an input.
 
-- **implicit methods ---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface. Recent works like *IMNet* or *OccNet* predict such functions and have shown to be capable of avoiding the drawbacks of explicit methods. Nonetheless, none of these works has been capable of reconstructing fine-grained details.
+- **implicit methods ---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface. 
+Recent works like *IMNet* or *OccNet* predict such functions and have shown to be capable of avoiding the drawbacks of explicit methods. Nonetheless, none of these works has been capable of reconstructing fine-grained details.
 
-  
-
-  
-
-## A two-step approach
-
-  
+## A two-step approach 
 
 To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. represent a 3D object implicitly using a Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface. As this function is continuous, DISN reconstructs objects with arbitrary resolution.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Figure 2: SDF visualization blabla Taken from [1]*
 
 To predict this SDF they developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network additionally to the global feature encoder.
-
-  
-
-  
 
 ### How is the camera pose estimated?
 For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
@@ -364,11 +333,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzI5Mjg1ODcsLTE1NjM5MjYxMTgsMj
-QzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3
-MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwND
-cyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkz
-OTIwOTM2LDE5ODY5MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNT
-EyNiwtNzc1NzU2MTk0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5
-MDI2NDE3OTVdfQ==
+eyJoaXN0b3J5IjpbMTQwMjAxMjM0NCwtMTU2MzkyNjExOCwyND
+M1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcy
+NjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0Nz
+IsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5
+MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MT
+I2LC03NzU3NTYxOTQsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkw
+MjY0MTc5NV19
 -->
