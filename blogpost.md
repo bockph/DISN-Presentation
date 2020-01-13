@@ -38,13 +38,15 @@ To achieve the goal of reconstructing both overall shape as well as fine-grained
 To predict this SDF they developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network additionally to the global feature encoder.
 
 ### How is the camera pose estimated?
-For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
+For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy [7]. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/3_cameraPoseNetwork.png?raw=true)
 *Figure  3: The camera pose estimation network. Taken from [supplementary](https://xharlie.github.io/images/neurips_2019_supp.pdf) of [1]*
 
 To reduce these disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$ is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, the rotation matrix $R =(R_x, R_y, R_z)^T \in \mathbb{R}^{(3x3)}$ is obtained with the following equations:
 $$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space and\space R_y = R_z \times R_x$$
-with $N(\cdot)$ being the normalization function and '$\times$' the cross product.**[?Zhou et al. ]** Translation $t \in \mathbb{R}^3$ is predicted directly.
+with $N(\cdot)$ being the normalization function and '$\times$' the cross product. [8]
+ Translation $t \in \mathbb{R}^3$ is predicted directly.
+
  #### Loss calcualtion for pose estimation
 When training this network (Figure 3), the authors use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space, and the renderings provided by Choy et al **[28]**. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
 
@@ -301,6 +303,10 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 [6] Lars Mescheder, Michael Oechsle, Michael Niemeyer, Sebastian Nowozin, and Andreas Geiger. Occupancy networks: Learning 3d reconstruction in function space. In CVPR, 2019.
 
+[7] Eldar Insafutdinov and Alexey Dosovitskiy. Unsupervised learning of shape and pose with differentiable point clouds. In NeurIPS, 2018.
+
+[8] Yi Zhou, Connelly Barnes, Jingwan Lu, Jimei Yang, and Hao Li. On the continuity of rotation representations in neural networks. arXiv preprint arXiv:1812.07035, 2018.
+
 Occnet:
 Lars Mescheder, Michael Oechsle, Michael Niemeyer, Sebastian Nowozin, and Andreas Geiger. Occupancy networks: Learning 3d reconstruction in function space. In CVPR, 2019.
 
@@ -330,7 +336,7 @@ Christopher B Choy, Danfei Xu, JunYoung Gwak, Kevin Chen, and Silvio Savarese. 3
 Pose estimation
 Eldar Insafutdinov and Alexey Dosovitskiy. Unsupervised learning of shape and pose with differentiable point clouds. In NeurIPS, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MzcwMzE1MCwtODU2MTM4NjExLDgyOD
+eyJoaXN0b3J5IjpbMTY5MTc4OTYwMiwtODU2MTM4NjExLDgyOD
 cxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2
 NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNi
 wtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYw
