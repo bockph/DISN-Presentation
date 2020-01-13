@@ -201,7 +201,7 @@ To further, test the effectiveness and robustness of the approach Ablation studi
 
 For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in Figure 6 for the former and table **4** for the latter.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 6: XXX  Taken from [1]*  
+*Figure 7: Qualitative results for the category 'chair' when employing the different ablation studies  Taken from [1]*  
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 4: XXX . Taken from [1]*
   
 
@@ -289,9 +289,9 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
   
 
-## Sources
+## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2ODg4Mzc1NywtMTg4MTY5OTU3NiwtMT
+eyJoaXN0b3J5IjpbMTM3MjU1Mjg4MywtMTg4MTY5OTU3NiwtMT
 MxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1
 OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNj
 cyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIs
