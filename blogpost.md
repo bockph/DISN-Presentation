@@ -61,7 +61,7 @@ The SDF prediction network consists of three encoders:
 
   
 
-Having the global and local features encoded together with the higher dimensional query point, the two embedding vectors are then decoded separetly. This results then in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network: ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+Having the global and local features encoded together with the higher dimensional query point, the two embedding vectors are then decoded separetly. This results then in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network: ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/4_sdfNetworkTwoStream.png?raw=true)
 *Figure 4: The SDF network model. Taken from [1]*
 
  #### Loss calcualtion for SDF prediction
@@ -74,7 +74,7 @@ m_1, &SDF^I(p) >\delta \\
 m_2, & \text{otherwise}
 \end{cases}$$
 ## Evaluation of DISN
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/5_qualitative.png?raw=true)
 *Figure 5: Single-view 3D reconstruction results of DISN and the other presented methods. The ground truth is denoted by 'GT'. Taken from [1]*  
 
 In order to evaluate whether the goal of reconstructing high-quality fine-grained 3D shapes has been achieved extensive evaluation and comparison against the previously mentioned methods (**[...]**) have to been done. To do this, qualitative (visual), as well as quantitative evaluation results on single-view 3D reconstruction, are provided. Additionally, the performance of the adapted camera pose estimation is examined against the original approach. In the last step Ablation studies have been conducted showing again qualitative as well as quantitative results.  
@@ -164,7 +164,7 @@ The results for EMD, CD, and IoU are presented in the following table 1. Each me
 
 Besides, a version of DISN is evaluated using the ground truth camera parameters denoted $'Ours'$ whereas the normal version using predicted camera parameters is denoted as $'Ours_cam'$.
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 1: Quantitative results on ShapeNet Core for the above presented methods. Metrics are CD ($\times 0.001$), EMD ($\times 100$) and IoU(%). CD and EMD are computed on 2048 points. Taken from[1]*
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_1.png?raw=true)*Table 1: Quantitative results on ShapeNet Core for the above presented methods. Metrics are CD ($\times 0.001$), EMD ($\times 100$) and IoU(%). CD and EMD are computed on 2048 points. Taken from[1]*
 
 The quantitative results show that, on average, DISN is superior using EMD and IoU. In CD it is only beaten by 3DN. Nevertheless, as explained above this method requires further information in the form of a source mesh.
 
@@ -172,7 +172,7 @@ The quantitative results show that, on average, DISN is superior using EMD and I
 
 The F-score results are shown in Table 2. One can see that, apart from a threshold of 20%, DISN again is superior to the other methods. Something to point out here is that, especially for Low thresholds, DISN is superior to the other methods by up to 1.5% at a threshold of 0.5% and up to 3.2% at a 1% threshold. As this difference is constantly declining when the threshold reaches higher than 2%, one can see strong indications that especially fine-grained details that correlate with small distances/threshold values are improved, while the overall shape produces similar values.
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 2: F-score results. Taken from [1]*
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_2.png?raw=true)*Table 2: F-score results. Taken from [1]*
 
   
 
@@ -185,7 +185,7 @@ If camera pose estimation has improved by using a continuous higher-dimensional 
   
 
 The results of these metrics for pose estimation are depicted in Table 3. They show that quantitative improvement in the process of pose estimation is measurable compared to the original approach of **[26]**. More importantly, when analyzing table 1, less difference between the mean results of $'Ours_cam'$ and $'Ours'$ than between $'Ours_cam'$. and most other reconstruction approaches can be seen.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 3: Quantitative results of camera pose estimation . Taken from [1]*
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_3.png?raw=true)*Table 3: Quantitative results of camera pose estimation . Taken from [1]*
   
 
 ### Qualitative Evaluation
@@ -201,7 +201,7 @@ As the quantitative results already indicate, qualitative results which are depi
 To further, test the effectiveness and robustness of the approach Ablation studies are conducted. Originally ablation means to surgical remove organs or other human material from the body. In the context of deep learning, the term ablation studies have been adopted to name a process where one removes different pieces of a network to gain a better understanding of how the network behaves.
 
 For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in Figure 6 for the former and table **4** for the latter.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/.png?raw=true)
 *Figure 6: Qualitative results for the category 'chair' when employing the different ablation studies.  Taken from [1]*  
 
   
@@ -292,11 +292,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY2MDI3MDMxLC0xMDA5OTQ1Nzg4LDEzOD
-IzMzU4NjYsLTE4ODE2OTk1NzYsLTEzMTQ4NDg2NDksLTE0Mjgw
-NjU0MjYsLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2OTA3OT
-QsLTE2MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MTI0LC0x
-MTMwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1ND
-IwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MDgzMDYs
-LTEzMjIzMDg4NzNdfQ==
+eyJoaXN0b3J5IjpbMTYxOTc5MzM1OSw0NjYwMjcwMzEsLTEwMD
+k5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3NiwtMTMxNDg0
+ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1OTgyMT
+IsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5
+MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3Mj
+M1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYs
+MTk4NjkwODMwNl19
 -->
