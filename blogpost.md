@@ -285,7 +285,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 1.  The quantitative metrics have not been explained in detail, IoU not at all. It would be better if they at least reference them to accepted scientific work, to assure that the measures are not manipulated for their work benefit.
 2. As evaluated above in F-score DISN provides the best results. However, the quality of the comparisons suffers from the fact, that other than to DISN F-score was only applied to 3DCNN and IMNET. 
 3.  They have added several additional applications, creating a perception of how awesome their work ist. However, no concrete implementation details have been published nor extensive evaluation. Therefore, in my opinion, this should be more seen as a possible outlook for the future than a proposal of what it is capable of doing.
-4.  OccNet seems to provide the best comparable research for single-view reconstruction. However, they did only compare IoU which is nearly equal and found no other quantitative metric. Further, in the supplementary extensive qualitative results are presented -- considering all other methods except OccNet.
+4.  OccNet seems to provide the next best comparable research for single-view reconstruction. However, they did only compare IoU which is nearly equal and found no other quantitative metric. Further, in the supplementary extensive qualitative results are presented -- considering all other methods except OccNet.
 
 
   
@@ -321,13 +321,8 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 
 
-3DCNN:
-Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion using 3d-encoderpredictor cnns and shape synthesis. 2017.
-
-
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI1NTQzMTczLC0xNzg0OTIxNjQ3LDE4Mj
+eyJoaXN0b3J5IjpbMzg5MjQzMDE3LC0xNzg0OTIxNjQ3LDE4Mj
 E3MzQ4MDQsLTg1NjEzODYxMSw4Mjg3MTQ0MjcsNDY2MDI3MDMx
 LC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1NzYsLT
 EzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQz
