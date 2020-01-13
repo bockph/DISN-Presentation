@@ -153,9 +153,10 @@ $$ CD(PC,PC_T) = \sum_{p_1 \in PC} min_{p_2 \in PC_T} ||p_1-p_2||^2_2$$ *For CD 
 
   
 
-3. **Intersection over Union (IoU)** is a ratio, measuring how much overlap is present between two distributions or in this case voxelized meshes. The general formula is given by $IoU = \frac{Intersection}{Union}$. A drawback here is that the authors do not mention how they calculated the values of Intersection and Union. Nonetheless, as the same metric is applied to each method, comparability exists. *For IoU counts, the higher the better.*
+3. **Intersection over Union (IoU)** is a ratio, measuring how much overlap is present between two distributions or in this case voxelized meshes. The general formula is given by $IoU = \frac{Intersection}{Union}$. A drawback here is that the authors do not mention how they calculated the values of Intersection and Union. Nonetheless, as the same metric is applied to each method, comparability exists. 
+*For IoU counts, the higher the better.*
 
-4. **F-score** gives a percentage of how much of the object is reconstructed correctly. For its calculation, we need two measures: Precision and Recall.
+5. **F-score** gives a percentage of how much of the object is reconstructed correctly. For its calculation, we need two measures: Precision and Recall.
 
 The former describes a ratio between all **predicted points** with a distance to the closest ground truth point smaller than a threshold $t$ and all generated points, while the later similarly describes a ratio between all **ground truth points** with a distance to the closest predicted point smaller than $t$ and all ground truth points. Having precision and recall, the F-score is calculated by:
 
@@ -328,11 +329,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MDc5MTEyOCwtMTc4NDkyMTY0NywxOD
-IxNzM0ODA0LC04NTYxMzg2MTEsODI4NzE0NDI3LDQ2NjAyNzAz
-MSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC
-0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0
-MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNz
-I2NzI4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3
-MiwxNDcyMzU3NTRdfQ==
+eyJoaXN0b3J5IjpbLTE1MDE3Mjg1NTMsLTE3ODQ5MjE2NDcsMT
+gyMTczNDgwNCwtODU2MTM4NjExLDgyODcxNDQyNyw0NjYwMjcw
+MzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3Ni
+wtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwy
+NDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMD
+cyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0
+NzIsMTQ3MjM1NzU0XX0=
 -->
