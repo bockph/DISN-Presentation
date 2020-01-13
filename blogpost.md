@@ -46,18 +46,9 @@ Modern research shows that as of now deep learning is the state-of-the-art techn
   
 
 - **explicit methods ---** describe a 3D model as a solid using e.g. point clouds, voxels or meshes. The main advantage of such a method is its intuitiveness which also makes them easy to encode e.g. in a Neural Network. However, these methods suffer from limited resolution and fixed mesh topologies. Further, traditionally applied training losses like Earth-mover Distance (EMD) or Chamfer Distance (CD) only approximate the similarity of shape and are therefore not accurate.
-
-  
-
 Examples that were compared to DISN are *AtlasNet*, *Pixel2Mesh*, and *3DN*. While the first uses a set of parametric elements to generate 3D surfaces, the latter two reconstruct 3D shapes by deforming a given source mesh. For this, Pixel2Mesh uses a hardcoded Ellipsoid-mesh while 3DN expects the source Mesh as an input.
 
-  
-
-- **implicit methods ---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface.
-
-  
-
-Recent works like *IMNet* or *OccNet* predict such functions and have shown to be capable of avoiding the drawbacks of explicit methods. Nonetheless, none of these works has been capable of reconstructing fine-grained details.
+- **implicit methods ---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface. Recent works like *IMNet* or *OccNet* predict such functions and have shown to be capable of avoiding the drawbacks of explicit methods. Nonetheless, none of these works has been capable of reconstructing fine-grained details.
 
   
 
@@ -68,14 +59,7 @@ Recent works like *IMNet* or *OccNet* predict such functions and have shown to b
   
 
 To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. represent a 3D object implicitly using a Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface. As this function is continuous, DISN reconstructs objects with arbitrary resolution.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-
-  
-
-<center><i>Figure 2: SDF visualization blabla Taken from [1]</i></center>
-
-  
- 
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Figure 2: SDF visualization blabla Taken from [1]*
 
 To predict this SDF they developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network additionally to the global feature encoder.
 
@@ -86,10 +70,8 @@ To predict this SDF they developed a feed-forward neural network that takes a si
 ### How is the camera pose estimated?
 For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-
-  
-
 *Figure  3: The camera pose estimation network. Taken from [supplementary](https://xharlie.github.io/images/neurips_2019_supp.pdf) of [1]*
+
 To reduce these disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$ is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, the rotation matrix $R =(R_x, R_y, R_z)^T \in \mathbb{R}^{(3x3)}$ is obtained with the following equations:
 
   
@@ -112,11 +94,6 @@ $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
 ### How is the Signed Distance Function predicted?
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-
-  
-
-*Figure 4: The SDF network model. Taken from [1]*
 
 The SDF prediction network consists of three different parts.
 
@@ -130,17 +107,8 @@ The SDF prediction network consists of three different parts.
 
   
 
-Finally decoding the global and local features results in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network.
-
-  
-
-  
-
-\image
-
-  
-
-  
+Finally decoding the global and local features results in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network.  ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+*Figure 4: The SDF network model. Taken from [1]*
 
 For the loss calculation of the network, two things have to be taken into consideration. First, in contrast to e.g., IMNet one wants to recover different iso-levels and second, the network should concentrate on details near and inside the iso-surface. This, in consequence, then leads to a weighted loss function of SDF values being defined as:
 
@@ -396,11 +364,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMz
-M2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1
-MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NC
-w5NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5
-MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MT
-k0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLTMy
-MDE1NjJdfQ==
+eyJoaXN0b3J5IjpbLTEwNzI5Mjg1ODcsLTE1NjM5MjYxMTgsMj
+QzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3
+MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwND
+cyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkz
+OTIwOTM2LDE5ODY5MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNT
+EyNiwtNzc1NzU2MTk0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5
+MDI2NDE3OTVdfQ==
 -->
