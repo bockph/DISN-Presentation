@@ -49,7 +49,7 @@ with $N(\cdot)$ being the normalization function and '$\times$' the cross produc
  Translation $t \in \mathbb{R}^3$ is predicted directly.
 
  #### Loss calcualtion for pose estimation
-When training this network (Figure 3), the authors use the ShapeNet Core dataset [9]  , where all objects are within the same aligned model space, and the renderings provided by Choy et al. [10]. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
+When training this network (see also figure 3), the authors use the ShapeNet Core dataset [9]  , where all objects are within the same aligned model space, and the renderings provided by Choy et al. [10]. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
 
 $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
@@ -328,11 +328,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MTk0NzY5NiwtMTc4NDkyMTY0NywxOD
-IxNzM0ODA0LC04NTYxMzg2MTEsODI4NzE0NDI3LDQ2NjAyNzAz
-MSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC
-0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0
-MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNz
-I2NzI4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3
-MiwxNDcyMzU3NTRdfQ==
+eyJoaXN0b3J5IjpbLTE1Njc2NTI5MTQsLTE3ODQ5MjE2NDcsMT
+gyMTczNDgwNCwtODU2MTM4NjExLDgyODcxNDQyNyw0NjYwMjcw
+MzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3Ni
+wtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwy
+NDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMD
+cyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0
+NzIsMTQ3MjM1NzU0XX0=
 -->
