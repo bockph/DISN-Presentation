@@ -173,8 +173,6 @@ The F-score results are shown in Table 2. One can see that, apart from a thresho
 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 2: F-score results. Taken from [1]*
 
-Despite the good results shown, one must wonder why only 3DCNN and IMNet are compared to DISN.
-
   
 
 #### Camera Pose Estimation results
@@ -186,12 +184,12 @@ If camera pose estimation has improved by using a continuous higher-dimensional 
   
 
 The results of these metrics for pose estimation are depicted in Table 3. They show that quantitative improvement in the process of pose estimation is measurable compared to the original approach of **[26]**. More importantly, when analyzing table 1, less difference between the mean results of $'Ours_cam'$ and $'Ours'$ than between $'Ours_cam'$. and most other reconstruction approaches can be seen.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 3: Camera Pose Estimation. Taken from [1]*
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 3: Quantitative results of camera pose estimation . Taken from [1]*
   
 
 ### Qualitative Evaluation
 
-As the quantitative results already indicate, qualitative results which are depicted in the following figure **X** show that DISN fulfills its goal of obtaining fine-grained details. For example, when looking at the chair it is the only method capable of the first chair, it not only recovers holes in the back part but nearly the exact pattern. This stands in contrast to the other methods where some are capable of adding holes but most only return a dense surface.
+As the quantitative results already indicate, qualitative results which are depicted in figure **X** show that DISN fulfills its goal of obtaining fine-grained details. For example, when looking at the chair it is the only method capable of the first chair, it not only recovers holes in the back part but nearly the exact pattern. This stands in contrast to the other methods where some are capable of adding holes but most only return a dense surface.
 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 
@@ -293,16 +291,17 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 1.  The quantitative metrics have not been explained in detail, IoU not at all. It would be better if they at least reference them to accepted scientific work, to assure that the measures are not manipulated for their work benefit.
 2.  They have added several additional applications, creating a perception of how awesome their work ist. However, no concrete implementation details have been published nor extensive evaluation. Therefore, in my opinion, this should be more seen as a possible outlook for the future than a proposal of what it is capable of doing.
 3.  OccNet seems to provide the best comparable research for single-view reconstruction. However, they did only compare IoU which is nearly equal and found no other quantitative metric. Further, in the supplementary extensive qualitative results are presented -- considering all other methods except OccNet.
+4. TODO: Despite the good results shown, one must wonder why only 3DCNN and IMNet are compared to DISN.
 
   
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTM4MzQ0NDgsLTEzMTQ4NDg2NDksLT
-E0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2
-OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MT
-I0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5
-NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MD
-gzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0
-LDM2MTk0NzMwMF19
+eyJoaXN0b3J5IjpbMTM4MTc2NDA4MCwtMTMxNDg0ODY0OSwtMT
+QyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5
+MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMj
+QsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1
+NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwOD
+MwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQs
+MzYxOTQ3MzAwXX0=
 -->
