@@ -256,14 +256,11 @@ The improvements, in utilizing not only an implicit method but also a local feat
   
 
 2. **Chamfer Distance (CD)** calculates the matching distance to the nearest feature in both ways, from $PC to PC_T$ as well as the other way round. Here the distance is calculated as the *squared* L2-Norm leading to the following equation:
-
-$$ CD(PC,PC_T) = \sum_{p_1 \in PC} min_{p_2 \in PC_T} ||p_1-p_2||^2_2$$For CD counts, the smaller the better.
+$$ CD(PC,PC_T) = \sum_{p_1 \in PC} min_{p_2 \in PC_T} ||p_1-p_2||^2_2$$ *For CD counts, the smaller the better.*
 
   
 
-3. **Intersection over Union (IoU)** is a ratio, measuring how much overlap is present between two distributions or in this case voxelized meshes. The general formula is given by $IoU = \frac{Intersection}{Union}$. A drawback here is that the authors do not mention how they calculated the values of Intersection and Union. Nonetheless, as the same metric is applied to each method, comparability exists.
-
-For IoU counts, the higher the better.
+3. **Intersection over Union (IoU)** is a ratio, measuring how much overlap is present between two distributions or in this case voxelized meshes. The general formula is given by $IoU = \frac{Intersection}{Union}$. A drawback here is that the authors do not mention how they calculated the values of Intersection and Union. Nonetheless, as the same metric is applied to each method, comparability exists. *For IoU counts, the higher the better.*
 
 4. **F-score** gives a percentage of how much of the object is reconstructed correctly. For its calculation, we need two measures: Precision and Recall.
 
@@ -423,11 +420,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMxNTY3NjUwLC0xNjA2NDY2MjY3LC0yMT
-IwNzI2NzI4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2
-MDQ3MiwxNDcyMzU3NTQsOTU1NTQyMDYyLC0xNjYzOTc5MzkzLD
-U5MzkyMDkzNiwxOTg2OTA4MzA2LC0xMzIyMzA4ODczLDIwNzUx
-MDUxMjYsLTc3NTc1NjE5NCwzNjE5NDczMDAsLTExMjg2MTQ3Mj
-csOTAyNjQxNzk1LC0zMjAxNTYyLC0yMTIxNjkzNjAyLDU1NDA2
-NzgwOV19
+eyJoaXN0b3J5IjpbMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMj
+EyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMy
+NjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5My
+w1OTM5MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1
+MTA1MTI2LC03NzU3NTYxOTQsMzYxOTQ3MzAwLC0xMTI4NjE0Nz
+I3LDkwMjY0MTc5NSwtMzIwMTU2MiwtMjEyMTY5MzYwMiw1NTQw
+Njc4MDldfQ==
 -->
