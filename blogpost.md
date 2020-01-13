@@ -17,7 +17,7 @@
 
   
 
-<center><i>Figure 1: 3D shape reconstruction from a 2D image using DISN [1]</i></center>
+<center><i>Figure 1: 3D shape reconstruction from a 2D image using DISN . Taken from [1]</i></center>
 
   
 
@@ -68,9 +68,14 @@ Recent works like *IMNet* or *OccNet* predict such functions and have shown to b
   
 
 To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. represent a 3D object implicitly using a Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface. As this function is continuous, DISN reconstructs objects with arbitrary resolution.
-
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 
   
+
+<center><i>Figure 2: SDF blabla. Taken from [1]</i></center>
+
+  
+ 
 
 To predict this SDF they developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network additionally to the global feature encoder.
 
@@ -408,7 +413,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NzA4MDQ4OSwyNDM1OTgyMTIsMjAzMz
+eyJoaXN0b3J5IjpbLTk1MTY4MzI2MCwyNDM1OTgyMTIsMjAzMz
 Y5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUx
 MjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LD
 k1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4Njkw
