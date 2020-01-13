@@ -74,7 +74,7 @@ m_2, & \text{otherwise}
 \end{cases}$$
 ## Evaluation of DISN
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 5: The SDF network model. Taken from [1]*
+*Figure 5: Single-view 3D reconstruction results of DISN and the other presented methods. The ground truth is denoted by 'GT'. Taken from [1]*
 
   
 
@@ -311,11 +311,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMzE2NDU4MiwtMTQyODA2NTQyNiwtMT
-U2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2
-NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNT
-gsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2
-Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwOD
-g3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQsMzYxOTQ3MzAwLC0x
-MTI4NjE0NzI3XX0=
+eyJoaXN0b3J5IjpbLTEzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLT
+E1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0
+NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3Mj
+U4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2
+NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MDgzMDYsLTEzMjIzMD
+g4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0LDM2MTk0NzMwMCwt
+MTEyODYxNDcyN119
 -->
