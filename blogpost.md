@@ -301,10 +301,16 @@ pixel2mesh
 IMNEt
 
 Zhou
+Yi Zhou, Connelly Barnes, Jingwan Lu, Jimei Yang, and Hao Li. On the continuity of rotation representations in neural networks. arXiv preprint arXiv:1812.07035, 2018.
+
 
 choy
+
+Christopher B Choy, Danfei Xu, JunYoung Gwak, Kevin Chen, and Silvio Savarese. 3d-r2n2: A unified approach for single and multi-view 3d object reconstruction. In ECCV, 2016.
+
+Pose estimation
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMTI1MTQ2OCwtODU2MTM4NjExLDgyOD
+eyJoaXN0b3J5IjpbMTI5MzM2NzcwMSwtODU2MTM4NjExLDgyOD
 cxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2
 NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNi
 wtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYw
