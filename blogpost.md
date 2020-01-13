@@ -242,16 +242,16 @@ As their last ablation study, the authors create a second SDF prediction network
 
 To further, show the capabilities of DISN three applications are employed and briefly depicted:
 
-1.  Shape interpolation -- generates plausible shapes between two different key-objects, using interpolation. Figure **S** shows that when interpolation is applied to both global and local features, a gradual transformation is possible.
+1.  Shape interpolation -- generates plausible shapes between two different key-objects, using interpolation. Figure 8 shows that when interpolation is applied to both global and local features, a gradual transformation is possible.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 9: Shapeinterpolation results. Taken from [1]*  
+*Figure 8: Shapeinterpolation results. Taken from [1]*  
 
-1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (Figure **kk**) do not look as nice as the ones of the official test set, they still return plausible predictions.
+1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (Figure 9) do not look as nice as the ones of the official test set, they still return plausible predictions.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 6: Results on single-view 3D reconstruction with online product images. Taken from [1]*  
+*Figure 9: Results on single-view 3D reconstruction with online product images. Taken from [1]*  
 
 3.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As Figure 10 shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 10 Multi-view reconstruction results. (b) shows the result from single-view input (a), while (e) is predicted using (a), (c) and (d).. Taken from [1]*  
+*Figure 10: Multi-view reconstruction results. (b) shows the result from single-view input (a), while (e) is predicted using (a), (c) and (d).. Taken from [1]*  
 
 
   
@@ -291,11 +291,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzI3NTY3NDQsMTM4MjMzNTg2NiwtMT
-g4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2
-MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2Nj
-I2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgs
-LTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mz
-k3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3
-MywyMDc1MTA1MTI2XX0=
+eyJoaXN0b3J5IjpbMTc3Mjg2MTk0NCwxMzgyMzM1ODY2LC0xOD
+gxNjk5NTc2LC0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYz
+OTI2MTE4LDI0MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2NDY2Mj
+Y3LC0yMTIwNzI2NzI4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwt
+MTkyMzI2MDQ3MiwxNDcyMzU3NTQsOTU1NTQyMDYyLC0xNjYzOT
+c5MzkzLDU5MzkyMDkzNiwxOTg2OTA4MzA2LC0xMzIyMzA4ODcz
+LDIwNzUxMDUxMjZdfQ==
 -->
