@@ -282,16 +282,16 @@ However, as the networks are only trained on rendered images they can only take 
 My overall opinion of DISN is very positive. The extensive evaluation seems to prove the conclusion of the paper's authors. They have not only compared their work equally to several highly rated other papers but also employed the settings of the test set up as similar as possible. Further, they conducted extensive ablation studies to prove the effectiveness of their newly introduced modules. However, there are also some points I have four things to criticize:
 
 1.  The quantitative metrics have not been explained in detail, IoU not at all. It would be better if they at least reference them to accepted scientific work, to assure that the measures are not manipulated for their work benefit.
-2. As evaluated above in F-score provides 
+2. As evaluated above in F-score DISN provides the best results. However, the quality of the comparisons suffers from the fact, that other than to DISN F-score was only applied to 3DCNN and IMNET. 
 3.  They have added several additional applications, creating a perception of how awesome their work ist. However, no concrete implementation details have been published nor extensive evaluation. Therefore, in my opinion, this should be more seen as a possible outlook for the future than a proposal of what it is capable of doing.
 4.  OccNet seems to provide the best comparable research for single-view reconstruction. However, they did only compare IoU which is nearly equal and found no other quantitative metric. Further, in the supplementary extensive qualitative results are presented -- considering all other methods except OccNet.
-5. TODO: Despite the good results shown, one must wonder why only 3DCNN and IMNet are compared to DISN.
+
 
   
 
-##Sources
+## Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5OTUwNjk2OCwtMTg4MTY5OTU3NiwtMT
+eyJoaXN0b3J5IjpbLTY2ODg4Mzc1NywtMTg4MTY5OTU3NiwtMT
 MxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1
 OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNj
 cyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIs
