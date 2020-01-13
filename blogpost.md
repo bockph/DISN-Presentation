@@ -307,6 +307,12 @@ Zhiqin Chen and Hao Zhang. Learning implicit fields for generative shape modelin
 Zhou
 Yi Zhou, Connelly Barnes, Jingwan Lu, Jimei Yang, and Hao Li. On the continuity of rotation representations in neural networks. arXiv preprint arXiv:1812.07035, 2018.
 
+3DN:
+Weiyue Wang, Duygu Ceylan, Radomir Mech, and Ulrich Neumann. 3dn: 3d deformation network. In CVPR, 2019.
+
+3DCNN:
+Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion using 3d-encoderpredictor cnns and shape synthesis. 2017.
+
 
 choy
 
@@ -315,7 +321,7 @@ Christopher B Choy, Danfei Xu, JunYoung Gwak, Kevin Chen, and Silvio Savarese. 3
 Pose estimation
 Eldar Insafutdinov and Alexey Dosovitskiy. Unsupervised learning of shape and pose with differentiable point clouds. In NeurIPS, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NTQ0NTEzNiwtODU2MTM4NjExLDgyOD
+eyJoaXN0b3J5IjpbMTM2NzIxMDgwNiwtODU2MTM4NjExLDgyOD
 cxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2
 NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNi
 wtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYw
