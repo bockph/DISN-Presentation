@@ -72,12 +72,9 @@ $$ L_{SDF} =\sum_p m | f(I,p) - SDF^I(p)|\\m =\begin{cases}
 m_1, &SDF^I(p) >\delta \\
 m_2, & \text{otherwise}
 \end{cases}$$
-
-  
-
-  
-
 ## Evaluation of DISN
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+*Figure 5: The SDF network model. Taken from [1]*
 
   
 
@@ -318,7 +315,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzE2MzU1MTUsLTE1NjM5MjYxMTgsMj
+eyJoaXN0b3J5IjpbLTE0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMj
 QzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3
 MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwND
 cyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkz
