@@ -68,7 +68,7 @@ The SDF prediction network consists of three encoders:
 Having the global and local features encoded together with the higher dimensional query point, the two embedding vectors are then decoded separetly. This results then in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them, trough simple summation, results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. 
 
  #### Loss calculation for SDF prediction
-For the loss calculation of the network, two things have to be taken into consideration. First, in contrast to e.g., IMNet one wants to recover a different iso-levels and second, the network should concentrate on details near and inside the iso-surface. This, in consequence, then leads to a weighted loss function of SDF values being defined as:
+For the loss calculation of the network, two things have to be taken into consideration. First, in contrast to e.g., IMNet one wants to recover a continous function and second, the network should concentrate on details near and inside the iso-surface. This, in consequence, then leads to a weighted loss function of SDF values being defined as:
 
   
 
@@ -328,7 +328,7 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMTYxNTA5MiwtMTc4NDkyMTY0NywxOD
+eyJoaXN0b3J5IjpbLTY0MDc5MTEyOCwtMTc4NDkyMTY0NywxOD
 IxNzM0ODA0LC04NTYxMzg2MTEsODI4NzE0NDI3LDQ2NjAyNzAz
 MSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC
 0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0
