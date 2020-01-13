@@ -78,13 +78,9 @@ m_2, & \text{otherwise}
 
   
 
-In order to evaluate whether the goal of reconstructing high-quality fine-grained 3D shapes has been achieved extensive evaluation and comparison against the previously mentioned methods (**[...]**) have to been done. To do this, qualitative (visual), as well as quantitative evaluation results on single-view 3D reconstruction, are provided. Additionally, the performance of the adapted camera pose estimation is examined against the original approach. In the last step Ablation studies have been conducted showing again qualitative as well as quantitative results.
+In order to evaluate whether the goal of reconstructing high-quality fine-grained 3D shapes has been achieved extensive evaluation and comparison against the previously mentioned methods (**[...]**) have to been done. To do this, qualitative (visual), as well as quantitative evaluation results on single-view 3D reconstruction, are provided. Additionally, the performance of the adapted camera pose estimation is examined against the original approach. In the last step Ablation studies have been conducted showing again qualitative as well as quantitative results.  
 
-  
-
-### Experimental setup
-
-  
+### Experimental setup  
 
 This includes the Dataset as well as the preparation training and testing implementation.
 
@@ -315,11 +311,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMj
-QzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3
-MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwND
-cyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkz
-OTIwOTM2LDE5ODY5MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNT
-EyNiwtNzc1NzU2MTk0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5
-MDI2NDE3OTVdfQ==
+eyJoaXN0b3J5IjpbMTEzMzE2NDU4MiwtMTQyODA2NTQyNiwtMT
+U2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2
+NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNT
+gsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2
+Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwOD
+g3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQsMzYxOTQ3MzAwLC0x
+MTI4NjE0NzI3XX0=
 -->
