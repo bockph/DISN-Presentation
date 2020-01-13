@@ -156,17 +156,15 @@ $$ CD(PC,PC_T) = \sum_{p_1 \in PC} min_{p_2 \in PC_T} ||p_1-p_2||^2_2$$ *For CD 
 3. **Intersection over Union (IoU)** is a ratio, measuring how much overlap is present between two distributions or in this case voxelized meshes. The general formula is given by $IoU = \frac{Intersection}{Union}$. A drawback here is that the authors do not mention how they calculated the values of Intersection and Union. Nonetheless, as the same metric is applied to each method, comparability exists. 
 *For IoU counts, the higher the better.*
 
-5. **F-score** gives a percentage of how much of the object is reconstructed correctly. For its calculation, we need two measures: Precision and Recall.
-
+4. **F-score** gives a percentage of how much of the object is reconstructed correctly. For its calculation, we need two measures: Precision and Recall.
 The former describes a ratio between all **predicted points** with a distance to the closest ground truth point smaller than a threshold $t$ and all generated points, while the later similarly describes a ratio between all **ground truth points** with a distance to the closest predicted point smaller than $t$ and all ground truth points. Having precision and recall, the F-score is calculated by:
-
-$$ \text{F-score} =2* \frac{Precision*Recall}{Precision+Recall}$$ Here the principle 'the higher the better' counts true, while a smaller threshold describes a bigger similarity.
+$$ \text{F-score} =2* \frac{Precision*Recall}{Precision+Recall}$$ *Here the principle 'the higher the better' counts true, while a smaller threshold describes a bigger similarity.*
 
 #### EMD, CD & IoU
 
 The results for EMD, CD, and IoU are presented in the following table 1. Each metric has been calculated for each object category. For OccNET[6], however, due to a scale mismatch, only IoU is evaluated which is scale-invariant.
 
-Besides, a version of DISN is evaluated using the ground truth camera parameters denoted $'Ours'$ whereas the normal version using predicted camera parameters is denoted as $'Ours_cam'$.
+Besides, a version of DISN is evaluated using the ground truth camera parameters denoted '$Ours$' whereas the normal version using predicted camera parameters is denoted as '$Ours_{cam}$'.
 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_1.png?raw=true)*Table 1: Quantitative results on ShapeNet Core for the above presented methods. Metrics are CD ($\times 0.001$), EMD ($\times 100$) and IoU(%). CD and EMD are computed on 2048 points. Taken from [1]*
 
@@ -329,11 +327,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDE3Mjg1NTMsLTE3ODQ5MjE2NDcsMT
-gyMTczNDgwNCwtODU2MTM4NjExLDgyODcxNDQyNyw0NjYwMjcw
-MzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3Ni
-wtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwy
-NDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMD
-cyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0
-NzIsMTQ3MjM1NzU0XX0=
+eyJoaXN0b3J5IjpbMTQxNjk0Mzk0LC0xNzg0OTIxNjQ3LDE4Mj
+E3MzQ4MDQsLTg1NjEzODYxMSw4Mjg3MTQ0MjcsNDY2MDI3MDMx
+LC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1NzYsLT
+EzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQz
+NTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3Mj
+Y3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcy
+LDE0NzIzNTc1NF19
 -->
