@@ -182,8 +182,6 @@ If camera pose estimation has improved by using a continuous higher-dimensional 
 1.  **$d_{3D}$** measures the mean distance between a point cloud transformed with the predicted values and the ground truth point cloud.
 2.  **$d_{2D}$ is the average 2D reprojection error. Generally, such reprojection error is calculated by projecting a 3D point $\^{X}$ onto the image point using the predicted parameters resulting in the 2D point $\^{x}$. A reprojection error then equals the euclidean distance $d(x,\^{x})$ where $x$ is the ground truth projection. Moreover, this reprojection error is measured in pixels.
 
-  
-
 The results of these metrics for pose estimation are depicted in Table 3. They show that quantitative improvement in the process of pose estimation is measurable compared to the original approach of **[26]**. More importantly, when analyzing table 1, less difference between the mean results of $'Ours_cam'$ and $'Ours'$ than between $'Ours_cam'$. and most other reconstruction approaches can be seen.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_3.png?raw=true)*Table 3: Quantitative results of camera pose estimation . Taken from [1]*
   
@@ -249,9 +247,9 @@ To further, show the capabilities of DISN three applications are employed and br
 
 1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (see also figure 9) do not look as nice as the ones of the official test set, they still return plausible predictions.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/9_online_products.png?raw=true)
-*Figure 9: Results on single-view 3D reconstruction with online product images. Taken from [1]*  
+*Figure 9: Results on single-view 3D reconstruction with online product images. Top are the inputs and bottom the rendered outputs. Taken from [1]*  
 
-3.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As Figure 10 shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/10_multi_view_reconstruction.png?raw=true)
+3.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As figure 10 shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/10_multi_view_reconstruction.png?raw=true)
 *Figure 10: Multi-view reconstruction results. (b) shows the result from single-view input (a), while (e) is predicted using (a), ( c) and (d).. Taken from [1]*  
 
 
@@ -292,7 +290,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1OTA1MjExNCw4Mjg3MTQ0MjcsNDY2MD
+eyJoaXN0b3J5IjpbLTc3MDk0NTkwMSw4Mjg3MTQ0MjcsNDY2MD
 I3MDMxLC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1
 NzYsLTEzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMT
 gsMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIx
