@@ -42,36 +42,20 @@ For camera pose estimation the authors use the general approach proposed by Insa
 *Figure  3: The camera pose estimation network. Taken from [supplementary](https://xharlie.github.io/images/neurips_2019_supp.pdf) of [1]*
 
 To reduce these disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$ is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, the rotation matrix $R =(R_x, R_y, R_z)^T \in \mathbb{R}^{(3x3)}$ is obtained with the following equations:
-
-  
-
 $$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space and\space R_y = R_z \times R_x$$
-
-  
-
 with $N(\cdot)$ being the normalization function and '$\times$' the cross product.**[?Zhou et al. ]** Translation $t \in \mathbb{R}^3$ is predicted directly.
  
 When training this network (Figure 3), the authors use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space, and the renderings provided by Choy et al **[28]**. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
 
-  
-
 $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
-
-  
-
-  
 
 ### How is the Signed Distance Function predicted?
 
 
-The SDF prediction network consists of three different parts.
-
-  
+The SDF prediction network consists of three different parts:
 
 1. A simple VGG-16 Encoder that extracts global features from the 2D image.
-
 2. A local feature extraction module. It uses the estimated camera pose to project the point $P \in \mathbb{R}^3$ onto a 2D location $q \in \mathbb{R}^2$ on the image plane. Having $q$ in each feature map the corresponding part is extracted and then concatenated -- resulting in the embedding vector. As not all feature maps equal the size of the input image, bilinear interpolation is used to resize the feature maps and extract the values.
-
 3. A multilayer perceptron which maps the given point to a higher dimensional feature space. This is then concatenated to both the global and local features.
 
   
@@ -333,7 +317,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMjAxMjM0NCwtMTU2MzkyNjExOCwyND
+eyJoaXN0b3J5IjpbLTM1NzE2NjgyNCwtMTU2MzkyNjExOCwyND
 M1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcy
 NjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0Nz
 IsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5
