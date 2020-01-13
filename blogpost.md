@@ -15,7 +15,8 @@
 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/1_title.png?raw=true)*Figure 1: 3D shape reconstruction from a 2D image using DISN . Taken from [1]*
 
-While humans are quite good at recognizing objects and deriving their properties, for machines it is a rather complex task to recover a 3D shape from a single view. Since this capability is a core technology, necessary in a variety of fields, it is an important object of research in 3D computer vision. Major progress has been achieved here, especially in the last few years through the introduction of deep learning. While most recent work already delivers quite decent results on recovering the overall shape, retrieving fine-grained details was not a major focus so far. In practice, this means small structures like holes have mostly been ignored in the reconstruction processes. To tackle this drawback Wang et al. presented "DISN: Deep Implicit Surface Network for High-quality single-view 3D Reconstruction" at the Conference on neural information processing systems (NeurIPS) 2019.
+While humans are quite good at recognizing objects and deriving their properties, for machines it is a rather complex task to recover a 3D shape from a single view. Since this capability is a core technology, necessary in a variety of fields, it is an important object of research in 3D computer vision. 
+Major progress has been achieved here, especially in the last few years through the introduction of deep learning. While most recent work already delivers quite decent results on recovering the overall shape, retrieving fine-grained details was not a major focus so far. In practice, this means small structures like holes have mostly been ignored in the reconstruction processes. To tackle this drawback Wang et al. presented "DISN: Deep Implicit Surface Network for High-quality single-view 3D Reconstruction" at the Conference on neural information processing systems (NeurIPS) 2019.
 
 In their publication, a Neural Network is presented as being capable of reconstructing both a high-quality overall shape as well as fine-grained details. While this post is about presenting their work in a more understandable manner, the original paper, as well as the official code, can be found [here](https://github.com/laughtervv/DISN): 
 
@@ -327,11 +328,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExOTg5NTY3OSwxODIxNzM0ODA0LC04NT
-YxMzg2MTEsODI4NzE0NDI3LDQ2NjAyNzAzMSwtMTAwOTk0NTc4
-OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC0xMzE0ODQ4NjQ5LC
-0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0MzU5ODIxMiwyMDMz
-NjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NT
-EyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQs
-OTU1NTQyMDYyXX0=
+eyJoaXN0b3J5IjpbLTE3ODQ5MjE2NDcsMTgyMTczNDgwNCwtOD
+U2MTM4NjExLDgyODcxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3
+ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OS
+wtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAz
+MzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NT
+UxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0
+LDk1NTU0MjA2Ml19
 -->
