@@ -24,7 +24,7 @@ In their publication, a Neural Network is presented as being capable of reconstr
 Modern research shows that as of now deep learning is the state-of-the-art technique for single-view 3D reconstruction. However, apart from the Neural Network structures, the approaches differ in the way 3D shapes are represented in the networks. Therefore, we can cluster the related work into two distinct representation methods:
 
 - **explicit methods ---** describe a 3D model as a solid using e.g. point clouds, voxels or meshes. The main advantage of such a method is its intuitiveness which also makes them easy to encode e.g. in a Neural Network. However, these methods suffer from limited resolution and fixed mesh topologies. Further, traditionally applied training losses like Earth-mover Distance (EMD) or Chamfer Distance (CD) only approximate the similarity of shape and are therefore not accurate.
-Examples that were compared to DISN are *AtlasNet*, *Pixel2Mesh*, and *3DN*. While the first uses a set of parametric elements to generate 3D surfaces, the latter two reconstruct 3D shapes by deforming a given source mesh. For this, Pixel2Mesh uses a hardcoded Ellipsoid-mesh while 3DN expects the source Mesh as an input.
+Examples that were compared to DISN are *AtlasNet* [2], *Pixel2Mesh* [3], and *3DN* [4]. While the first uses a set of parametric elements to generate 3D surfaces, the latter two reconstruct 3D shapes by deforming a given source mesh. For this, Pixel2Mesh uses a hardcoded Ellipsoid-mesh while 3DN expects the source Mesh as an input.
 
 - **implicit methods ---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface. 
 Recent works like *IMNet* or *OccNet* predict such functions and have shown to be capable of avoiding the drawbacks of explicit methods. Nonetheless, none of these works has been capable of reconstructing fine-grained details.
@@ -290,12 +290,14 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 [1] Weiyue Wang, Qiangeng Xu, Duygu Ceylan, Radomir Mech, and Ulrich Neumann. DISN: Deep Implicit Surface Network for High-quality Single-view 3D Reconstruction. In NeurIPS, 2019
+[2] Thibault Groueix, Matthew Fisher, Vladimir G. Kim, Bryan Russell, and Mathieu Aubry. AtlasNet: A Papier-Mâché Approach to Learning 3D Surface Generation. In CVPR, 2018.
+[3]Nanyang Wang, Yinda Zhang, Zhuwen Li, Yanwei Fu, Wei Liu, and Yu-Gang Jiang. Pixel2mesh: Generating 3d mesh models from single rgb images. arXiv preprint arXiv:1804.01654, 2018.
+[4]Weiyue Wang, Duygu Ceylan, Radomir Mech, and Ulrich Neumann. 3dn: 3d deformation network. In CVPR, 2019.
 
 Occnet:
 Lars Mescheder, Michael Oechsle, Michael Niemeyer, Sebastian Nowozin, and Andreas Geiger. Occupancy networks: Learning 3d reconstruction in function space. In CVPR, 2019.
 
 Atlasnet
-Thibault Groueix, Matthew Fisher, Vladimir G. Kim, Bryan Russell, and Mathieu Aubry. AtlasNet: A Papier-Mâché Approach to Learning 3D Surface Generation. In CVPR, 2018.
 
 
 pixel2mesh
@@ -321,7 +323,7 @@ Christopher B Choy, Danfei Xu, JunYoung Gwak, Kevin Chen, and Silvio Savarese. 3
 Pose estimation
 Eldar Insafutdinov and Alexey Dosovitskiy. Unsupervised learning of shape and pose with differentiable point clouds. In NeurIPS, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMjgxNDgzMCwtODU2MTM4NjExLDgyOD
+eyJoaXN0b3J5IjpbLTIwMzgyNDA1MywtODU2MTM4NjExLDgyOD
 cxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2
 NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNi
 wtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYw
