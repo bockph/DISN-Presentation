@@ -201,7 +201,7 @@ To further, test the effectiveness and robustness of the approach Ablation studi
 
 For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in Figure 6 for the former and table **4** for the latter.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 7: Qualitative results for the category 'chair' when employing the different ablation studies.  Taken from [1]*  
+*Figure 6: Qualitative results for the category 'chair' when employing the different ablation studies.  Taken from [1]*  
 
   
 
@@ -231,7 +231,7 @@ The authors of the DISN paper presents their additional local feature extraction
 
 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 8: The network architecture "One-stream" employed for ablation studies. Taken from [1]*  
+*Figure 7: The network architecture "One-stream" employed for ablation studies. Taken from [1]*  
   
 
 As their last ablation study, the authors create a second SDF prediction network called One-stream (Figure 8). Different from the actual proposed one, only one decoder is used and both global and local features are concatenated. The only slightly inferior quantitative as well as qualitative results of one-stream vs two-stream (which is the proposed approach) show that DISN can be implemented by different network structures.
@@ -291,11 +291,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MjMzNTg2NiwtMTg4MTY5OTU3NiwtMT
-MxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1
-OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNj
-cyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIs
-MTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5Mj
-A5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2
-LC03NzU3NTYxOTRdfQ==
+eyJoaXN0b3J5IjpbLTE0NzI3NTY3NDQsMTM4MjMzNTg2NiwtMT
+g4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2
+MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2Nj
+I2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgs
+LTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mz
+k3OTM5Myw1OTM5MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3
+MywyMDc1MTA1MTI2XX0=
 -->
