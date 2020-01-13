@@ -32,7 +32,8 @@ Recent works like *IMNet* or *OccNet* predict such functions and have shown to b
 ## A two-step approach 
 
 To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. represent a 3D object implicitly using a Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface. As this function is continuous, DISN reconstructs objects with arbitrary resolution.
-![https://github.com/bockph/DISN-Presentation/blob/master/images/3_cameraPoseNetwork.png?raw=true)*Figure 2: SDF visualization blabla Taken from [1]*
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/2_sdf.png?raw=true)
+*Figure 2: SDF visualization blabla Taken from [1]*
 
 To predict this SDF they developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network additionally to the global feature encoder.
 
@@ -291,11 +292,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MTcxNjcwNywtMTAwOTk0NTc4OCwxMz
-gyMzM1ODY2LC0xODgxNjk5NTc2LC0xMzE0ODQ4NjQ5LC0xNDI4
-MDY1NDI2LC0xNTYzOTI2MTE4LDI0MzU5ODIxMiwyMDMzNjkwNz
-k0LC0xNjA2NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NTEyNCwt
-MTEzMDc0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQsOTU1NT
-QyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwxOTg2OTA4MzA2
-LC0xMzIyMzA4ODczXX0=
+eyJoaXN0b3J5IjpbNDY2MDI3MDMxLC0xMDA5OTQ1Nzg4LDEzOD
+IzMzU4NjYsLTE4ODE2OTk1NzYsLTEzMTQ4NDg2NDksLTE0Mjgw
+NjU0MjYsLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2OTA3OT
+QsLTE2MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MTI0LC0x
+MTMwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1ND
+IwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MDgzMDYs
+LTEzMjIzMDg4NzNdfQ==
 -->
