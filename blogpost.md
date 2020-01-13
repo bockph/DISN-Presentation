@@ -84,17 +84,12 @@ To predict this SDF they developed a feed-forward neural network that takes a si
   
 
 ### How is the camera pose estimated
-
+For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 
   
 
 *Figure  3: The camera pose estimation network. Taken from [supplementary](https://xharlie.github.io/images/neurips_2019_supp.pdf) of [1]*
-
-For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure.
-
-  
-
 To reduce these disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$ is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, the rotation matrix $R =(R_x, R_y, R_z)^T \in \mathbb{R}^{(3x3)}$ is obtained with the following equations:
 
   
@@ -409,11 +404,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMjQ4NTk4LDI0MzU5ODIxMiwyMDMzNj
-kwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NTEy
-NCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQsOT
-U1NTQyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwxOTg2OTA4
-MzA2LC0xMzIyMzA4ODczLDIwNzUxMDUxMjYsLTc3NTc1NjE5NC
-wzNjE5NDczMDAsLTExMjg2MTQ3MjcsOTAyNjQxNzk1LC0zMjAx
-NTYyXX0=
+eyJoaXN0b3J5IjpbMjA0MjI1MTQ4OCwyNDM1OTgyMTIsMjAzMz
+Y5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUx
+MjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LD
+k1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4Njkw
+ODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOT
+QsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMzIw
+MTU2Ml19
 -->
