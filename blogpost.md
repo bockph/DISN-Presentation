@@ -189,17 +189,13 @@ The results of these metrics for pose estimation are depicted in Table 3. They s
 
 ### Qualitative Evaluation
 
-As the quantitative results already indicate, qualitative results which are depicted in figure **X** show that DISN fulfills its goal of obtaining fine-grained details. For example, when looking at the chair it is the only method capable of the first chair, it not only recovers holes in the back part but nearly the exact pattern. This stands in contrast to the other methods where some are capable of adding holes but most only return a dense surface.
+As the quantitative results already indicate, qualitative results which are depicted in figure 5 show that DISN fulfills its goal of obtaining fine-grained details. For example, when looking at the first chair sample it is the only method capable of trecovering not only the holes in the back part but nearly the exact pattern. This stands in contrast to the other methods where some are capable of adding holes but most only return a dense surface.
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-
-<center><i>Figure X: Single-view reconstruction results of various methods. Ground truth shapes are labeled with 'GT'[1]</i></center>
+ 
 
   
 
-  
-
-###Ablation studies
+### Ablation studies
 
 To further, test the effectiveness and robustness of the approach Ablation studies are conducted. Originally ablation means to surgical remove organs or other human material from the body. In the context of deep learning, the term ablation studies have been adopted to name a process where one removes different pieces of a network to gain a better understanding of how the network behaves.
 
@@ -297,7 +293,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MTc2NDA4MCwtMTMxNDg0ODY0OSwtMT
+eyJoaXN0b3J5IjpbMTQ4ODc1MDM5OCwtMTMxNDg0ODY0OSwtMT
 QyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5
 MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMj
 QsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1
