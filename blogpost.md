@@ -163,7 +163,7 @@ The results for EMD, CD, and IoU are presented in the following table 1. Each me
 
 Besides, a version of DISN is evaluated using the ground truth camera parameters denoted $'Ours'$ whereas the normal version using predicted camera parameters is denoted as $'Ours_cam'$.
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 1: Quantitative results on ShapeNet Core for the above presented methods. Metrics are CD ($\times 0.001$), EMD ($\times 100$) and IoU(%). CD and EMD are computed on 2048 points.[1]*
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 1: Quantitative results on ShapeNet Core for the above presented methods. Metrics are CD ($\times 0.001$), EMD ($\times 100$) and IoU(%). CD and EMD are computed on 2048 points. Taken from[1]*
 
 The quantitative results show that, on average, DISN is superior using EMD and IoU. In CD it is only beaten by 3DN. Nevertheless, as explained above this method requires further information in the form of a source mesh.
 
@@ -171,16 +171,13 @@ The quantitative results show that, on average, DISN is superior using EMD and I
 
 The F-score results are shown in Table 2. One can see that, apart from a threshold of 20%, DISN again is superior to the other methods. Something to point out here is that, especially for Low thresholds, DISN is superior to the other methods by up to 1.5% at a threshold of 0.5% and up to 3.2% at a 1% threshold. As this difference is constantly declining when the threshold reaches higher than 2%, one can see strong indications that especially fine-grained details that correlate with small distances/threshold values are improved, while the overall shape produces similar values.
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 2: F-score results[1]</i></center>
-
-  
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 2: F-score results. Taken from [1]*
 
 Despite the good results shown, one must wonder why only 3DCNN and IMNet are compared to DISN.
 
   
 
 #### Camera Pose Estimation results
-
 If camera pose estimation has improved by using a continuous higher-dimensional parameter representation is tested by applying two metrics:
 
 1.  **$d_{3D}$** measures the mean distance between a point cloud transformed with the predicted values and the ground truth point cloud.
@@ -189,7 +186,7 @@ If camera pose estimation has improved by using a continuous higher-dimensional 
   
 
 The results of these metrics for pose estimation are depicted in Table 3. They show that quantitative improvement in the process of pose estimation is measurable compared to the original approach of **[26]**. More importantly, when analyzing table 1, less difference between the mean results of $'Ours_cam'$ and $'Ours'$ than between $'Ours_cam'$. and most other reconstruction approaches can be seen.
-
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 3: Camera Pose Estimation. Taken from [1]*
   
 
 ### Qualitative Evaluation
@@ -301,11 +298,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjgyMTg0MywtMTMxNDg0ODY0OSwtMT
-QyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5
-MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMj
-QsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1
-NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwOD
-MwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQs
-MzYxOTQ3MzAwXX0=
+eyJoaXN0b3J5IjpbLTE5NTM4MzQ0NDgsLTEzMTQ4NDg2NDksLT
+E0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2
+OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MT
+I0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5
+NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MD
+gzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0
+LDM2MTk0NzMwMF19
 -->
