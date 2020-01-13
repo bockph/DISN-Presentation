@@ -202,7 +202,7 @@ To further, test the effectiveness and robustness of the approach Ablation studi
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/6_ablationChairQualitative.png?raw=true)
 *Figure 6: Qualitative results for the category 'chair' when employing the different ablation studies.  Taken from [1]*  
 
-For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in figure 6 for the former and table **4** for the latter.
+For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in figure 6 for the former and table 4 for the latter.
 
   
 
@@ -210,7 +210,7 @@ For DISN the authors wanted to find out what impact the camera pose estimation, 
 
 As the local feature extraction module is directly dependant on the pose estimation, one wants to how big this influence is and whether the further improvement is crucial here. Especially, as the evaluation of the pose estimation network (Table 3) has shown that an average reprojection error of 2.95 pixels is introduced to the network. After conducting the ablation studies one can see (depicted in Table 1) that constantly better results can be achieved if true camera parameters are used. However, as already stated this might not be a crucial issue as the difference in metrics between estimated and true values is lower than the difference to most other approaches.
 
-When looking at Figure **X** and **Y** one can further, conclude that there are small differences but the overall aim is still met.
+When looking at figure 5 and 6 one can further, conclude that there are small differences but the overall aim is still met.
 
   
 
@@ -218,13 +218,13 @@ When looking at Figure **X** and **Y** one can further, conclude that there are 
 
 Novel about the here presented approach is also the prediction of concrete SDF values instead of a simple inside/outside classification. However, to further investigate the effectiveness of this different approach the same network structure is employed but trained with a softmax cross-entropy loss. With this classifier, the output of a point is the probability of being inside or outside the iso-surface.
 
-While quantitative results are slightly worse than the original proposed DISN they are -- compared to the other methods -- still a lot better using the chair category. Nevertheless, when comparing the concrete visual results in Figure **Y** quality loss is obvious. Both presented chairs are not completely solid compared to ground truth and the continuous prediction of an SDF.
+While quantitative results are slightly worse than the original proposed DISN they are -- compared to the other methods -- still a lot better using the chair category. Nevertheless, when comparing the concrete visual results in figure 6 quality loss is obvious. Both presented chairs are not completely solid compared to ground truth and the continuous prediction of an SDF.
 
   
 
 #### Removal of Local Feature Extraction Module
 
-The authors of the DISN paper presents their additional local feature extraction module as their key finding for 3D reconstruction. Therefore, to validate its effectiveness its is completely removed from the network and the results in Table 4 and Figure **Y** are labeled as Global. Surprisingly, while IoU is nearly equal, EMD and CD are better compared to the Binary studies -- this is unexpected as this implies a stronger impact of the classifier change than the one of adding local feature extraction. Notwithstanding, the qualitative results of the chair lose a lot of detail and seem to be more similar to IMNET or OCCNET than to DISN.
+The authors of the DISN paper presents their additional local feature extraction module as their key finding for 3D reconstruction. Therefore, to validate its effectiveness its is completely removed from the network and the results in Table 4 and figure 6 are labeled as Global. Surprisingly, while IoU is nearly equal, EMD and CD are better compared to the Binary studies -- this is unexpected as this implies a stronger impact of the classifier change than the one of adding local feature extraction. Notwithstanding, the qualitative results of the chair lose a lot of detail and seem to be more similar to IMNET or OCCNET than to DISN.
 
   
 
@@ -235,7 +235,7 @@ The authors of the DISN paper presents their additional local feature extraction
 *Figure 7: The network architecture "One-stream" employed for ablation studies. Taken from [1]*  
   
 
-As their last ablation study, the authors create a second SDF prediction network called One-stream (Figure 8). Different from the actual proposed one, only one decoder is used and both global and local features are concatenated. The only slightly inferior quantitative as well as qualitative results of one-stream vs two-stream (which is the proposed approach) show that DISN can be implemented by different network structures.
+As their last ablation study, the authors create a second SDF prediction network called One-stream (see also figure 7). Different from the actual proposed one, only one decoder is used and both global and local features are concatenated. The only slightly inferior quantitative as well as qualitative results of one-stream vs two-stream (which is the proposed approach) show that DISN can be implemented by different network structures.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_4.png?raw=true)*Table 4: Quantitative results for the category 'chair' when employing the different ablation studies. Taken from [1]*
   
 
@@ -245,9 +245,9 @@ To further, show the capabilities of DISN three applications are employed and br
 
 1.  Shape interpolation -- generates plausible shapes between two different key-objects, using interpolation. Figure 8 shows that when interpolation is applied to both global and local features, a gradual transformation is possible.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/8_shape_interpolation.png?raw=true)
-*Figure 8: Shapeinterpolation results. Taken from [1]*  
+*Figure 8: Shape interpolation results. Taken from [1]*  
 
-1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (Figure 9) do not look as nice as the ones of the official test set, they still return plausible predictions.
+1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (see also figure 9) do not look as nice as the ones of the official test set, they still return plausible predictions.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/9_online_products.png?raw=true)
 *Figure 9: Results on single-view 3D reconstruction with online product images. Taken from [1]*  
 
@@ -292,7 +292,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NTAxMzgyOSw4Mjg3MTQ0MjcsNDY2MD
+eyJoaXN0b3J5IjpbMTY1OTA1MjExNCw4Mjg3MTQ0MjcsNDY2MD
 I3MDMxLC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1
 NzYsLTEzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMT
 gsMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIx
