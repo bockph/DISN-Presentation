@@ -243,15 +243,15 @@ As their last ablation study, the authors create a second SDF prediction network
 
 To further, show the capabilities of DISN three applications are employed and briefly depicted:
 
-1.  Shape interpolation -- generates plausible shapes between two different key-objects, using interpolation. Figure 8 shows that when interpolation is applied to both global and local features, a gradual transformation is possible.
+1.  **Shape interpolation** -- generates plausible shapes between two different key-objects, using interpolation. Figure 8 shows that when interpolation is applied to both global and local features, a gradual transformation is possible.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/8_shape_interpolation.png?raw=true)
 *Figure 8: Shape interpolation results. Taken from [1]*  
 
-1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (see also figure 9) do not look as nice as the ones of the official test set, they still return plausible predictions.
+1.  **Online product images as input** -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (see also figure 9) do not look as nice as the ones of the official test set, they still return plausible predictions.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/9_online_products.png?raw=true)
 *Figure 9: Results on single-view 3D reconstruction with online product images. Top are the inputs and bottom the rendered outputs. Taken from [1]*  
 
-3.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As figure 10 shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/10_multi_view_reconstruction.png?raw=true)
+3.  **Multi-view reconstruction** -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As figure 10 shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/10_multi_view_reconstruction.png?raw=true)
 *Figure 10: Multi-view reconstruction results. (b) shows the result from single-view input (a), while (e) is predicted using (a), ( c) and (d).. Taken from [1]*  
 
 
@@ -327,11 +327,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI4NDg0MTcxLC0xNzg0OTIxNjQ3LDE4Mj
-E3MzQ4MDQsLTg1NjEzODYxMSw4Mjg3MTQ0MjcsNDY2MDI3MDMx
-LC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1NzYsLT
-EzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQz
-NTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3Mj
-Y3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcy
-LDE0NzIzNTc1NF19
+eyJoaXN0b3J5IjpbLTEzNTI5NzkzODEsLTE3ODQ5MjE2NDcsMT
+gyMTczNDgwNCwtODU2MTM4NjExLDgyODcxNDQyNyw0NjYwMjcw
+MzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3Ni
+wtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwy
+NDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMD
+cyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0
+NzIsMTQ3MjM1NzU0XX0=
 -->
