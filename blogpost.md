@@ -30,13 +30,11 @@ Examples that were compared to DISN are *AtlasNet*[2], *Pixel2Mesh*[3], and *3DN
 - **implicit methods ---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface. A common function $F$ is the Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface. As this function is continuous, objects are represented with arbitrary resolution.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/2_sdf.png?raw=true)
 *Figure 2: In (b) the SDF values of the rendered object in (a) are visualized. S is positive if outside and negative if inside. If S equals 0 ones knows that the corresponding point is part of the iso-surface. Taken from [1]*
-While in the here presented approach a SDF is predicted, in recent works like *IMNet*[5] or *OccNet*[6] a binary version of $F$ is predicted -- only telling whether a point is insider or outside. While none of these works has been capable of reconstructing fine-grained details, they have be capable of avoiding the drawbacks of explicit methods. Nonetheless, 
+While in the here presented approach a SDF is predicted, in recent works like *IMNet*[5] or *OccNet*[6] a binary version of $F$ is predicted -- only telling whether a point is insider or outside. While none of these works has been capable of reconstructing fine-grained details, they have shown to be capable of avoiding the drawbacks of explicit methods.  
 
 ## A two-step approach 
 
-To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. represent a 3D object implicitly using a Signed-Distance-Function (SDF). 
-
-To predict this SDF they developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network additionally to the global feature encoder.
+To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. predict an SDF. They developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network --  additionally to aglobal feature encoder.
 
 ### How is the camera pose estimated?
 For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy [7]. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
@@ -328,11 +326,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjI3NDgzNjEsLTE3ODQ5MjE2NDcsMT
-gyMTczNDgwNCwtODU2MTM4NjExLDgyODcxNDQyNyw0NjYwMjcw
-MzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3Ni
-wtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwy
-NDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMD
-cyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0
-NzIsMTQ3MjM1NzU0XX0=
+eyJoaXN0b3J5IjpbNDczNDE0MDcyLC0xNzg0OTIxNjQ3LDE4Mj
+E3MzQ4MDQsLTg1NjEzODYxMSw4Mjg3MTQ0MjcsNDY2MDI3MDMx
+LC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1NzYsLT
+EzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQz
+NTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3Mj
+Y3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcy
+LDE0NzIzNTc1NF19
 -->
