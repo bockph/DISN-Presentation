@@ -89,7 +89,7 @@ To predict this SDF they developed a feed-forward neural network that takes a si
 
   
 
-<center><i>Figure  3: The camera pose estimation network. Taken from [1]</i></center>
+*Figure  3: The camera pose estimation network. Taken from [supplementary](https://xharlie.github.io/images/neurips_2019_supp.pdf) of [1]*
 
 For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure.
 
@@ -409,7 +409,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2OTY4OTc2LDI0MzU5ODIxMiwyMDMzNj
+eyJoaXN0b3J5IjpbMTEwMjQ4NTk4LDI0MzU5ODIxMiwyMDMzNj
 kwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NTEy
 NCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQsOT
 U1NTQyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwxOTg2OTA4
