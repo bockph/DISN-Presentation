@@ -182,9 +182,9 @@ The F-score results are shown in Table 2. One can see that, apart from a thresho
 If camera pose estimation has improved -- by using a continuous higher-dimensional parameter representation -- is tested by applying two metrics:
 
 1.  **$d_{3D}$** measures the mean distance between a point cloud transformed with the predicted values and the ground truth point cloud.
-2.  **$d_{2D}$** is the average 2D reprojection error. Generally, such reprojection error is calculated by projecting a 3D point $\^{X}$ onto the image point using the predicted parameters resulting in the 2D point $\^{x}$. A reprojection error then equals the euclidean distance $d(x,\^{x})$ where $x$ is the ground truth projection. Moreover, this reprojection error is measured in pixels.
+2.  **$d_{2D}$** is the average 2D reprojection error. Generally, such reprojection error is calculated by projecting a 3D point $\hat{X}$ onto the image point using the predicted parameters resulting in the 2D point $\hat{x}$. A reprojection error then equals the euclidean distance $d(x,\hat{x})$ where $x$ is the ground truth projection. Moreover, this reprojection error is measured in pixels.
 
-The results of these metrics for pose estimation are depicted in Table 3. They show that quantitative improvement in the process of pose estimation is measurable compared to the original approach of [7]. More importantly, when analyzing table 1, less difference between the mean results of $'Ours_cam'$ and $'Ours'$ than between $'Ours_cam'$. and most other reconstruction approaches can be seen.
+The results of these metrics for pose estimation are depicted in Table 3. They show that quantitative improvement in the process of pose estimation is measurable compared to the original approach of [7]. More importantly, when analyzing table 1, less difference between the mean results of '$Ours_{cam}$' and $'Ours'$ than between $Ours_{cam}$'. and most other reconstruction approaches can be seen.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_3.png?raw=true)*Table 3: Quantitative results of camera pose estimation . Taken from [1]*
   
 
@@ -327,11 +327,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMzY1NjU1OCwtMTc4NDkyMTY0NywxOD
-IxNzM0ODA0LC04NTYxMzg2MTEsODI4NzE0NDI3LDQ2NjAyNzAz
-MSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC
-0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0
-MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNz
-I2NzI4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3
-MiwxNDcyMzU3NTRdfQ==
+eyJoaXN0b3J5IjpbLTIxMTkxMDI5OTIsLTE3ODQ5MjE2NDcsMT
+gyMTczNDgwNCwtODU2MTM4NjExLDgyODcxNDQyNyw0NjYwMjcw
+MzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3Ni
+wtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwy
+NDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMD
+cyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0
+NzIsMTQ3MjM1NzU0XX0=
 -->
