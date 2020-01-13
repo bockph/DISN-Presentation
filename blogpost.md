@@ -274,7 +274,7 @@ In their conclusion Wang et al. [1] state that their work provides two main cont
 
   
 
-However, as the networks are only trained on rendered images they can only take images with a clear background as input. To tackle this limitation future work should include texture prediction using a differentiable renderer **[33]**
+However, as the networks are only trained on rendered images they can only take images with a clear background as input. To tackle this limitation future work should include texture prediction using a differentiable renderer [13]
 
   
 
@@ -315,7 +315,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 [12] Fun Shing Sin, Daniel Schroeder, and Jernej Barbic. Vega: non-linear fem deformable object ˇ simulator. In Computer Graphics Forum, volume 32, pages 36–48. Wiley Online Library, 2013.
 
-[13]
+[13] Hiroharu Kato, Yoshitaka Ushiku, and Tatsuya Harada. Neural 3d mesh renderer. In CVPR, 2018.
 
 
 
@@ -327,11 +327,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMTczNDgwNCwtODU2MTM4NjExLDgyOD
-cxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2
-NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNi
-wtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYw
-NjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3ND
-cyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2Miwt
-MTY2Mzk3OTM5M119
+eyJoaXN0b3J5IjpbMTExOTg5NTY3OSwxODIxNzM0ODA0LC04NT
+YxMzg2MTEsODI4NzE0NDI3LDQ2NjAyNzAzMSwtMTAwOTk0NTc4
+OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC0xMzE0ODQ4NjQ5LC
+0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0MzU5ODIxMiwyMDMz
+NjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NT
+EyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQs
+OTU1NTQyMDYyXX0=
 -->
