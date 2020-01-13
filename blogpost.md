@@ -231,10 +231,10 @@ The authors of the DISN paper presents their additional local feature extraction
 
 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 8: XXX  Taken from [1]*  
+*Figure 8: The network architecture "One-stream" employed for ablation studies. Taken from [1]*  
   
 
-As their last ablation study, the authors create a second SDF prediction network called One-stream (Figure Z). Different from the actual proposed one, only one decoder is used and both global and local features are concatenated. The only slightly inferior quantitative as well as qualitative results of one-stream vs two-stream (which is the proposed approach) show that DISN can be implemented by different network structures.
+As their last ablation study, the authors create a second SDF prediction network called One-stream (Figure 8). Different from the actual proposed one, only one decoder is used and both global and local features are concatenated. The only slightly inferior quantitative as well as qualitative results of one-stream vs two-stream (which is the proposed approach) show that DISN can be implemented by different network structures.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 4: Quantitative results for the category 'chair' when employing the different ablation studies. Taken from [1]*
   
 
@@ -244,7 +244,7 @@ To further, show the capabilities of DISN three applications are employed and br
 
 1.  Shape interpolation -- generates plausible shapes between two different key-objects, using interpolation. Figure **S** shows that when interpolation is applied to both global and local features, a gradual transformation is possible.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
-*Figure 6: Shapeinterpolation results. Taken from [1]*  
+*Figure 9: Shapeinterpolation results. Taken from [1]*  
 
 1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (Figure **kk**) do not look as nice as the ones of the official test set, they still return plausible predictions.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
@@ -291,11 +291,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NDQ4ODAyNCwtMTg4MTY5OTU3NiwtMT
-MxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1
-OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNj
-cyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIs
-MTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5Mj
-A5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2
-LC03NzU3NTYxOTRdfQ==
+eyJoaXN0b3J5IjpbNTIzNDg1MzQ1LC0xODgxNjk5NTc2LC0xMz
+E0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0MzU5
+ODIxMiwyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNzI2Nz
+I4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3Miwx
+NDcyMzU3NTQsOTU1NTQyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMD
+kzNiwxOTg2OTA4MzA2LC0xMzIyMzA4ODczLDIwNzUxMDUxMjYs
+LTc3NTc1NjE5NF19
 -->
