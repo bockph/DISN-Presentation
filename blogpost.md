@@ -66,7 +66,7 @@ The SDF prediction network consists of three encoders:
 Having the global and local features encoded together with the higher dimensional query point, the two embedding vectors are then decoded separetly. This results then in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network: ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/4_sdfNetworkTwoStream.png?raw=true)
 *Figure 4: The SDF network model. Taken from [1]*
 
- #### Loss calcualtion for SDF prediction
+ #### Loss calculation for SDF prediction
 For the loss calculation of the network, two things have to be taken into consideration. First, in contrast to e.g., IMNet one wants to recover different iso-levels and second, the network should concentrate on details near and inside the iso-surface. This, in consequence, then leads to a weighted loss function of SDF values being defined as:
 
   
@@ -79,7 +79,7 @@ m_2, & \text{otherwise}
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/5_qualitative.png?raw=true)
 *Figure 5: Single-view 3D reconstruction results of DISN and the other presented methods. The ground truth is denoted by 'GT'. Taken from [1]*  
 
-In order to evaluate whether the goal of reconstructing high-quality fine-grained 3D shapes has been achieved extensive evaluation and comparison against the previously mentioned methods (**[...]**) have to been done. To do this, qualitative (visual), as well as quantitative evaluation results on single-view 3D reconstruction, are provided. Additionally, the performance of the adapted camera pose estimation is examined against the original approach. In the last step Ablation studies have been conducted showing again qualitative as well as quantitative results.  
+In order to evaluate whether the goal of reconstructing high-quality fine-grained 3D shapes has been achieved extensive evaluation and comparison against the previously mentioned methods [2-6] have to been done. To do this, qualitative (visual), as well as quantitative evaluation results on single-view 3D reconstruction, are provided. Additionally, the performance of the adapted camera pose estimation is examined against the original approach. In the last step Ablation studies have been conducted showing again qualitative as well as quantitative results.  
 
 ### Experimental setup  
 
@@ -91,7 +91,7 @@ This includes the Dataset as well as the preparation training and testing implem
 
   
 
-For the experiments the ShapeNet Core **[...]** dataset was used. According to the [official website](https://www.shapenet.org/) it "is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations. It covers 55 common object categories with about 51,300 unique 3D models." However, to make the evaluation comparable, the official training/test split on 13 object categories is used. Furthermore, to obtain 2D images the renderings of Choy et al **[28]** are employed. This is quite good work as most of the aforementioned other approaches (**[Atlas, Pixel,3DN, OccNet]** ) employed the same settings for their evaluation.
+For the experiments the ShapeNet Core **[...]** dataset was used. According to the [official website](https://www.shapenet.org/) it "is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations. It covers 55 common object categories with about 51,300 unique 3D models." However, to make the evaluation comparable, the official training/test split on 13 object categories is used. Furthermore, to obtain 2D images the renderings of Choy et al. [10] are employed. This is quite good work as most of the aforementioned other approaches [2-4,6] employed the same settings for their evaluation.
 
   
 
@@ -323,11 +323,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMDU2NjgzOSwtODU2MTM4NjExLDgyOD
-cxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2
-NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNi
-wtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYw
-NjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3ND
-cyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2Miwt
-MTY2Mzk3OTM5M119
+eyJoaXN0b3J5IjpbLTE0NDAwMzMyMDIsLTg1NjEzODYxMSw4Mj
+g3MTQ0MjcsNDY2MDI3MDMxLC0xMDA5OTQ1Nzg4LDEzODIzMzU4
+NjYsLTE4ODE2OTk1NzYsLTEzMTQ4NDg2NDksLTE0MjgwNjU0Mj
+YsLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2
+MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MTI0LC0xMTMwNz
+Q3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1NDIwNjIs
+LTE2NjM5NzkzOTNdfQ==
 -->
