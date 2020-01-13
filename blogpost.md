@@ -34,10 +34,12 @@ While in the here presented approach a SDF is predicted, in recent works like *I
 
 ## A two-step approach 
 
-To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. predict an SDF. They developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network --  additionally to aglobal feature encoder.
+To achieve the goal of reconstructing both overall shape as well as fine-grained details, Wang et al. predict an SDF. They developed a feed-forward neural network that takes a single 2D image and a point in world coordinates $P(X, Y, Z)$ and returns the corresponding SDF value. Internally, this is done by using two consecutive networks: The first estimates the camera pose to map an object in world space to the image plane. Having this mapping a local feature extraction module is employed in the second (SDF predicting) network --  additionally to a global feature encoder.
 
 ### How is the camera pose estimated?
 For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy [7]. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
+
+
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/3_cameraPoseNetwork.png?raw=true)
 *Figure  3: The camera pose estimation network. Taken from [supplementary](https://xharlie.github.io/images/neurips_2019_supp.pdf) of [1]*
 
@@ -326,11 +328,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDczNDE0MDcyLC0xNzg0OTIxNjQ3LDE4Mj
-E3MzQ4MDQsLTg1NjEzODYxMSw4Mjg3MTQ0MjcsNDY2MDI3MDMx
-LC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1NzYsLT
-EzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQz
-NTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3Mj
-Y3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcy
-LDE0NzIzNTc1NF19
+eyJoaXN0b3J5IjpbMTU2MTk0NzY5NiwtMTc4NDkyMTY0NywxOD
+IxNzM0ODA0LC04NTYxMzg2MTEsODI4NzE0NDI3LDQ2NjAyNzAz
+MSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC
+0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0
+MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNz
+I2NzI4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3
+MiwxNDcyMzU3NTRdfQ==
 -->
