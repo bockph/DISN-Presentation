@@ -27,11 +27,9 @@ Modern research shows that as of now deep learning is the state-of-the-art techn
 - **explicit methods ---** describe a 3D model as a solid using e.g. point clouds, voxels or meshes. The main advantage of such a method is its intuitiveness which also makes them easy to encode e.g. in a Neural Network. However, these methods suffer from limited resolution and/or fixed mesh topologies. Further, traditionally applied training losses like Earth-mover Distance (EMD) or Chamfer Distance (CD) only approximate the similarity of shape and are therefore not completly accurate.
 Examples that were compared to DISN are *AtlasNet*[2], *Pixel2Mesh*[3], and *3DN*[4]. While the first uses a set of parametric elements to generate 3D surfaces, the latter two reconstruct 3D shapes by deforming a given source mesh. For this, Pixel2Mesh uses a hardcoded Ellipsoid-mesh while 3DN expects the source Mesh as an input.
 
-- **implicit methods ---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface. A common function $F$ is the Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface. As this function is continuous, objects are represented with arbitrary resolution.
-- 
+- **implicit methods ---** in contrast, define a surface by using a volumetric scalar function. If the equation $F(X,Y,Z) = 0$ holds, then a point $P(X,Y,Z)$ is said to be on the surface. A common function $F$ is the Signed-Distance-Function (SDF). An SDF maps a point $P$ to a real value $s \in \mathbb{R}$ where the sign of $s$ tells whether $P$ is inside or outside of the 3D shape and the absolute value gives the distance of $P$ to the isosurface. As this function is continuous, objects are represented with arbitrary resolution. 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/2_sdf.png?raw=true)
 *Figure 2: In (b) the SDF values of the rendered object in (a) are visualized. S is positive if outside and negative if inside. If S equals 0 ones knows that the corresponding point is part of the iso-surface. Taken from [1]*
-
 While in the here presented approach a SDF is predicted, in recent works like *IMNet*[5] or *OccNet*[6] a binary version of $F$ is predicted -- only telling whether a point is insider or outside. While none of these works has been capable of reconstructing fine-grained details, they have shown to be capable of avoiding the drawbacks of explicit methods.  
 
 ## A two-step approach 
@@ -324,7 +322,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI3MTMxMzUwLDM4OTI0MzAxNywtMTc4ND
+eyJoaXN0b3J5IjpbODM0NjkwMTgxLDM4OTI0MzAxNywtMTc4ND
 kyMTY0NywxODIxNzM0ODA0LC04NTYxMzg2MTEsODI4NzE0NDI3
 LDQ2NjAyNzAzMSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2LC0xOD
 gxNjk5NTc2LC0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYz
