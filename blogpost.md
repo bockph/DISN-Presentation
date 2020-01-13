@@ -198,7 +198,7 @@ As the quantitative results already indicate, qualitative results which are depi
 
 ### Ablation studies
 
-To further, test the effectiveness and robustness of the approach Ablation studies are conducted. Originally, ablation means to surgical remove organs or other human material from the body. In the context of deep learning, the term ablation studies wasbeen adopted to name a process where one removes different pieces of a network to gain a better understanding of how the network behaves.
+To further, test the effectiveness and robustness of the approach Ablation studies are conducted. Originally, ablation means to surgical remove organs or other human material from the body. In the context of deep learning, the term ablation studies was adopted to name a process where one removes different pieces of a network to gain a better understanding of how the network behaves.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/6_ablationChairQualitative.png?raw=true)
 *Figure 6: Qualitative results for the category 'chair' when employing the different ablation studies.  Taken from [1]*  
 
@@ -208,7 +208,7 @@ For DISN the authors wanted to find out what impact the camera pose estimation, 
 
 #### Camera Pose estimation
 
-As the local feature extraction module is directly dependant on the pose estimation, one wants to how big this influence is and whether the further improvement is crucial here. Especially, as the evaluation of the pose estimation network (see also table 3) has shown that an average reprojection error of 2.95 pixels is introduced to the network. After conducting the ablation studies one can see (depicted in table 1) that constantly better results can be achieved if true camera parameters are used. However, as already stated this might not be a crucial issue as the difference in metrics between estimated and true values is lower than the difference to most other approaches.
+As the local feature extraction module is directly dependant on the pose estimation, one wants to know how big this influence is and whether the further improvement is crucial here. Especially, as the evaluation of the pose estimation network (see also table 3) has shown that an average reprojection error of 2.95 pixels is introduced to the network. After conducting the ablation studies one can see (depicted in table 1) that constantly better results can be achieved if true camera parameters are used. However, as already stated this might not be a crucial issue as the difference in metrics between estimated and true values is lower than the difference to most other approaches.
 
 When looking at figure 5 and 6 one can further, conclude that there are small differences but the overall aim is still met.
 
@@ -327,11 +327,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5OTU3NTAwNCwtMTc4NDkyMTY0NywxOD
-IxNzM0ODA0LC04NTYxMzg2MTEsODI4NzE0NDI3LDQ2NjAyNzAz
-MSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC
-0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0
-MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNz
-I2NzI4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3
-MiwxNDcyMzU3NTRdfQ==
+eyJoaXN0b3J5IjpbNzI4NDg0MTcxLC0xNzg0OTIxNjQ3LDE4Mj
+E3MzQ4MDQsLTg1NjEzODYxMSw4Mjg3MTQ0MjcsNDY2MDI3MDMx
+LC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1NzYsLT
+EzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQz
+NTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3Mj
+Y3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcy
+LDE0NzIzNTc1NF19
 -->
