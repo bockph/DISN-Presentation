@@ -72,7 +72,7 @@ To achieve the goal of reconstructing both overall shape as well as fine-grained
 
   
 
-<center><i>Figure 2: SDF blabla. Taken from [1]</i></center>
+<center><i>Figure 3: SDF blabla. Taken from [1]</i></center>
 
   
  
@@ -89,7 +89,7 @@ To predict this SDF they developed a feed-forward neural network that takes a si
 
   
 
-<center><i>Figure : The camera pose estimation network. [1]</i></center>
+<center><i>Figure  3: The camera pose estimation network. Taken from [1]</i></center>
 
 For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure.
 
@@ -103,17 +103,13 @@ $$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space and\space R_y = R_z \times 
 
   
 
-with N(\point) being the normalization function and \times the cross product.**[?Zhou et al. ]**
-
-  
-
-Translation $t \in \mathbb{R}^3$ is predicted directly.
+with $N(\cdot)$ being the normalization function and '$\times$' the cross product.**[?Zhou et al. ]** Translation $t \in \mathbb{R}^3$ is predicted directly.
 
   
 
   
 
-When training this network (Figure **??**), the authors use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space, and the renderings provided by Choy et al **[28]**. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$.
+When training this network (Figure 3), the authors use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space, and the renderings provided by Choy et al **[28]**. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$.
 
   
 
@@ -413,11 +409,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MTY4MzI2MCwyNDM1OTgyMTIsMjAzMz
-Y5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUx
-MjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LD
-k1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4Njkw
-ODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOT
-QsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMzIw
-MTU2Ml19
+eyJoaXN0b3J5IjpbMTA2OTY4OTc2LDI0MzU5ODIxMiwyMDMzNj
+kwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NTEy
+NCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQsOT
+U1NTQyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwxOTg2OTA4
+MzA2LC0xMzIyMzA4ODczLDIwNzUxMDUxMjYsLTc3NTc1NjE5NC
+wzNjE5NDczMDAsLTExMjg2MTQ3MjcsOTAyNjQxNzk1LC0zMjAx
+NTYyXX0=
 -->
