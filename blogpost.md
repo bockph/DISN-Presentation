@@ -48,7 +48,7 @@ with $N(\cdot)$ being the normalization function and '$\times$' the cross produc
  Translation $t \in \mathbb{R}^3$ is predicted directly.
 
  #### Loss calcualtion for pose estimation
-When training this network (Figure 3), the authors use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space, and the renderings provided by Choy et al **[28]**. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
+When training this network (Figure 3), the authors use the ShapeNet Core dataset [9] **[25]** , where all objects are within the same aligned model space, and the renderings provided by Choy et al. [10] **[28]**. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
 
 $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
@@ -307,6 +307,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 [8] Yi Zhou, Connelly Barnes, Jingwan Lu, Jimei Yang, and Hao Li. On the continuity of rotation representations in neural networks. arXiv preprint arXiv:1812.07035, 2018.
 
+[9] Angel X. Chang, Thomas Funkhouser, Leonidas Guibas, Pat Hanrahan, Qixing Huang, Zimo Li, Silvio Savarese, Manolis Savva, Shuran Song, Hao Su, Jianxiong Xiao, Li Yi, and Fisher Yu. Shapenet: An information-rich 3d model repository. arxiv, 2015.
+
+[10]
+
+
 Occnet:
 Lars Mescheder, Michael Oechsle, Michael Niemeyer, Sebastian Nowozin, and Andreas Geiger. Occupancy networks: Learning 3d reconstruction in function space. In CVPR, 2019.
 
@@ -336,11 +341,11 @@ Christopher B Choy, Danfei Xu, JunYoung Gwak, Kevin Chen, and Silvio Savarese. 3
 Pose estimation
 Eldar Insafutdinov and Alexey Dosovitskiy. Unsupervised learning of shape and pose with differentiable point clouds. In NeurIPS, 2018.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MTc4OTYwMiwtODU2MTM4NjExLDgyOD
-cxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2
-NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNi
-wtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYw
-NjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3ND
-cyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2Miwt
-MTY2Mzk3OTM5M119
+eyJoaXN0b3J5IjpbNDcyODIyNzAyLC04NTYxMzg2MTEsODI4Nz
+E0NDI3LDQ2NjAyNzAzMSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2
+LC0xODgxNjk5NTc2LC0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC
+0xNTYzOTI2MTE4LDI0MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2
+NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NTEyNCwtMTEzMDc0Nz
+I1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQsOTU1NTQyMDYyLC0x
+NjYzOTc5MzkzXX0=
 -->
