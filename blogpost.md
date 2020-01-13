@@ -238,7 +238,7 @@ As their last ablation study, the authors create a second SDF prediction network
 
   
 
-##Additional Work
+## Additional Work
 
 To further, show the capabilities of DISN three applications are employed and briefly depicted:
 
@@ -251,8 +251,8 @@ To further, show the capabilities of DISN three applications are employed and br
 *Figure 6: Results on single-view 3D reconstruction with online product images. Taken from [1]*  
 
 3.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As Figure **kkk** shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+*Figure 6: Multi-view reconstruction results. (b) shows the result from single-view input (a), while (e) is predicted using (a), (c) and (d).. Taken from [1]*  
 
-<center><i>Figure : Multi-view reconstruction results. (b) shows the result from single-view input (a), while (e) is predicted using (a), (c) and (d).[1]</i></center>
 
   
 
@@ -279,18 +279,19 @@ However, as the networks are only trained on rendered images they can only take 
 
 ### My perspective
 
-My overall opinion of DISN is very positive. The extensive evaluation seems to prove the conclusion of the paper's authors. They have not only compared their work equally to several highly rated other papers but also employed the settings of the test set up as similar as possible. Further, they conducted extensive ablation studies to prove the effectiveness of their newly introduced modules. However, there are also some points I have two things to criticize:
+My overall opinion of DISN is very positive. The extensive evaluation seems to prove the conclusion of the paper's authors. They have not only compared their work equally to several highly rated other papers but also employed the settings of the test set up as similar as possible. Further, they conducted extensive ablation studies to prove the effectiveness of their newly introduced modules. However, there are also some points I have four things to criticize:
 
 1.  The quantitative metrics have not been explained in detail, IoU not at all. It would be better if they at least reference them to accepted scientific work, to assure that the measures are not manipulated for their work benefit.
-2.  They have added several additional applications, creating a perception of how awesome their work ist. However, no concrete implementation details have been published nor extensive evaluation. Therefore, in my opinion, this should be more seen as a possible outlook for the future than a proposal of what it is capable of doing.
-3.  OccNet seems to provide the best comparable research for single-view reconstruction. However, they did only compare IoU which is nearly equal and found no other quantitative metric. Further, in the supplementary extensive qualitative results are presented -- considering all other methods except OccNet.
-4. TODO: Despite the good results shown, one must wonder why only 3DCNN and IMNet are compared to DISN.
+2. As evaluated above in F-score provides 
+3.  They have added several additional applications, creating a perception of how awesome their work ist. However, no concrete implementation details have been published nor extensive evaluation. Therefore, in my opinion, this should be more seen as a possible outlook for the future than a proposal of what it is capable of doing.
+4.  OccNet seems to provide the best comparable research for single-view reconstruction. However, they did only compare IoU which is nearly equal and found no other quantitative metric. Further, in the supplementary extensive qualitative results are presented -- considering all other methods except OccNet.
+5. TODO: Despite the good results shown, one must wonder why only 3DCNN and IMNet are compared to DISN.
 
   
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMTMwMDQ0MCwtMTg4MTY5OTU3NiwtMT
+eyJoaXN0b3J5IjpbMTI5OTUwNjk2OCwtMTg4MTY5OTU3NiwtMT
 MxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1
 OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNj
 cyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIs
