@@ -201,7 +201,7 @@ As the quantitative results already indicate, qualitative results which are depi
 To further, test the effectiveness and robustness of the approach Ablation studies are conducted. Originally ablation means to surgical remove organs or other human material from the body. In the context of deep learning, the term ablation studies have been adopted to name a process where one removes different pieces of a network to gain a better understanding of how the network behaves.
 
 For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in Figure 6 for the former and table **4** for the latter.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/.png?raw=true)
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/6_ablationChairQualitative.png?raw=true)
 *Figure 6: Qualitative results for the category 'chair' when employing the different ablation studies.  Taken from [1]*  
 
   
@@ -231,12 +231,12 @@ The authors of the DISN paper presents their additional local feature extraction
 #### Different Network structures
 
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/7_oneStreamNetwork.png?raw=true)
 *Figure 7: The network architecture "One-stream" employed for ablation studies. Taken from [1]*  
   
 
 As their last ablation study, the authors create a second SDF prediction network called One-stream (Figure 8). Different from the actual proposed one, only one decoder is used and both global and local features are concatenated. The only slightly inferior quantitative as well as qualitative results of one-stream vs two-stream (which is the proposed approach) show that DISN can be implemented by different network structures.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 4: Quantitative results for the category 'chair' when employing the different ablation studies. Taken from [1]*
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_4.png?raw=true)*Table 4: Quantitative results for the category 'chair' when employing the different ablation studies. Taken from [1]*
   
 
 ## Additional Work
@@ -244,11 +244,11 @@ As their last ablation study, the authors create a second SDF prediction network
 To further, show the capabilities of DISN three applications are employed and briefly depicted:
 
 1.  Shape interpolation -- generates plausible shapes between two different key-objects, using interpolation. Figure 8 shows that when interpolation is applied to both global and local features, a gradual transformation is possible.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/8_shape_interpolation.png?raw=true)
 *Figure 8: Shapeinterpolation results. Taken from [1]*  
 
 1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (Figure 9) do not look as nice as the ones of the official test set, they still return plausible predictions.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/.png?raw=true)
 *Figure 9: Results on single-view 3D reconstruction with online product images. Taken from [1]*  
 
 3.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As Figure 10 shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
@@ -292,7 +292,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxOTc5MzM1OSw0NjYwMjcwMzEsLTEwMD
+eyJoaXN0b3J5IjpbLTI2OTc3MjA3MCw0NjYwMjcwMzEsLTEwMD
 k5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3NiwtMTMxNDg0
 ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1OTgyMT
 IsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5
