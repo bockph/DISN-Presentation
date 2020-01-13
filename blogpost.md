@@ -162,13 +162,13 @@ $$ \text{F-score} =2* \frac{Precision*Recall}{Precision+Recall}$$ Here the princ
 
 #### EMD, CD & IoU
 
-The results for EMD, CD, and IoU are presented in the following table 1. Each metric has been calculated for each object category. For OccNett, however, due to a scale mismatch, only IoU is evaluated which is scale-invariant.
+The results for EMD, CD, and IoU are presented in the following table 1. Each metric has been calculated for each object category. For OccNET[6], however, due to a scale mismatch, only IoU is evaluated which is scale-invariant.
 
 Besides, a version of DISN is evaluated using the ground truth camera parameters denoted $'Ours'$ whereas the normal version using predicted camera parameters is denoted as $'Ours_cam'$.
 
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_1.png?raw=true)*Table 1: Quantitative results on ShapeNet Core for the above presented methods. Metrics are CD ($\times 0.001$), EMD ($\times 100$) and IoU(%). CD and EMD are computed on 2048 points. Taken from[1]*
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_1.png?raw=true)*Table 1: Quantitative results on ShapeNet Core for the above presented methods. Metrics are CD ($\times 0.001$), EMD ($\times 100$) and IoU(%). CD and EMD are computed on 2048 points. Taken from [1]*
 
-The quantitative results show that, on average, DISN is superior using EMD and IoU. In CD it is only beaten by 3DN. Nevertheless, as explained above this method requires further information in the form of a source mesh.
+The quantitative results show that, on average, DISN is superior using EMD and IoU. In CD it is only beaten by 3DN [4]. Nevertheless, as explained above this method requires further information in the form of a source mesh.
 
 #### F-score
 
@@ -184,7 +184,7 @@ If camera pose estimation has improved by using a continuous higher-dimensional 
 1.  **$d_{3D}$** measures the mean distance between a point cloud transformed with the predicted values and the ground truth point cloud.
 2.  **$d_{2D}$ is the average 2D reprojection error. Generally, such reprojection error is calculated by projecting a 3D point $\^{X}$ onto the image point using the predicted parameters resulting in the 2D point $\^{x}$. A reprojection error then equals the euclidean distance $d(x,\^{x})$ where $x$ is the ground truth projection. Moreover, this reprojection error is measured in pixels.
 
-The results of these metrics for pose estimation are depicted in Table 3. They show that quantitative improvement in the process of pose estimation is measurable compared to the original approach of **[26]**. More importantly, when analyzing table 1, less difference between the mean results of $'Ours_cam'$ and $'Ours'$ than between $'Ours_cam'$. and most other reconstruction approaches can be seen.
+The results of these metrics for pose estimation are depicted in Table 3. They show that quantitative improvement in the process of pose estimation is measurable compared to the original approach of [7]. More importantly, when analyzing table 1, less difference between the mean results of $'Ours_cam'$ and $'Ours'$ than between $'Ours_cam'$. and most other reconstruction approaches can be seen.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/table_3.png?raw=true)*Table 3: Quantitative results of camera pose estimation . Taken from [1]*
   
 
@@ -327,11 +327,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA0MjQ1ODEzLC04NTYxMzg2MTEsODI4Nz
-E0NDI3LDQ2NjAyNzAzMSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2
-LC0xODgxNjk5NTc2LC0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC
-0xNTYzOTI2MTE4LDI0MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2
-NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NTEyNCwtMTEzMDc0Nz
-I1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQsOTU1NTQyMDYyLC0x
-NjYzOTc5MzkzXX0=
+eyJoaXN0b3J5IjpbMTgyMTczNDgwNCwtODU2MTM4NjExLDgyOD
+cxNDQyNyw0NjYwMjcwMzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2
+NiwtMTg4MTY5OTU3NiwtMTMxNDg0ODY0OSwtMTQyODA2NTQyNi
+wtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYw
+NjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3ND
+cyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2Miwt
+MTY2Mzk3OTM5M119
 -->
