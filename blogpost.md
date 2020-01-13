@@ -248,10 +248,10 @@ To further, show the capabilities of DISN three applications are employed and br
 *Figure 8: Shapeinterpolation results. Taken from [1]*  
 
 1.  Online product images as input -- are possible candidates for a real application. As the Network is trained on rendered images, this experiment gives a first clue on how applicable DISN is for other domains. Despite that the reconstruction results (Figure 9) do not look as nice as the ones of the official test set, they still return plausible predictions.
-![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/.png?raw=true)
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/9_online_products.png?raw=true)
 *Figure 9: Results on single-view 3D reconstruction with online product images. Taken from [1]*  
 
-3.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As Figure 10 shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+3.  Multi-view reconstruction -- makes use of more information, in form of multiple view inputs, to improve the reconstruction process. For this, the global and local features are encoded for each image separately and then concatenated in the corresponding embedding vector. After applying a max-pooling operation on this embedding vector it is fed two the decoder. As Figure 10 shows training such an extended architecture with two additional views can result in better predictions.![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/10_multi_view_reconstruction.png?raw=true)
 *Figure 10: Multi-view reconstruction results. (b) shows the result from single-view input (a), while (e) is predicted using (a), ( c) and (d).. Taken from [1]*  
 
 
@@ -292,11 +292,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2OTc3MjA3MCw0NjYwMjcwMzEsLTEwMD
-k5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3NiwtMTMxNDg0
-ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1OTgyMT
-IsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5
-MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3Mj
-M1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYs
-MTk4NjkwODMwNl19
+eyJoaXN0b3J5IjpbODI4NzE0NDI3LDQ2NjAyNzAzMSwtMTAwOT
+k0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC0xMzE0ODQ4
+NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0MzU5ODIxMi
+wyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNzI2NzI4LDkx
+NDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMz
+U3NTQsOTU1NTQyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwx
+OTg2OTA4MzA2XX0=
 -->
