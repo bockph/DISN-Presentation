@@ -157,22 +157,9 @@ For the loss calculation of the network, two things have to be taken into consid
 
   
 
-$$ L_{SDF} =\sum_p m | f(I,p) - SDF^I(p)|
-
-  
-
-\\m =\begin{cases}
-
-  
-
+$$ L_{SDF} =\sum_p m | f(I,p) - SDF^I(p)|\\m =\begin{cases}
 m_1, &SDF^I(p) >\delta \\
-
-  
-
 m_2, & \text{otherwise}
-
-  
-
 \end{cases}$$
 
   
@@ -420,11 +407,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMj
-EyMDcyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMy
-NjA0NzIsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5My
-w1OTM5MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1
-MTA1MTI2LC03NzU3NTYxOTQsMzYxOTQ3MzAwLC0xMTI4NjE0Nz
-I3LDkwMjY0MTc5NSwtMzIwMTU2MiwtMjEyMTY5MzYwMiw1NTQw
-Njc4MDldfQ==
+eyJoaXN0b3J5IjpbMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MD
+Y0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3
+MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLT
+E2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MDgzMDYsLTEzMjIz
+MDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0LDM2MTk0NzMwMC
+wtMTEyODYxNDcyNyw5MDI2NDE3OTUsLTMyMDE1NjIsLTIxMjE2
+OTM2MDJdfQ==
 -->
