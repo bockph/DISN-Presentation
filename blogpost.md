@@ -72,7 +72,7 @@ To achieve the goal of reconstructing both overall shape as well as fine-grained
 
   
 
-<center><i>Figure 3: SDF blabla. Taken from [1]</i></center>
+<center><i>Figure 2: SDF visualization blabla Taken from [1]</i></center>
 
   
  
@@ -83,7 +83,7 @@ To predict this SDF they developed a feed-forward neural network that takes a si
 
   
 
-### How is the camera pose estimated
+### How is the camera pose estimated?
 For camera pose estimation the authors use the general approach proposed by Insafutdinov and Dosovitskiy. By using a Convolutional Neural Network several pose candidates are combined. However, their approach suffers from a large number of network parameters and a complex training procedure. 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 
@@ -99,16 +99,8 @@ $$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space and\space R_y = R_z \times 
   
 
 with $N(\cdot)$ being the normalization function and '$\times$' the cross product.**[?Zhou et al. ]** Translation $t \in \mathbb{R}^3$ is predicted directly.
-
-  
-
-  
-
-When training this network (Figure 3), the authors use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space, and the renderings provided by Choy et al **[28]**. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$.
-
-  
-
-As a regression loss they use the Mean-squared-error (MSE) resulting in:
+ 
+When training this network (Figure 3), the authors use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space, and the renderings provided by Choy et al **[28]**. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
 
   
 
@@ -118,13 +110,13 @@ $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
   
 
-### How is the Signed Distance Function predicted
+### How is the Signed Distance Function predicted?
 
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 
   
 
-<center><i>Figure : The SDF network model. [1]</i></center>
+*Figure 4: The SDF network model. Taken from [1]*
 
 The SDF prediction network consists of three different parts.
 
@@ -404,11 +396,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MjI1MTQ4OCwyNDM1OTgyMTIsMjAzMz
-Y5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUx
-MjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LD
-k1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4Njkw
-ODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOT
-QsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkwMjY0MTc5NSwtMzIw
-MTU2Ml19
+eyJoaXN0b3J5IjpbLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMz
+M2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1
+MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NC
+w5NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5
+MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MT
+k0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5MDI2NDE3OTUsLTMy
+MDE1NjJdfQ==
 -->
