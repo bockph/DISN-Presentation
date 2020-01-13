@@ -49,12 +49,13 @@ with $N(\cdot)$ being the normalization function and '$\times$' the cross produc
  Translation $t \in \mathbb{R}^3$ is predicted directly.
 
  #### Loss calcualtion for pose estimation
-When training this network (see also figure 3), the authors use the ShapeNet Core dataset [9]  , where all objects are within the same aligned model space, and the renderings provided by Choy et al. [10]. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
+When training this network (see also figure 3), the authors use the ShapeNet Core dataset [9]  , where all objects are within the same aligned model space, and the renderings provided by Choy et al. [10]. The model space of the original dataset is then set as the world space with all camera parameters in respect to. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
 
 $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 
 ### How is the Signed Distance Function predicted?
-
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/4_sdfNetworkTwoStream.png?raw=true)
+*Figure 4: The SDF network model. Taken from [1]*
 
 The SDF prediction network consists of three encoders:
 
@@ -64,8 +65,7 @@ The SDF prediction network consists of three encoders:
 
   
 
-Having the global and local features encoded together with the higher dimensional query point, the two embedding vectors are then decoded separetly. This results then in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network: ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/4_sdfNetworkTwoStream.png?raw=true)
-*Figure 4: The SDF network model. Taken from [1]*
+Having the global and local features encoded together with the higher dimensional query point, the two embedding vectors are then decoded separetly. This results then in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network: 
 
  #### Loss calculation for SDF prediction
 For the loss calculation of the network, two things have to be taken into consideration. First, in contrast to e.g., IMNet one wants to recover different iso-levels and second, the network should concentrate on details near and inside the iso-surface. This, in consequence, then leads to a weighted loss function of SDF values being defined as:
@@ -328,11 +328,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Njc2NTI5MTQsLTE3ODQ5MjE2NDcsMT
-gyMTczNDgwNCwtODU2MTM4NjExLDgyODcxNDQyNyw0NjYwMjcw
-MzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3Ni
-wtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwy
-NDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMD
-cyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0
-NzIsMTQ3MjM1NzU0XX0=
+eyJoaXN0b3J5IjpbMTU4OTY4MzQ5NiwtMTc4NDkyMTY0NywxOD
+IxNzM0ODA0LC04NTYxMzg2MTEsODI4NzE0NDI3LDQ2NjAyNzAz
+MSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC
+0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0
+MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNz
+I2NzI4LDkxNDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3
+MiwxNDcyMzU3NTRdfQ==
 -->
