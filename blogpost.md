@@ -44,7 +44,7 @@ For camera pose estimation the authors use the general approach proposed by Insa
 To reduce these disadvantages, the authors of DISN make use of recent research results, that continuous representations are easier to regress for Neural Networks. Zhou et al. have shown that e.g. a 6D rotation representation $b=(b_x,b_y)$ where $b \in \mathbb{R}^6, b_x \in \mathbb{R}^3, b_y \in \mathbb{R}^3$ is continuous, while quaternions and Euler angles are not, and is, therefore, better suited for regression in neural networks. Once $b$ is predicted, the rotation matrix $R =(R_x, R_y, R_z)^T \in \mathbb{R}^{(3x3)}$ is obtained with the following equations:
 $$R_x = N(b_x),\space R_z = N(R_x \times b_y),\space and\space R_y = R_z \times R_x$$
 with $N(\cdot)$ being the normalization function and '$\times$' the cross product.**[?Zhou et al. ]** Translation $t \in \mathbb{R}^3$ is predicted directly.
- 
+ #### Loss calcualtion for pose estimation
 When training this network (Figure 3), the authors use the ShapeNet Core dataset **[25]** , where all objects are within the same aligned model space, and the renderings provided by Choy et al **[28]**. The model space of the original dataset is then set as the world space with all camera parameters respect to it. For regression, a given world space point cloud $PC_w$ is transformed to camera space using predicted parameters and then compared to the camera space ground truth point cloud $PC_{cam}$. As a regression loss they use the Mean-squared-error (MSE) resulting in:
 
 $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
@@ -60,9 +60,10 @@ The SDF prediction network consists of three encoders:
 
   
 
-Having the global and local features encoded together with the higher dimensional query point, the two embedding vectors are decoding the global and local features results in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network.  ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+Having the global and local features encoded together with the higher dimensional query point, the two embedding vectors are then decoded separetly. This results then in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network: ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 *Figure 4: The SDF network model. Taken from [1]*
 
+ #### Loss calcualtion for SDF prediction
 For the loss calculation of the network, two things have to be taken into consideration. First, in contrast to e.g., IMNet one wants to recover different iso-levels and second, the network should concentrate on details near and inside the iso-surface. This, in consequence, then leads to a weighted loss function of SDF values being defined as:
 
   
@@ -317,11 +318,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MTI4NzgyNCwtMTU2MzkyNjExOCwyND
-M1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcy
-NjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0Nz
-IsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5
-MjA5MzYsMTk4NjkwODMwNiwtMTMyMjMwODg3MywyMDc1MTA1MT
-I2LC03NzU3NTYxOTQsMzYxOTQ3MzAwLC0xMTI4NjE0NzI3LDkw
-MjY0MTc5NV19
+eyJoaXN0b3J5IjpbLTEwNzE2MzU1MTUsLTE1NjM5MjYxMTgsMj
+QzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3
+MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwND
+cyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkz
+OTIwOTM2LDE5ODY5MDgzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNT
+EyNiwtNzc1NzU2MTk0LDM2MTk0NzMwMCwtMTEyODYxNDcyNyw5
+MDI2NDE3OTVdfQ==
 -->
