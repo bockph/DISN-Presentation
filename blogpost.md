@@ -52,7 +52,7 @@ $$L_{cam} = \frac{\sum_{p \in PC_w}||p_G-(Rp_w +t)||^2_2}{\sum_{p \in PC_w} 1}$$
 ### How is the Signed Distance Function predicted?
 
 
-The SDF prediction network consists of three different parts:
+The SDF prediction network consists of three encoders:
 
 1. A simple VGG-16 Encoder that extracts global features from the 2D image.
 2. A local feature extraction module. It uses the estimated camera pose to project the point $P \in \mathbb{R}^3$ onto a 2D location $q \in \mathbb{R}^2$ on the image plane. Having $q$ in each feature map the corresponding part is extracted and then concatenated -- resulting in the embedding vector. As not all feature maps equal the size of the input image, bilinear interpolation is used to resize the feature maps and extract the values.
@@ -60,7 +60,7 @@ The SDF prediction network consists of three different parts:
 
   
 
-Finally decoding the global and local features results in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network.  ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+Having the global and local features encoded together with the higher dimensional query point, the two embedding vectors are decoding the global and local features results in an SDF value for the overall shape for the former, and a *residual* SDF for the later. Combining them trough simple summation results in an SDF that in addition to an overall shape also recovers the in previous approaches missing details of an object. The following figure illustrates the concrete structure of the network.  ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
 *Figure 4: The SDF network model. Taken from [1]*
 
 For the loss calculation of the network, two things have to be taken into consideration. First, in contrast to e.g., IMNet one wants to recover different iso-levels and second, the network should concentrate on details near and inside the iso-surface. This, in consequence, then leads to a weighted loss function of SDF values being defined as:
@@ -317,7 +317,7 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NzE2NjgyNCwtMTU2MzkyNjExOCwyND
+eyJoaXN0b3J5IjpbLTI0MTI4NzgyNCwtMTU2MzkyNjExOCwyND
 M1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcy
 NjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0Nz
 IsMTQ3MjM1NzU0LDk1NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5
