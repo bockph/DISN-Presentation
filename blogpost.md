@@ -105,7 +105,7 @@ For the experiments the ShapeNet Core **[...]** dataset was used. According to t
 
   
 
-In the data preparation step, two things must be done: Firstly, ground truth data for camera pose estimation is needed. To achieve this, the rendering of Choy et al. is used. The renderings provide different viewpoints of the objects in the main data set together with annotation of their transformation from world to camera space. Secondly, SDF ground truth data has to be generated. Following the approaches of **[29,30]** this is done by an SDF grid resolution of $256^3$. But, as one is mostly interested in SDF values close to the iso-surface it is not necessary to train on all $256^3 = 16,777,216$ values. To reduce this number, Monte Carlo sampling under Gaussian distribution $\mathbb{N}(0,0.1) is used to choose 2048 grid points for training.
+In the data preparation step, two things must be done: Firstly, ground truth data for camera pose estimation is needed. To achieve this, the rendering of Choy et al. is used. The renderings provide different viewpoints of the objects in the main data set together with annotation of their transformation from world to camera space. Secondly, SDF ground truth data has to be generated. Following the approaches of [11,12] this is done by an SDF grid resolution of $256^3$. But, as one is mostly interested in SDF values close to the iso-surface it is not necessary to train on all $256^3 = 16,777,216$ values. To reduce this number, Monte Carlo sampling under Gaussian distribution $\mathbb{N}(0,0.1) is used to choose 2048 grid points for training.
 
   
 
@@ -311,9 +311,13 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 [10] Christopher B Choy, Danfei Xu, JunYoung Gwak, Kevin Chen, and Silvio Savarese. 3d-r2n2: A unified approach for single and multi-view 3d object reconstruction. In ECCV, 2016.
 
-[11]
+[11] Hongyi Xu and Jernej Barbic. Signed distance fields for polygon soup meshes. In ˇ Proceedings of Graphics Interface 2014, pages 35–41. Canadian Information Processing Society, 2014. 
 
-[12]
+[12] Fun Shing Sin, Daniel Schroeder, and Jernej Barbic. Vega: non-linear fem deformable object ˇ simulator. In Computer Graphics Forum, volume 32, pages 36–48. Wiley Online Library, 2013.
+
+[13]
+
+
 
 
 
@@ -323,11 +327,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDAwMzMyMDIsLTg1NjEzODYxMSw4Mj
-g3MTQ0MjcsNDY2MDI3MDMxLC0xMDA5OTQ1Nzg4LDEzODIzMzU4
-NjYsLTE4ODE2OTk1NzYsLTEzMTQ4NDg2NDksLTE0MjgwNjU0Mj
-YsLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2
-MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MTI0LC0xMTMwNz
-Q3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5NTU1NDIwNjIs
-LTE2NjM5NzkzOTNdfQ==
+eyJoaXN0b3J5IjpbODA0MjQ1ODEzLC04NTYxMzg2MTEsODI4Nz
+E0NDI3LDQ2NjAyNzAzMSwtMTAwOTk0NTc4OCwxMzgyMzM1ODY2
+LC0xODgxNjk5NTc2LC0xMzE0ODQ4NjQ5LC0xNDI4MDY1NDI2LC
+0xNTYzOTI2MTE4LDI0MzU5ODIxMiwyMDMzNjkwNzk0LC0xNjA2
+NDY2MjY3LC0yMTIwNzI2NzI4LDkxNDY1NTEyNCwtMTEzMDc0Nz
+I1OCwtMTkyMzI2MDQ3MiwxNDcyMzU3NTQsOTU1NTQyMDYyLC0x
+NjYzOTc5MzkzXX0=
 -->
