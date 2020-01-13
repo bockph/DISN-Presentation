@@ -274,13 +274,13 @@ In their conclusion Wang et al. [1] state that their work provides two main cont
 
   
 
-However, as the networks are only trained on rendered images they can only take images with a clear background as input. To tackle this limitation future work should include texture prediction using a differentiable renderer [13]
+However, as the networks are only trained on rendered images they can only take images with a clear background as input. To tackle this limitation future work should include texture prediction using a differentiable renderer as proposed by [13].
 
   
 
 ### My perspective
 
-My overall opinion of DISN is very positive. The extensive evaluation seems to prove the conclusion of the paper's authors. They have not only compared their work equally to several highly rated other papers but also employed the settings of the test set up as similar as possible. Further, they conducted extensive ablation studies to prove the effectiveness of their newly introduced modules. However, there are also some points I have four things to criticize:
+My overall opinion of DISN is very positive. The extensive evaluation seems to prove the conclusion of the paper's authors. They have not only compared their work equally to several highly rated other papers but also employed the settings of the test set up as similar as possible. Further, they conducted extensive ablation studies to prove the effectiveness of their newly introduced modules. However, there are four things to criticize:
 
 1.  The quantitative metrics have not been explained in detail, IoU not at all. It would be better if they at least reference them to accepted scientific work, to assure that the measures are not manipulated for their work benefit.
 2. As evaluated above in F-score DISN provides the best results. However, the quality of the comparisons suffers from the fact, that other than to DISN F-score was only applied to 3DCNN and IMNET. 
@@ -327,11 +327,11 @@ Angela Dai, Charles Ruizhongtai Qi, and Matthias Nießner. Shape completion usin
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTI5NzkzODEsLTE3ODQ5MjE2NDcsMT
-gyMTczNDgwNCwtODU2MTM4NjExLDgyODcxNDQyNyw0NjYwMjcw
-MzEsLTEwMDk5NDU3ODgsMTM4MjMzNTg2NiwtMTg4MTY5OTU3Ni
-wtMTMxNDg0ODY0OSwtMTQyODA2NTQyNiwtMTU2MzkyNjExOCwy
-NDM1OTgyMTIsMjAzMzY5MDc5NCwtMTYwNjQ2NjI2NywtMjEyMD
-cyNjcyOCw5MTQ2NTUxMjQsLTExMzA3NDcyNTgsLTE5MjMyNjA0
-NzIsMTQ3MjM1NzU0XX0=
+eyJoaXN0b3J5IjpbODI1NTQzMTczLC0xNzg0OTIxNjQ3LDE4Mj
+E3MzQ4MDQsLTg1NjEzODYxMSw4Mjg3MTQ0MjcsNDY2MDI3MDMx
+LC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1NzYsLT
+EzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQz
+NTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3Mj
+Y3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcy
+LDE0NzIzNTc1NF19
 -->
