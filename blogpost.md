@@ -199,10 +199,10 @@ As the quantitative results already indicate, qualitative results which are depi
 ### Ablation studies
 
 To further, test the effectiveness and robustness of the approach Ablation studies are conducted. Originally ablation means to surgical remove organs or other human material from the body. In the context of deep learning, the term ablation studies have been adopted to name a process where one removes different pieces of a network to gain a better understanding of how the network behaves.
-
-For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in Figure 6 for the former and table **4** for the latter.
 ![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/images/6_ablationChairQualitative.png?raw=true)
 *Figure 6: Qualitative results for the category 'chair' when employing the different ablation studies.  Taken from [1]*  
+
+For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in figure 6 for the former and table **4** for the latter.
 
   
 
@@ -292,11 +292,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ## References
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI4NzE0NDI3LDQ2NjAyNzAzMSwtMTAwOT
-k0NTc4OCwxMzgyMzM1ODY2LC0xODgxNjk5NTc2LC0xMzE0ODQ4
-NjQ5LC0xNDI4MDY1NDI2LC0xNTYzOTI2MTE4LDI0MzU5ODIxMi
-wyMDMzNjkwNzk0LC0xNjA2NDY2MjY3LC0yMTIwNzI2NzI4LDkx
-NDY1NTEyNCwtMTEzMDc0NzI1OCwtMTkyMzI2MDQ3MiwxNDcyMz
-U3NTQsOTU1NTQyMDYyLC0xNjYzOTc5MzkzLDU5MzkyMDkzNiwx
-OTg2OTA4MzA2XX0=
+eyJoaXN0b3J5IjpbLTg5NTAxMzgyOSw4Mjg3MTQ0MjcsNDY2MD
+I3MDMxLC0xMDA5OTQ1Nzg4LDEzODIzMzU4NjYsLTE4ODE2OTk1
+NzYsLTEzMTQ4NDg2NDksLTE0MjgwNjU0MjYsLTE1NjM5MjYxMT
+gsMjQzNTk4MjEyLDIwMzM2OTA3OTQsLTE2MDY0NjYyNjcsLTIx
+MjA3MjY3MjgsOTE0NjU1MTI0LC0xMTMwNzQ3MjU4LC0xOTIzMj
+YwNDcyLDE0NzIzNTc1NCw5NTU1NDIwNjIsLTE2NjM5NzkzOTMs
+NTkzOTIwOTM2XX0=
 -->
