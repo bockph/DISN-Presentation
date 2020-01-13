@@ -199,7 +199,11 @@ As the quantitative results already indicate, qualitative results which are depi
 
 To further, test the effectiveness and robustness of the approach Ablation studies are conducted. Originally ablation means to surgical remove organs or other human material from the body. In the context of deep learning, the term ablation studies have been adopted to name a process where one removes different pieces of a network to gain a better understanding of how the network behaves.
 
-For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in Figure **X** for the former and table **4** for the latter.
+For DISN the authors wanted to find out what impact the camera pose estimation, local feature extraction, and different network architectures have. This impact is evaluated by applying the same qualitative and quantitative measures as above and results are presented in Figure 6 for the former and table **4** for the latter.
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)
+*Figure 6: XXX  Taken from [1]*  
+![enter image description here](https://github.com/bockph/DISN-Presentation/blob/master/title_1.png?raw=true)*Table 4: XXX . Taken from [1]*
+  
 
 #### Camera Pose estimation
 
@@ -293,11 +297,11 @@ My overall opinion of DISN is very positive. The extensive evaluation seems to p
 
 ##Sources
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4ODc1MDM5OCwtMTMxNDg0ODY0OSwtMT
-QyODA2NTQyNiwtMTU2MzkyNjExOCwyNDM1OTgyMTIsMjAzMzY5
-MDc5NCwtMTYwNjQ2NjI2NywtMjEyMDcyNjcyOCw5MTQ2NTUxMj
-QsLTExMzA3NDcyNTgsLTE5MjMyNjA0NzIsMTQ3MjM1NzU0LDk1
-NTU0MjA2MiwtMTY2Mzk3OTM5Myw1OTM5MjA5MzYsMTk4NjkwOD
-MwNiwtMTMyMjMwODg3MywyMDc1MTA1MTI2LC03NzU3NTYxOTQs
-MzYxOTQ3MzAwXX0=
+eyJoaXN0b3J5IjpbLTE4ODE2OTk1NzYsLTEzMTQ4NDg2NDksLT
+E0MjgwNjU0MjYsLTE1NjM5MjYxMTgsMjQzNTk4MjEyLDIwMzM2
+OTA3OTQsLTE2MDY0NjYyNjcsLTIxMjA3MjY3MjgsOTE0NjU1MT
+I0LC0xMTMwNzQ3MjU4LC0xOTIzMjYwNDcyLDE0NzIzNTc1NCw5
+NTU1NDIwNjIsLTE2NjM5NzkzOTMsNTkzOTIwOTM2LDE5ODY5MD
+gzMDYsLTEzMjIzMDg4NzMsMjA3NTEwNTEyNiwtNzc1NzU2MTk0
+LDM2MTk0NzMwMF19
 -->
